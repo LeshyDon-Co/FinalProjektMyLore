@@ -1,0 +1,8 @@
+.myloretitle {
+  background-image: url(../../assets/my-lore-schriftzug.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

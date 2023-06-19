@@ -1,0 +1,10 @@
+.maincontainer {
+  background-image: url(../assets/my-lore-clean.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 100vh;
+
+  font-size: 1.5em;
+}

@@ -1,13 +1,11 @@
 "use client";
 import Link from 'next/link';
-// import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import styles from "./register.module.css";
 
 //--------------------------------------------------------------------//
 const Register = () => {
 
-  //const router = useRouter();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +14,7 @@ const Register = () => {
 //--------------------------------------------------------------------//
   const registerUser = async (e) => {
     e.preventDefault();
-    console.log("registriere User");
+    
 
     //Senden der eingegebenen Informationen an den api/register-Endpunkt.
     //Dieser sendet eine Antwort, die wie in "res" speichern und dann abfragen.
@@ -44,8 +42,7 @@ const Register = () => {
     setUsername("");
     setEmail("");
     setPassword("");
-
-  }
+  };
 
 //--------------------------------------------------------------------//
   return (

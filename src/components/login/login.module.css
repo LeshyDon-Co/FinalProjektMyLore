@@ -1,18 +1,15 @@
-.logincontainer {
-  width: 30%;
-  border: 1px solid #535252;
-  height: 100%;
-
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
+.body {
+  /* border: 2px solid red; */
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
+  height: 100%;
 }
+
 .loginheading {
   text-align: center;
   color: #e9d593;
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
   margin-top: 1rem;
 }
 
@@ -22,15 +19,6 @@
 
 .loginlabel {
   display: none;
-  /* display: block;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  margin-top: 10px;
-  color: #e9d593; */
-
-  /* color: #1a4c39; */
-  /* color:  #d4af37; */
 }
 
 .logininput {
@@ -44,7 +32,7 @@
 }
 
 .loginbutton {
-  margin-top: 16px;
+  margin: 3%;
   padding: 8px 16px;
   border: none;
   border-radius: 10px;
@@ -53,9 +41,6 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000;
   box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000;
-  /* position: absolute; */
-  bottom: 5%;
-  left: 45%;
   justify-content: center;
   align-items: center;
 }

@@ -9,7 +9,7 @@ import { useSession } from "next-auth/react";
 const LoginandRegister = () => {
 
   const session = useSession();
-  console.log(session);;
+  console.log(session);
   return (
     <div className={styles.body}>
       {/* <h2>Registrierung und Login</h2> */}

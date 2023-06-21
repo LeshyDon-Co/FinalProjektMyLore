@@ -10,17 +10,19 @@ import User from "@/models/User";
             id: "credentials",
             name: "Credentials",
             async authorize(credentials) {
-              //Check if the user exists.
+
               await connect();
       
+              //muss hier emaillogin hin?
               try {
                 const user = await User.findOne({
-                  email: credentials.email,
+                  email: credentials.emaillogin,
                 });
       
+                console.log(user);
                 if (user) {
                   const isPasswordCorrect = await bcrypt.compare(
-                    credentials.password,
+                    credentials.passwordlogin,
                     user.password
                   );
       
@@ -39,7 +41,7 @@ import User from "@/models/User";
           }),
         ],
         pages: {
-          error: "/login",
+          error: "/loginandregister",
         },      
       });
 

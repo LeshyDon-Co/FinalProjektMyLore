@@ -24,6 +24,11 @@ const links = [
     title: "Login / Register",
     url: "/loginandregister",
   },
+  {
+    id: 5,
+    title: "Charaktererstellung",
+    url: "/charactercreation",
+  },
 ];
 
 const Navbar = () => {

@@ -58,7 +58,7 @@ const Register = () => {
             type="username"
             id="username"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Username"
             value={username}
             onChange={(e) => {setUsername(e.target.value)}}
@@ -70,7 +70,7 @@ const Register = () => {
             type="email"
             id="email"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Email"
             value={email}
             onChange={(e) => {setEmail(e.target.value)}}
@@ -81,9 +81,10 @@ const Register = () => {
             Passwort
           </label>
           <input
+            type="password"
             id="password"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Passwort"
             value={password}
             onChange={(e) => {setPassword(e.target.value)}}

@@ -47,7 +47,7 @@ const loginUser = async (e) => {
             type="email"
             id="email"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Email"
             onChange={(e) => {setEmaillogin(e.target.value)}}
           />
@@ -57,10 +57,11 @@ const loginUser = async (e) => {
             Passwort
           </label>
           <input
+            type="password"
             value={passwordlogin}
             id="password"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Passwort"
             onChange={(e) => {setPasswordlogin(e.target.value)}}
           />

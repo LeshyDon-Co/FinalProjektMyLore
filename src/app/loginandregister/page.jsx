@@ -1,9 +1,14 @@
+"use client";
 import Register from '@/components/register/register';
 import Login from '@/components/login/login';
 import React from 'react';
 import styles from "./page.module.css";
+import { useSession } from "next-auth/react";
 
-function LoginandRegister() {
+const LoginandRegister = () => {
+
+  const session = useSession();
+  console.log(session);;
   return (
     <div>
         <h1>Login und Register</h1>

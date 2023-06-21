@@ -33,7 +33,7 @@ const Register = () => {
       });
 
       if(res.status === 201){
-        console.log("User registriert!!!");
+        console.log("User registriert!!! Bitte einoggen um fortzufahren.");
       }
     } catch (error) {
         setError(true);

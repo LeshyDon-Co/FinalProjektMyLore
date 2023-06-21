@@ -7,4 +7,12 @@
   height: 100vh;
 
   font-size: 1.5em;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.maincontainer img {
+  padding-top: 20%;
+  margin: 0 auto;
 }

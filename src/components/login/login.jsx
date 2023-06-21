@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import styles from "./login.module.css";
+import {signIn} from "next-auth/react";
+
 //--------------------------------------------------------------------//
 
 const Login = () => {
@@ -15,31 +17,14 @@ const loginUser = async (e) => {
   e.preventDefault();
 
 
-  //Dateneingabe speichern
-  //An Datenbank schicken
-  //Schauen, ob diese Emailadresse bereits vorhanden ist
-  //wenn vorhanden -> Passwort abfragen
-  //wenn erfolgreich -> Variable isLoggedIn auf true setzen
-  //wenn nicht vorhanden oder PW falsch, dann Rückmeldung an User
+  signIn("credentials", {emaillogin, passwordlogin});
 
-    try {
-      const res = await fetch("/api/auth/login", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          emaillogin,
-          passwordlogin,
-        }),
-      });
-
-    if(res.status === 201){
-      console.log("User eingeloggt!");
-    };    
-  } catch (error) {
-    setError(true);
-  }
+  // //Dateneingabe speichern
+  // //An Datenbank schicken
+  // //Schauen, ob diese Emailadresse bereits vorhanden ist
+  // //wenn vorhanden -> Passwort abfragen
+  // //wenn erfolgreich -> Variable isLoggedIn auf true setzen
+  // //wenn nicht vorhanden oder PW falsch, dann Rückmeldung an User
 
   setEmaillogin("");
   setPasswordlogin("");
@@ -79,6 +64,3 @@ const loginUser = async (e) => {
 }
 
 export default Login;
-
-//TODO:
-//Login möglich mit Email UND USERNAME

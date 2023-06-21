@@ -1,10 +1,16 @@
-import Register from "@/components/register/register";
-import Login from "@/components/login/login";
-import React from "react";
+"use client";
+import Register from '@/components/register/register';
+import Login from '@/components/login/login';
+import React from 'react';
 import Link from "next/link";
 import styles from "./page.module.css";
+import { useSession } from "next-auth/react";
 
-function LoginandRegister() {
+
+const LoginandRegister = () => {
+
+  const session = useSession();
+  console.log(session);
   return (
     <div className={styles.body}>
       {/* <h2>Registrierung und Login</h2> */}
@@ -28,7 +34,6 @@ function LoginandRegister() {
           <Login />
         </div>
       </div>
-      {/* <Link href="/">zurück zur Startseite</Link> */}
     </div>
   );
 }

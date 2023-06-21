@@ -1,7 +1,9 @@
-import './globals.css'
+import './globals.css';
 import styles from "./page.module.css";
-import { textFont } from './fonts'
-import Navbar from '@/components/navigation/navbar'
+import { textFont } from './fonts';
+import Navbar from '@/components/navigation/navbar';
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
+
 
 export const metadata = {
   title: 'My Lore',
@@ -19,9 +21,11 @@ export default function RootLayout({ children }) {
           sizes="32x32"
         />
       </head>
-      <body className={textFont.className}>
-        <Navbar/>
-        {children}
+      <body className= {textFont.className} suppressHydrationWarning={true} >
+        <AuthProvider>
+          <Navbar/>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   )

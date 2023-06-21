@@ -39,6 +39,11 @@
   border: 1px solid #535252;
   background-color: transparent;
 }
+
+.logininput::placeholder {
+  color: #000000;
+}
+
 .loginbutton {
   margin: 3%;
   padding: 8px 16px;

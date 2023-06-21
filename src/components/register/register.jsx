@@ -1,6 +1,7 @@
+
 "use client";
-import Link from 'next/link';
-import React, { useState } from 'react'
+
+import React, { useState } from 'react';
 import styles from "./register.module.css";
 
 //--------------------------------------------------------------------//
@@ -46,44 +47,52 @@ const Register = () => {
 
 //--------------------------------------------------------------------//
   return (
-    <div>
-        <h2>Registrierung</h2>
-        <form>
-          <div>
-            <label>Username</label>
-            <input
-              value={username}
-              type='text'
-              required
-              placeholder='Username'
-              onChange={(e) => {setUsername(e.target.value)}}
-            />
-          </div>
-          <div>
-            <label>Email-Adresse</label>
-            <input
-              value={email}
-              type='email'
-              required
-              placeholder='Email'
-              onChange={(e) => {setEmail(e.target.value)}}
-            />
-          </div>
-          <div>
-            <label>Passwort</label>
-            <input 
-              value={password}
-              type='password'
-              required
-              placeholder='Password'
-              onChange={(e) => {setPassword(e.target.value)}}
-            />
-          </div>
-          <button onClick={registerUser}>Registrieren</button>
-        </form>
-        {error && "Etwas ist schief gelaufen!"};
+    <div className={styles.body}>
+      <h2 className={styles.loginheading}>Registrierung</h2>
+      <form>
+        <div className={styles.formgroup}>
+          <label className={styles.loginlabel}>Username</label>
+          <input
+            type="username"
+            id="username"
+            className={styles.logininput}
+            required
+            placeholder="Username"
+            value={username}
+            onChange={(e) => {setUsername(e.target.value)}}
+          />
+        </div>
+        <div className={styles.formgroup}>
+          <label className={styles.loginlabel}>Email</label>
+          <input
+            type="email"
+            id="email"
+            className={styles.logininput}
+            required
+            placeholder="Email"
+            value={email}
+            onChange={(e) => {setEmail(e.target.value)}}
+          />
+        </div>
+        <div className={styles.formgroup}>
+          <label htmlFor="password" className={styles.loginlabel}>
+            Passwort
+          </label>
+          <input
+            id="password"
+            className={styles.logininput}
+            required
+            placeholder="Passwort"
+            value={password}
+            onChange={(e) => {setPassword(e.target.value)}}
+          />
+        </div>
+        <button type="submit" onClick={registerUser} className={styles.loginbutton}>
+          Register
+        </button>
+      </form>
     </div>
-  )
+  );
 }
 
 export default Register;

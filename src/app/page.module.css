@@ -1,17 +1,13 @@
 .body {
   width: 100vw;
   height: 100vh;
+}
 
-  padding-top: 5vh;
-
+.maincontainer {
   background-image: url(../assets/my-lore-clean.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.maincontainer {
- 
 
   height: 100vh;
 
@@ -22,6 +18,6 @@
 }
 
 .maincontainer img {
-  padding-top: 20%;
+  padding-top: 10%;
   margin: 0 auto;
 }

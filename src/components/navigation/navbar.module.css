@@ -45,3 +45,17 @@
 
   padding-right: 20px;
 }
+
+.logoutbutton {
+  margin: 3%;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d4af37;
+  color: #f4e9c6;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000;
+  box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,16 +1,47 @@
 .container {
+  position: fixed;
+  width: 100vw;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  font-size: 1.5em;
+
+  /* font-weight: bold; */
+  /* text-shadow: 1px 1.5px 0.5px #332907 ;
+     */
+
+  /* background: -webkit-linear-gradient(
+    top,
+    #493d13 20%,
+    #68561b 30%,
+    #947b27 40%,
+    #e9d593 47%,
+    #947b27 52%,
+    #493d13 87%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .logo {
   font-weight: bold;
   font-size: 22px;
+
+  padding-left: 20px;
+  padding-top: 5px;
 }
 
 .links {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
+
+  flex-basis: 75%;
+
+  padding-right: 20px;
 }

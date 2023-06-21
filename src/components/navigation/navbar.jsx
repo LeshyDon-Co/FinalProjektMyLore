@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import React from 'react';
 import styles from "./navbar.module.css";
+import { useSession, signOut } from 'next-auth/react';
 
 // Logo (Linke Seite)
 import MyLore from '../../assets/my-lore-schriftzug.png';
@@ -26,14 +27,14 @@ const links = [
     title: "About",
     url: "/about",
   },
-  {
-    id: 4,
-    title: "Login / Register",
-    url: "/loginandregister",
-  },
 ];
 
+//--------------------------------------------------------------------//
+
 const Navbar = () => {
+
+  const session = useSession();
+
   return (
     <div className={`${styles.container} ${titleFont.className}`}>
       <Link href="/" className={styles.logo}>
@@ -51,6 +52,13 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
+        {session.status === "unauthenticated" && (
+          <Link href="/loginandregister" className={styles.link}>Login / Register
+          </Link>
+        )}
+        {session.status === "authenticated" && (
+          <button onClick={()=>signOut()}>Logout</button>
+        )}
       </div>
     </div>
   );

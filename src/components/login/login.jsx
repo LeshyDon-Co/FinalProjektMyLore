@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import styles from "./login.module.css";
 import {signIn} from "next-auth/react";
+import { useRouter } from 'next/navigation';
 
 //--------------------------------------------------------------------//
 
@@ -11,13 +12,15 @@ const Login = () => {
   const [emaillogin, setEmaillogin] = useState("");
   const [passwordlogin, setPasswordlogin] = useState("");
   const [error, setError] = useState(false);
+  const router = useRouter();
 
 //--------------------------------------------------------------------//
 const loginUser = async (e) => {
   e.preventDefault();
 
 
-  signIn("credentials", {emaillogin, passwordlogin});
+  signIn("credentials", {redirect: false, emaillogin, passwordlogin});
+    
 
   // //Dateneingabe speichern
   // //An Datenbank schicken

@@ -1,8 +1,10 @@
 
 "use client";
 
+
 import React, { useState } from 'react';
 import styles from "./register.module.css";
+import { useRouter } from 'next/navigation';
 
 //--------------------------------------------------------------------//
 const Register = () => {
@@ -11,6 +13,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const router = useRouter();
 
 //--------------------------------------------------------------------//
   const registerUser = async (e) => {
@@ -33,9 +36,8 @@ const Register = () => {
         }),
       });
 
-      if(res.status === 201){
-        console.log("User registriert!!! Bitte einoggen um fortzufahren.");
-      }
+      res.status === 201 && router.push("/loginandregister?success=User wurde registriert");
+
     } catch (error) {
         setError(true);
     }

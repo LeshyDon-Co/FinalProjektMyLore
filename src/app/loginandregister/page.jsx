@@ -6,6 +6,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { useSession } from "next-auth/react";
 
+
 const LoginandRegister = () => {
 
   const session = useSession();
@@ -33,7 +34,6 @@ const LoginandRegister = () => {
           <Login />
         </div>
       </div>
-      {/* <Link href="/">zurück zur Startseite</Link> */}
     </div>
   );
 }

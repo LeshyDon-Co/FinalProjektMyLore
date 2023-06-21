@@ -13,7 +13,6 @@ import User from "@/models/User";
 
               await connect();
       
-              //muss hier emaillogin hin?
               try {
                 const user = await User.findOne({
                   email: credentials.emaillogin,
@@ -42,6 +41,7 @@ import User from "@/models/User";
         ],
         pages: {
           error: "/loginandregister",
+          success: "/characteroverview",
         },      
       });
 

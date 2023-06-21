@@ -5,12 +5,22 @@ import React from 'react';
 import Link from "next/link";
 import styles from "./page.module.css";
 import { useSession } from "next-auth/react";
+import { useRouter } from 'next/navigation';
 
 
 const LoginandRegister = () => {
 
   const session = useSession();
+  const router = useRouter();
+
   console.log(session);
+  console.log("Hallo ich bin eingeloggt oder?");
+  if(session.status === 'authenticated'){
+    router.push("/characteroverview");
+  }else{
+    router.push("/loginandregister")
+  };
+
   return (
     <div className={styles.body}>
       {/* <h2>Registrierung und Login</h2> */}

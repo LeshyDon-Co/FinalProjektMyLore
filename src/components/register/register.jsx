@@ -1,7 +1,6 @@
 
 "use client";
 
-
 import React, { useState } from 'react';
 import styles from "./register.module.css";
 import { useRouter } from 'next/navigation';
@@ -58,7 +57,7 @@ const Register = () => {
             type="username"
             id="username"
             className={styles.logininput}
-            required="true"
+            required={true}
             placeholder="Username"
             value={username}
             onChange={(e) => {setUsername(e.target.value)}}
@@ -70,7 +69,7 @@ const Register = () => {
             type="email"
             id="email"
             className={styles.logininput}
-            required="true"
+            required={true}
             placeholder="Email"
             value={email}
             onChange={(e) => {setEmail(e.target.value)}}
@@ -84,7 +83,7 @@ const Register = () => {
             type="password"
             id="password"
             className={styles.logininput}
-            required="true"
+            required={true}
             placeholder="Passwort"
             value={password}
             onChange={(e) => {setPassword(e.target.value)}}

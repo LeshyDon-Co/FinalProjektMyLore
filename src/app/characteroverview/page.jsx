@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./page.module.css";
+import Charactercard from "@/components/charactercard/charactercard";
 
 function CharakterÜbersicht() {
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-        Rechts sieht man die bereits vorhandenen Charaktere, links kann man einen
-        neuen erstellen und wir zur CharakterErstellungs-eite weitergeleitet
+        Wähle deinen Helden
+        <Charactercard />
+        <Charactercard />
+        <Charactercard />
       </div>
     </div>
   );

@@ -6,5 +6,5 @@
 }
 
 .container {
-  background-color: lawngreen;
+  display: flex;
 }

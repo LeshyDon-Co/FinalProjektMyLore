@@ -12,7 +12,7 @@ function Register() {
             type="username"
             id="username"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Username"
           />
         </div>
@@ -22,7 +22,7 @@ function Register() {
             type="email"
             id="email"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Email"
           />
         </div>
@@ -31,9 +31,10 @@ function Register() {
             Passwort
           </label>
           <input
+            type="password"
             id="password"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Passwort"
           />
         </div>

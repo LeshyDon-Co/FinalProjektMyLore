@@ -12,7 +12,7 @@ function Login() {
             type="email"
             id="email"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Email"
           />
         </div>
@@ -21,9 +21,10 @@ function Login() {
             Passwort
           </label>
           <input
+            type="password"
             id="password"
             className={styles.logininput}
-            required
+            required="true"
             placeholder="Passwort"
           />
         </div>

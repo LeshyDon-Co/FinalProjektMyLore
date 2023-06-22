@@ -1,3 +1,4 @@
+import Charactercard from "@/components/charactercard/charactercard";
 import React from "react";
 import styles from "./page.module.css";
 
@@ -5,11 +6,18 @@ function CharakterÜbersicht() {
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-        Rechts sieht man die bereits vorhandenen Charaktere, links kann man einen
-        neuen erstellen und wir zur CharakterErstellungs-eite weitergeleitet
+        <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
+        <div className={styles.charactercardscontainer}>
+          <Charactercard></Charactercard>
+          <Charactercard></Charactercard>
+
+        </div>
       </div>
     </div>
   );
 }
 
 export default CharakterÜbersicht;
+
+//Für jeden Charakter, den der User bereits erstellt hat, wird eine Card angezeigt
+//Immer die letze Card ist die "Neuen Charakter erstellen"- Karte -> leitet zu /charaktercreateion weiter

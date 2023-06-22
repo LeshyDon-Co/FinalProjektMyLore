@@ -5,5 +5,8 @@
   padding-top: 5vh;
 }
 .container {
-  background-color: tomato;
+  padding-top: 10vh;
+  display: flex;
+  height: 50hv;
+  /* background-color: tomato; */
 }

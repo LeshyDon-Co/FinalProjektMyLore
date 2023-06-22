@@ -5,6 +5,17 @@
 }
 
 .container {
-  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
   /* background-color: forestgreen; */
+}
+
+.allMembers {
+  margin-top: 2rem;
+  border: 2px solid red;
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
 }

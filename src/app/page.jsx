@@ -1,5 +1,5 @@
-import MyLore from '../assets/my-lore-schriftzug.png';
-import Image from 'next/image';
+import MyLore from "../assets/my-lore-schriftzug.png";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -15,5 +15,5 @@ export default function Home() {
         />
       </main>
     </div>
-  )
+  );
 }

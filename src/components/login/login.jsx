@@ -17,7 +17,7 @@ const Login = () => {
   const loginUser = async (e) => {
     e.preventDefault();
 
-    signIn("credentials", {redirect: false, emaillogin, passwordlogin});
+    signIn("credentials", {emaillogin, passwordlogin});
 
     // //Dateneingabe speichern
     // //An Datenbank schicken
@@ -25,6 +25,8 @@ const Login = () => {
     // //wenn vorhanden -> Passwort abfragen
     // //wenn erfolgreich -> Variable isLoggedIn auf true setzen
     // //wenn nicht vorhanden oder PW falsch, dann Rückmeldung an User
+
+    signIn("credentials", {emaillogin, passwordlogin});
 
     setEmaillogin("");
     setPasswordlogin("");

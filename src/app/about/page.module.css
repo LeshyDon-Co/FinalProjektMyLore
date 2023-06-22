@@ -5,9 +5,9 @@
 }
 
 .container {
+  padding-top: 10vh;
   display: flex;
-  flex-direction: column;
-  padding-top: 5vh;
+
   /* background-color: forestgreen; */
 }
 

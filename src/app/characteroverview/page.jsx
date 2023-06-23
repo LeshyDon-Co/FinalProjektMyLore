@@ -1,4 +1,5 @@
 "use client";
+import Buttonone from "@/components/buttons/buttonone/buttonone";
 import Charactercard from "@/components/cards/charactercard/charactercard";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -31,7 +32,7 @@ function CharakterÜbersicht() {
           <p>+</p>
         </div>
       </div>
-      <button className={styles.spielenbutton}>Weiter spielen</button>
+      <Buttonone text={"weiter spielen"} link={"/charactercreation"}/>
     </div>
   );
   };

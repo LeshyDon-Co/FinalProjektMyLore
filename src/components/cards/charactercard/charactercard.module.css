@@ -30,7 +30,7 @@
   width: 100%;
   height: 50%;
   margin-bottom: 10%;
-  background-color: yellow;
+  /* background-color: yellow; */
   background-image: url(../../../assets/my-lore-clean.jpg);
   background-position: center;
   background-size: cover;

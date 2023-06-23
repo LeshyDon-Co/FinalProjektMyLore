@@ -1,4 +1,5 @@
 "use client";
+import Charactercard from "@/components/cards/charactercard/charactercard";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -14,11 +15,23 @@ function CharakterÜbersicht() {
   }else{
   return (
     <div className={styles.body}>
-      <div className={styles.container}>
-        <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
-        <div className={styles.charactercardscontainer}>
+      <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
+      <div className={styles.container}>        
+        <div className={styles.charlist}>
+          <p>Deine Charaktere:</p>
+          <div className={styles.listitem}>item</div>
+          <div className={styles.listitem}>item</div>
+          <div className={styles.listitem}>item</div>
+          <div className={styles.listitem}>item</div>
+          <div className={styles.listitem}>item</div>
+          <div className={styles.listitem}>item</div>
+        </div>
+        <div className={styles.card} onClick={()=> router.push("/charactercreation")}>
+          <p>Neuen Charakter erstellen</p>
+          <p>+</p>
         </div>
       </div>
+      <button className={styles.spielenbutton}>Weiter spielen</button>
     </div>
   );
   };

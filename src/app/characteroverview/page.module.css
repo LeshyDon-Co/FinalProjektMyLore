@@ -21,15 +21,6 @@
   justify-content: center;
   display: flex;
 }
-.spielenbutton {
-  border: 2px solid red;
-  right: 0;
-  display: flex;
-  margin: auto 5vw auto auto;
-}
-.spielenbutton:hover {
-  border: 4px solid brown;
-}
 
 .charlist {
   display: flex;

@@ -25,6 +25,7 @@ function CharakterErstellung() {
       </div>
     </div>
   );
+  };
 };
 
 export default CharakterErstellung;

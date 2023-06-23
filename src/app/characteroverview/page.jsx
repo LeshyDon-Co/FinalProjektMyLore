@@ -1,5 +1,4 @@
 "use client";
-import Charactercard from "@/components/charactercard/charactercard";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -18,9 +17,6 @@ function CharakterÜbersicht() {
       <div className={styles.container}>
         <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
         <div className={styles.charactercardscontainer}>
-          <Charactercard></Charactercard>
-          <Charactercard></Charactercard>
-
         </div>
       </div>
     </div>

@@ -3,10 +3,24 @@
   height: 100vh;
 
   padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.h2 {
+  margin: 5vh auto auto auto;
 }
 .container {
-  padding-top: 10vh;
+  /* padding-top: 5vh; */
   display: flex;
+  /* justify-content:; */
   height: 50hv;
   /* background-color: tomato; */
+}
+
+.button {
+  border: 2px solid red;
+  right: 0;
+  display: flex;
+  margin: auto 5vw auto auto;
 }

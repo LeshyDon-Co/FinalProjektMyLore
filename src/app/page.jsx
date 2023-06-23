@@ -1,3 +1,4 @@
+
 "use client";
 import MyLore from '../assets/my-lore-schriftzug.png';
 import Image from 'next/image';
@@ -24,5 +25,5 @@ export default function Home() {
         />
       </main>
     </div>
-  )
+  );
 }

@@ -14,7 +14,7 @@ const LoginandRegister = () => {
   const router = useRouter();
 
   console.log(session);
-  console.log("Hallo ich bin eingeloggt oder?");
+
   if(session.status === 'authenticated'){
     router.push("/characteroverview");
   }else{

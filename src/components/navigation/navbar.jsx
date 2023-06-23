@@ -37,15 +37,28 @@ const Navbar = () => {
 
   return (
     <div className={`${styles.container} ${titleFont.className}`}>
-      <Link href="/" className={styles.logo}>
-      <Image
-        className={styles.myloretitle}
-        src={MyLore}
-        width={150}
-        height={150}
-        alt="Name of the game as Logo in 3D"
-      />
+        {session.status === "unauthenticated" && (
+        <Link href="/" className={styles.logo}>
+          <Image
+            className={styles.myloretitle}
+            src={MyLore}
+            width={150}
+            height={150}
+            alt="Name of the game as Logo in 3D"
+          />
       </Link>
+      )}
+      {session.status === "authenticated" && (
+        <Link href="/characteroverview" className={styles.logo}>
+        <Image
+          className={styles.myloretitle}
+          src={MyLore}
+          width={150}
+          height={150}
+          alt="Name of the game as Logo in 3D"
+      />
+      </Link>      
+        )}
       <div className={styles.links}>
         {links.map((link) => (
           <Link key={link.id} href={link.url} className={styles.link}>

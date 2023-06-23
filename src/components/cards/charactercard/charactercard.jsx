@@ -1,14 +1,14 @@
 "use client";
 //Inspiration: https://codepen.io/drehimself/pen/QNXpyp
 import styles from "./charactercard.module.css";
-import {Card, Grid, Row, Text, Col} from "@nextui-org/react";
+// import {Card, Grid, Row, Text, Col} from "@nextui-org/react";
 
 function Charactercard() {
   const list = [
     {
       name: "Maddy",
       img: "/images/fruit-1.jpeg",
-      text: "gdrhrhrhdrhdrhdrh",
+      text: "",
       attribute1: "attribute1",
       value1: "value1",
       attribute2: "attribute2",
@@ -50,63 +50,28 @@ function Charactercard() {
       value3: "",
     },
   ];
-  // gap={1}
-  return (
-    <Grid.Container justify="space-around" max-width="100vw">
-      {list.map((item, index) => (
-        <Grid sm={2} key={index}>
-          <Card isPressable className={styles.card}>
-            <Card.Header className={styles.header}>
-              <Card.Image
-                className={styles.image}
-                src={"https://nextui.org" + item.img}
-                objectFit="cover"
-              />
-            </Card.Header>
-            <Card.Body css={{p: 0}}>
-              <Col>
-                <Text className={styles.title}>{item.title}</Text>
-                <Text h3>{item.name}</Text>
-              </Col>
-            </Card.Body>
-            <Card.Footer
-              className={styles.footer}
-              css={{
-                justifyItems: "flex-end",
-              }}
-            >
-              <Row justify="space-between" align="center">
-                <Col>
-                  <Row>
-                    <Col>
-                      <Text className={styles.title}>{item.attribute1}</Text>
-                      <Text className={styles.title}>{item.value1}</Text>
-                    </Col>
-                  </Row>
-                </Col>
 
-                <Col>
-                  <Row>
-                    <Col>
-                      <Text className={styles.title}>{item.attribute2}</Text>
-                      <Text className={styles.title}>{item.value2}</Text>
-                    </Col>
-                  </Row>
-                </Col>
-                <Col>
-                  <Row>
-                    <Col>
-                      <Text className={styles.title}>{item.attribute3}</Text>
-                      <Text className={styles.title}>{item.value3}</Text>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Card.Footer>
-          </Card>
-        </Grid>
-      ))}
-    </Grid.Container>
+  return (
+    <div className={styles.bodyComponent}>
+      <div className={styles.allCards}>
+        {list.map((item, index) => (
+          <div className={styles.allOfCard} key={index}>
+            <div className={styles.image}></div>
+            <div className={styles.card}>
+              <div className={styles.header}></div>
+              <div className={styles.body}>{item.name}</div>
+              <div className={styles.footer}>
+                <div>
+                  {item.attribute1} {item.value1}
+                </div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 

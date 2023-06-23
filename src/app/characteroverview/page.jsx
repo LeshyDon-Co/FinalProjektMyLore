@@ -1,8 +1,18 @@
+"use client";
 import Charactercard from "@/components/charactercard/charactercard";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import styles from "./page.module.css";
 
 function CharakterÜbersicht() {
+
+  const session = useSession();
+  const router = useRouter();
+
+  if(session.status === "unauthenticated"){
+    router?.push("/loginandregister");
+  }else{
   return (
     <div className={styles.body}>
       <div className={styles.container}>
@@ -15,7 +25,8 @@ function CharakterÜbersicht() {
       </div>
     </div>
   );
-}
+  };
+};
 
 export default CharakterÜbersicht;
 

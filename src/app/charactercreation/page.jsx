@@ -2,15 +2,25 @@
 import React from "react";
 import styles from "./page.module.css";
 import Charactercard from "@/components/charactercard/charactercard";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 function CharakterErstellung() {
-  return (
-    <div className={styles.body}>
-      <div className={styles.container}>
-        <Charactercard />
+
+  const session = useSession();
+  const router = useRouter()
+
+  if(session.status === "unauthenticated"){
+    router?.push("/loginandregister")
+  }else{
+    return (
+      <div className={styles.body}>
+        <div className={styles.container}>
+          <Charactercard />
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  };
+};
 
 export default CharakterErstellung;

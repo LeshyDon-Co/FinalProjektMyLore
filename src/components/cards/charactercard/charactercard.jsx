@@ -39,7 +39,7 @@ function Charactercard() {
       value3: "value3",
     },
     // {
-    //   name: "Neuer Character",
+    //   name: "",
     //   img: "",
     //   text: "",
     //   attribute1: "",

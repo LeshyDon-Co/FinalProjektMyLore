@@ -6,9 +6,11 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 function CharakterErstellung() {
+
   const session = useSession();
-  const router = useRouter()
-  
+  const router = useRouter();
+
+ 
   if(session.status === "unauthenticated"){
     router?.push("/loginandregister")
   }else{

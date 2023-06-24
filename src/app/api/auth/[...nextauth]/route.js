@@ -45,8 +45,8 @@ import User from "@/models/User";
         }, 
         session: {
           strategy: "jwt",
-          maxAge: 60, // 60 seconds
-         // maxAge: 15 * 60 * 60, // 15 minutes 
+          //maxAge: 60, // 60 seconds
+          maxAge: 15 * 60 * 60, // 15 minutes 
          // maxAge: 30 * 24 * 60 * 60, // 30 days
         },     
       });

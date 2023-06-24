@@ -44,7 +44,7 @@ const Login = () => {
             <input
               value={emaillogin}
               type="email"
-              id="email"
+              id="emaillogin"
               className={styles.logininput}
               required={true}
               placeholder="Email"
@@ -60,7 +60,7 @@ const Login = () => {
             <input
               type="password"
               value={passwordlogin}
-              id="password"
+              id="passwordlogin"
               className={styles.logininput}
               required={true}
               placeholder="Passwort"

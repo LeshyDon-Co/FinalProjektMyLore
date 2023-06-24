@@ -11,16 +11,10 @@ function CharakterErstellung() {
   const session = useSession();
   const router = useRouter();
 
-<<<<<<< HEAD
- 
-  if(session.status === "unauthenticated"){
-    router?.push("/loginandregister")
-  }else{
-=======
   // if(session.status === "unauthenticated"){
   //   router?.push("/loginandregister")
   // }else{
->>>>>>> develop
+
   return (
     <div className={styles.body}>
       <div className={styles.h2}>

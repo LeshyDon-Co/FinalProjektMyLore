@@ -61,7 +61,7 @@ function Charactercard() {
               alt={item.name}
               width={400}
               height={400}
-              // fill={true}
+              //fill={true}
               className={styles.wiwa}
             />
           </div>

@@ -59,8 +59,8 @@ function Charactercard() {
             <Image
               src={item.img}
               alt={item.name}
-              width={400}
-              height={400}
+              width={500}
+              height={500}
               // fill={true}
               className={styles.wiwa}
             />

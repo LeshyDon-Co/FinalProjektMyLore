@@ -4,7 +4,8 @@ import styles from "./charactercard.module.css";
 import Image from "next/image";
 
 //Bilder
-import WischiWaschi from "/home/dci-student/Schreibtisch/Games/FinalProjektMyLore/finalprojektmylore/src/assets/characterimages/WischiWaschiBaer.png";
+
+import WischiWaschi from "../../../assets/characterimages/WischiWaschiBaer.png";
 
 function Charactercard() {
   const list = [
@@ -12,7 +13,7 @@ function Charactercard() {
       name: "Wischi-Waschi-Bär",
       img: (
         <Image
-          src="/WischiWaschiBaer.png"
+          src={WischiWaschi}
           width={400}
           height={400}
           // fill={true}

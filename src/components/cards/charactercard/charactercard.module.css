@@ -38,6 +38,7 @@
 
 .wiwa {
   /* border: 2px solid turquoise; */
+  height: 120%;
   max-width: 130%;
   position: absolute;
   left: -15%;

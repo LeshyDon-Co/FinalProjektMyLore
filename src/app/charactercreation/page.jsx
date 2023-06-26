@@ -6,14 +6,13 @@ import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
 import Buttonone from "@/components/buttons/buttonone/buttonone";
 
-function CharakterErstellung () {
-
+function CharakterErstellung() {
   const router = useRouter();
   const session = useSession();
 
-  if(session.status === "unauthenticated"){
-    router.push("/");
-  }else{
+  // if(session.status === "unauthenticated"){
+  //   router.push("/");
+  // }else{
   return (
     <div className={styles.body}>
       <div className={styles.h2}>
@@ -26,7 +25,7 @@ function CharakterErstellung () {
       </div>
     </div>
   );
-};
-};
+}
+// };
 
 export default CharakterErstellung;

@@ -1,76 +1,89 @@
 "use client";
 //Inspiration: https://codepen.io/drehimself/pen/QNXpyp
 import styles from "./charactercard.module.css";
-// import {Card, Grid, Row, Text, Col} from "@nextui-org/react";
+import Image from "next/image";
 
 function Charactercard() {
   const list = [
     {
-      name: "Maddy",
-      img: "/images/fruit-1.jpeg",
-      text: "",
-      attribute1: "attribute1",
+      name: "Wischi-Waschi-Bär",
+      img: "/WischiWaschiBär.png",
+      text: "Wisch wasch, wasch willscht du?",
+      attribute1: "ATK",
       value1: "value1",
-      attribute2: "attribute2",
+      attribute2: "DEF",
       value2: "value2",
-      attribute3: "attribute3",
+      attribute3: "HP",
       value3: "value3",
     },
     {
-      name: "Claudi",
-      img: "/images/fruit-1.jpeg",
-      text: "",
-      attribute1: "attribute1",
+      name: "Flammenko (comming soon)",
+      img: "/WischiWaschiBär.png",
+      text: "Ich habe Hunger, gib mir einen Lappen!",
+      attribute1: "ATK",
       value1: "value1",
-      attribute2: "attribute2",
+      attribute2: "DEF",
       value2: "value2",
-      attribute3: "attribute3",
+      attribute3: "HP",
       value3: "value3",
     },
     {
-      name: "Lion",
-      img: "/images/fruit-1.jpeg",
-      text: "",
-      attribute1: "attribute1",
+      name: "Axolilalittle  (comming soon)",
+      img: "/WischiWaschiBär.png",
+      text: "Willst du spielen? Habe meine Krallen frisch geschärft!",
+      attribute1: "ATK",
       value1: "value1",
-      attribute2: "attribute2",
+      attribute2: "DEF",
       value2: "value2",
-      attribute3: "attribute3",
+      attribute3: "HP",
       value3: "value3",
     },
-    {
-      name: "Neuer Character",
-      img: "",
-      text: "",
-      attribute1: "",
-      value1: "",
-      attribute2: "",
-      value2: "",
-      attribute3: "",
-      value3: "",
-    },
+    // {
+    //   name: "",
+    //   img: "",
+    //   text: "",
+    //   attribute1: "",
+    //   value1: "",
+    //   attribute2: "",
+    //   value2: "",
+    //   attribute3: "",
+    //   value3: "",
+    // },
   ];
 
   return (
     <div className={styles.bodyComponent}>
-      <div className={styles.allCards}>
-        {list.map((item, index) => (
-          <div className={styles.allOfCard} key={index}>
-            <div className={styles.image}></div>
-            <div className={styles.card}>
-              <div className={styles.header}></div>
-              <div className={styles.body}>{item.name}</div>
-              <div className={styles.footer}>
-                <div>
-                  {item.attribute1} {item.value1}
-                </div>
-                <div></div>
-                <div></div>
-              </div>
+      {list.map((item, index) => (
+        <div className={styles.card} key={index}>
+          <div className={styles.imagecontainer}>
+            <Image
+              src={item.img}
+              alt={item.name}
+              width={400}
+              height={400}
+              // fill={true}
+              className={styles.wiwa}
+            />
+          </div>
+          <div className={styles.main}>
+            {item.name} <p className={styles.p}>{item.text}</p>
+          </div>
+          <div className={styles.footer}>
+            <div className={styles.attributes}>
+              <div className={styles.attribute}>{item.attribute1}</div>
+              <div className={styles.value}>{item.value1}</div>
+            </div>
+            <div className={styles.attributes}>
+              <div className={styles.attribute}>{item.attribute2}</div>
+              <div className={styles.value}>{item.value2}</div>
+            </div>
+            <div className={styles.attributes}>
+              <div className={styles.attribute}>{item.attribute3}</div>
+              <div className={styles.value}>{item.value3}</div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }

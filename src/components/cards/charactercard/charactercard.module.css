@@ -1,49 +1,81 @@
 .bodyComponent {
-  border: 2px solid red;
+  /* border: 2px solid red; */
 
+  height: 60vh;
   width: 100vw;
-  /* display: flex; */
-  /* justify-content: space-around; */
-}
 
-.allCards {
   display: flex;
   justify-content: space-around;
 }
 
-.allOfCard {
-  border: 2px solid red;
-  display: flex;
-  width: 20%;
+.p {
+  font-size: 0.6rem;
 }
 
 .card {
-  border: 2px solid red;
-  height: 60vh;
-  padding: 2%;
-  /* justify-content: space-between; */
-}
-.header {
-  height: 50%;
-  /* width: 100%; */
-  /* padding: 0 !important; */
-  /* margin: 0 !important; */
-  /* position: fixed; */
-  /* z-index: 1; */
-  /* top: 0; */
+  /* border: 2px solid red; */
+  background: beige;
+  width: 20%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  position: relative;
 }
 
-.image {
-  /* border: 2px solid red; */
-  /* background-image: url("https://nextui.org/images/card-example-6.jpeg") !important; */
-  /* width: 100%; */
-  /* height: 100% !important; */
-  /* background-size: cover;
+.imagecontainer {
+  /* border: 2px solid blue; */
+  position: relative;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 10%;
+  /* background-color: yellow; */
+  background-image: url(../../../assets/my-lore-clean.jpg);
   background-position: center;
-  background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+.wiwa {
+  /* border: 2px solid turquoise; */
+  max-width: 130%;
+  position: absolute;
+  left: -15%;
+  top: -10%;
+}
+.main {
+  position: relative;
+  /* top: -5%; */
+  /* border: 2px solid green; */
 }
 
 .footer {
-  /* position: absolute; */
-  /* bottom: 0; */
+  /* border: 2px solid orange; */
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  bottom: 2%;
+}
+
+.attributes {
+  /* border: 2px solid black; */
+  width: 33%;
+  display: flex;
+  font-size: small;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.attribute {
+  text-align: center;
+  justify-content: center;
+  padding: 10%;
+  font-size: 0.6rem;
+}
+
+.value {
+  font-size: 0.6rem;
 }

@@ -4,17 +4,21 @@ import styles from "./charactercard.module.css";
 import Image from "next/image";
 
 //Bilder
-import WischiWaschi from '/home/dci-student/Schreibtisch/Games/FinalProjektMyLore/finalprojektmylore/src/assets/characterimages/WischiWaschiBaer.png';
+import WischiWaschi from "/home/dci-student/Schreibtisch/Games/FinalProjektMyLore/finalprojektmylore/src/assets/characterimages/WischiWaschiBaer.png";
 
 function Charactercard() {
   const list = [
     {
       name: "Wischi-Waschi-Bär",
-      img: <Image src={WischiWaschi}
-      width={400}
-      height={400}
-      // fill={true}
-      className={styles.wiwa}/>,      
+      img: (
+        <Image
+          src="/WischiWaschiBaer.png"
+          width={400}
+          height={400}
+          // fill={true}
+          className={styles.wiwa}
+        />
+      ),
       text: "Wisch wasch, wasch willscht du?",
       attribute1: "ATK",
       value1: "value1",
@@ -25,11 +29,15 @@ function Charactercard() {
     },
     {
       name: "Flammenko (comming soon)",
-      img: <Image src={WischiWaschi}
-      width={400}
-      height={400}
-      // fill={true}
-      className={styles.wiwa}/>, 
+      img: (
+        <Image
+          src={WischiWaschi}
+          width={400}
+          height={400}
+          // fill={true}
+          className={styles.wiwa}
+        />
+      ),
       text: "Ich habe Hunger, gib mir einen Lappen!",
       attribute1: "ATK",
       value1: "value1",
@@ -40,11 +48,15 @@ function Charactercard() {
     },
     {
       name: "Axolilalittle  (comming soon)",
-      img: <Image src={WischiWaschi}
-      width={400}
-      height={400}
-      // fill={true}
-      className={styles.wiwa}/>, 
+      img: (
+        <Image
+          src={WischiWaschi}
+          width={400}
+          height={400}
+          // fill={true}
+          className={styles.wiwa}
+        />
+      ),
       text: "Willst du spielen? Habe meine Krallen frisch geschärft!",
       attribute1: "ATK",
       value1: "value1",

@@ -4,7 +4,7 @@ import styles from "./charactercard.module.css";
 import Image from "next/image";
 
 //Bilder
-import WischiWaschi from '/home/dci-student/Schreibtisch/Games/FinalProjektMyLore/finalprojektmylore/src/assets/characterimages/WischiWaschiBaer.png';
+import WischiWaschi from '../../../assets/characterimages/WischiWaschiBaer.png';
 
 function Charactercard() {
   const list = [

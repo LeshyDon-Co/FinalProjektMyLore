@@ -1,25 +1,23 @@
 "use client";
-import Register from '@/components/register/register';
-import Login from '@/components/login/login';
-import React from 'react';
+import Register from "@/components/register/register";
+import Login from "@/components/login/login";
+import React from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { useSession } from "next-auth/react";
-import { useRouter } from 'next/navigation';
-
+import {useSession} from "next-auth/react";
+import {useRouter} from "next/navigation";
 
 const LoginandRegister = () => {
-
   const session = useSession();
   const router = useRouter();
 
   console.log(session);
 
-  if(session.status === 'authenticated'){
+  if (session.status === "authenticated") {
     router.push("/characteroverview");
-  }else{
-    router.push("/loginandregister")
-  };
+  } else {
+    router.push("/loginandregister");
+  }
 
   return (
     <div className={styles.body}>
@@ -37,8 +35,8 @@ const LoginandRegister = () => {
             <p className="RegisterMailInfo">Mail ist unterwegs!</p>
           )}
           {myRegisterError && (
-            <p className="myRegisterError">{myRegisterError}</p>
-          )} */}
+            <p className="myRegisterError">{myRegisterError}</p> 
+          )}*/}
         </div>
         <div className={styles.logincontainer}>
           <Login />
@@ -46,6 +44,6 @@ const LoginandRegister = () => {
       </div>
     </div>
   );
-}
+};
 
 export default LoginandRegister;

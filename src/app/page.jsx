@@ -8,13 +8,6 @@ import { useRouter } from 'next/navigation';
 
 export default function Home() {
 
-  //Kann raus, war nur zum testen
-  // const router = useRouter();
-  // const session = useSession();
-  // console.log(session);
-  // if(session.status === "authenticated"){
-  //   router.push("/characteroverview");
-  // }else{
   return (
     <div className={styles.body}>
       <main className={styles.maincontainer}>

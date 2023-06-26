@@ -41,7 +41,7 @@ import User from "@/models/User";
         ],
         pages: {
           error: "/loginandregister",
-          success: "/characteroverview",
+          // success: "/characteroverview",
         }, 
         session: {
           strategy: "jwt",

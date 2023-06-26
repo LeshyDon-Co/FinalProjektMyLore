@@ -3,11 +3,18 @@
 import styles from "./charactercard.module.css";
 import Image from "next/image";
 
+//Bilder
+import WischiWaschi from '/home/dci-student/Schreibtisch/Games/FinalProjektMyLore/finalprojektmylore/src/assets/characterimages/WischiWaschiBaer.png';
+
 function Charactercard() {
   const list = [
     {
       name: "Wischi-Waschi-Bär",
-      img: "/WischiWaschiBär.png",
+      img: <Image src={WischiWaschi}
+      width={400}
+      height={400}
+      // fill={true}
+      className={styles.wiwa}/>,      
       text: "Wisch wasch, wasch willscht du?",
       attribute1: "ATK",
       value1: "value1",
@@ -18,7 +25,11 @@ function Charactercard() {
     },
     {
       name: "Flammenko (comming soon)",
-      img: "/WischiWaschiBär.png",
+      img: <Image src={WischiWaschi}
+      width={400}
+      height={400}
+      // fill={true}
+      className={styles.wiwa}/>, 
       text: "Ich habe Hunger, gib mir einen Lappen!",
       attribute1: "ATK",
       value1: "value1",
@@ -29,7 +40,11 @@ function Charactercard() {
     },
     {
       name: "Axolilalittle  (comming soon)",
-      img: "/WischiWaschiBär.png",
+      img: <Image src={WischiWaschi}
+      width={400}
+      height={400}
+      // fill={true}
+      className={styles.wiwa}/>, 
       text: "Willst du spielen? Habe meine Krallen frisch geschärft!",
       attribute1: "ATK",
       value1: "value1",
@@ -56,14 +71,15 @@ function Charactercard() {
       {list.map((item, index) => (
         <div className={styles.card} key={index}>
           <div className={styles.imagecontainer}>
-            <Image
+            {item.img}
+            {/* <Image
               src={item.img}
               alt={item.name}
               width={400}
               height={400}
               //fill={true}
               className={styles.wiwa}
-            />
+            /> */}
           </div>
           <div className={styles.main}>
             {item.name} <p className={styles.p}>{item.text}</p>

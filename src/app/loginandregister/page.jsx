@@ -2,22 +2,24 @@
 import Register from "@/components/register/register";
 import Login from "@/components/login/login";
 import React from "react";
+
 import Link from "next/link";
 import styles from "./page.module.css";
 import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
 
-const LoginandRegister = () => {
-  const session = useSession();
+
+// const LoginandRegister = async () => {
+function LoginandRegister() {
+
   const router = useRouter();
+  const session = useSession();
 
-  console.log(session);
 
-  if (session.status === "authenticated") {
+
+  if(session.status === "authenticated"){
     router.push("/characteroverview");
-  } else {
-    router.push("/loginandregister");
-  }
+  }else{
 
   return (
     <div className={styles.body}>
@@ -45,5 +47,7 @@ const LoginandRegister = () => {
     </div>
   );
 };
+};
+
 
 export default LoginandRegister;

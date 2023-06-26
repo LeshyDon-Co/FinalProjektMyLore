@@ -19,14 +19,19 @@ const Login = () => {
 
     signIn("credentials", {emaillogin, passwordlogin});
 
+
+  if(session.status === 'authenticated'){
+    router?.push("/characteroverview");
+  // }else{
+    // router.push("/")
+  };
+
     // //Dateneingabe speichern
     // //An Datenbank schicken
     // //Schauen, ob diese Emailadresse bereits vorhanden ist
     // //wenn vorhanden -> Passwort abfragen
     // //wenn erfolgreich -> Variable isLoggedIn auf true setzen
     // //wenn nicht vorhanden oder PW falsch, dann Rückmeldung an User
-
-    signIn("credentials", {emaillogin, passwordlogin});
 
     setEmaillogin("");
     setPasswordlogin("");
@@ -44,7 +49,7 @@ const Login = () => {
             <input
               value={emaillogin}
               type="email"
-              id="email"
+              id="emaillogin"
               className={styles.logininput}
               required={true}
               placeholder="Email"
@@ -60,7 +65,7 @@ const Login = () => {
             <input
               type="password"
               value={passwordlogin}
-              id="password"
+              id="passwordlogin"
               className={styles.logininput}
               required={true}
               placeholder="Passwort"

@@ -1,18 +1,19 @@
 "use client";
 import Buttonone from "@/components/buttons/buttonone/buttonone";
-import Charactercard from "@/components/cards/charactercard/charactercard";
+// import Charactercard from "@/components/cards/charactercard/charactercard";
 import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
 import React from "react";
 import styles from "./page.module.css";
 
 function CharakterÜbersicht() {
-  const session = useSession();
-  const router = useRouter();
 
-  // if(session.status === "unauthenticated"){
-  //   router?.push("/loginandregister");
-  // }else{
+  const router = useRouter();
+  const session = useSession();
+
+  if(session.status === "unauthenticated"){
+    router.push("/");
+  }else{
   return (
     <div className={styles.body}>
       <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
@@ -34,11 +35,11 @@ function CharakterÜbersicht() {
           <p>+</p>
         </div>
       </div>
-      <Buttonone text={"weiter spielen"} link={"/charactercreation"} />
+      <Buttonone text={"weiter spielen"} />
     </div>
   );
-}
-// };
+};
+};
 
 export default CharakterÜbersicht;
 

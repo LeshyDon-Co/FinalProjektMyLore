@@ -3,13 +3,25 @@ import Buttonone from "@/components/buttons/buttonone/buttonone";
 // import Charactercard from "@/components/cards/charactercard/charactercard";
 import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
-function CharakterÜbersicht() {
+async function getCharData(id){
+  const res = await fetch("http://localhost:3000/apiauth/character/${id}");
+  
+  if(!res.ok){
+    throw new Error("Failed to fetch Data");
+  }
 
-  const router = useRouter();
-  const session = useSession();
+  return res.json();
+};
+
+const CharakterÜbersicht = async({params}) => {
+  
+    const chardata = await getCharData(params.id);
+    const router = useRouter();
+    const session = useSession();  
+ 
 
   if(session.status === "unauthenticated"){
     router.push("/");
@@ -20,12 +32,9 @@ function CharakterÜbersicht() {
       <div className={styles.container}>
         <div className={styles.charlist}>
           <p>Deine Charaktere:</p>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
+          {chardata?.map((char) => {
+            return<div key={char.id} className={styles.listitem}>{char.name}, {char.email}</div>
+          })}
         </div>
         <div
           className={styles.card}

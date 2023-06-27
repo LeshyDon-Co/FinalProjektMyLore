@@ -11,6 +11,7 @@ function Charactercard() {
     {
       name: "Wischi-Waschi-Bär",
       img: <Image src={WischiWaschi}
+      alt="Alternativtext"
       width={400}
       height={400}
       // fill={true}
@@ -26,6 +27,7 @@ function Charactercard() {
     {
       name: "Flammenko (comming soon)",
       img: <Image src={WischiWaschi}
+      alt="Alternativtext"
       width={400}
       height={400}
       // fill={true}
@@ -41,6 +43,7 @@ function Charactercard() {
     {
       name: "Axolilalittle  (comming soon)",
       img: <Image src={WischiWaschi}
+      alt="Alternativtext"
       width={400}
       height={400}
       // fill={true}

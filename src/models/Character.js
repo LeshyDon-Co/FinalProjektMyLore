@@ -4,9 +4,8 @@ const { Schema } = mongoose;
 
 const characterSchema = new Schema(
   {
-    charname: {
+    name: {
       type: String,
-      unique: true,
       required: true,
     },
     nation: {
@@ -17,14 +16,17 @@ const characterSchema = new Schema(
       type: Number,
       required: true,
     },
-    attributeone: {
+    health: {
         type: Number,
       },
-      attributetwo: {
+    attack: {
         type: Number,
       },
-      attributethree: {
+    defense: {
         type: Number,
+      },
+    characteristic: {
+        type: String,
       },
   },
   { timestamps: true }

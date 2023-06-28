@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Story from "@/assets/storytelling/story";
-import Buttonone from "@/components/buttons/buttonone/buttonone";
+import Buttonone from "@/components/buttons/buttonnormal/buttonnormal";
 import Introtext from "@/components/explanation/introtext/introtext";
 import React from "react";
 

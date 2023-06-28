@@ -15,6 +15,7 @@ const CharakterErstellung = () => {
   const router = useRouter();
   const session = useSession();
 
+  console.log(session);
   useEffect(() => {
     if(session.status === "unauthenticated"){
       router.push("/")
@@ -28,8 +29,9 @@ const CharakterErstellung = () => {
   const saveCharacter = async (e) => {
     e.preventDefault();
 
-    console.log("hello from CharSave");
+    console.log("speichere Charakterdaten...");
 
+    console.log(session.data.user.email);
     const name = "Waschi1";
     const nation = "Wischi-Waschi-Bär";
     const level = 1;
@@ -37,7 +39,7 @@ const CharakterErstellung = () => {
     const attack = 4;
     const defense = 10;
     const characteristic = "Ein sehr arrogantes pummeliges Bärchen";
-
+    const createdBy = session.data.user.email;
     try {
       const res = await fetch("/api/auth/character",{
         method: "POST",
@@ -52,6 +54,7 @@ const CharakterErstellung = () => {
           attack,
           defense,
           characteristic,
+          createdBy,
         })
     });
     const resdata = await res.json();

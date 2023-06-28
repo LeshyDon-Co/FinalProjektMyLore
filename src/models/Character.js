@@ -28,6 +28,9 @@ const characterSchema = new Schema(
     characteristic: {
         type: String,
       },
+    createdBy: {
+        type: String,
+      },
   },
   { timestamps: true }
 );

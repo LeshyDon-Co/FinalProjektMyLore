@@ -6,22 +6,36 @@ import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
-async function getCharData(id){
-  const res = await fetch("http://localhost:3000/apiauth/character/${id}");
+// async function getCharData(){
+//   const res = await fetch("http://localhost:3000/api/auth/character/");
   
-  if(!res.ok){
-    throw new Error("Failed to fetch Data");
-  }
+//   if(!res.ok){
+//     throw new Error("Failed to fetch Data");
+//   }
 
-  return res.json();
-};
+//   return res.json();
+// };
 
-const CharakterÜbersicht = async({params}) => {
-  
-    const chardata = await getCharData(params.id);
-    const router = useRouter();
-    const session = useSession();  
- 
+const CharakterÜbersicht = async() => {
+
+  const router = useRouter();
+  const session = useSession(); 
+  const [chardata, setChardata] = useState("")
+
+  useEffect(() => {
+    const getCharData = async () => {
+      const res = await fetch("/api/auth/character");
+
+      if(!res.ok){
+        throw new Error("Failed Datafetching")
+      }
+
+      const data = await res.json();
+      setChardata(data);
+    }
+    getCharData()
+  }, []);
+
 
   if(session.status === "unauthenticated"){
     router.push("/");

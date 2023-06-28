@@ -14,7 +14,8 @@ export const POST = async (request) => {
             health,
             attack,
             defense,
-            characteristic,      
+            characteristic,
+            createdBy,    
         } = await request.json();
 
         await connect();
@@ -26,7 +27,8 @@ export const POST = async (request) => {
             health,
             attack,
             defense,
-            characteristic
+            characteristic,
+            createdBy,
     });
     console.log(newChar);
 

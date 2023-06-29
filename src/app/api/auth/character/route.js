@@ -1,5 +1,6 @@
 import Character from "@/models/Character";
 import connect from "@/utils/db";
+import { getServerSession } from "next-auth";
 import {NextResponse} from "next/server";
 
 //-----------------POST---------------------//
@@ -44,15 +45,20 @@ export const POST = async (request) => {
 };
 
 //----------------GET----------------------//
+
 export const GET = async (request) => {
-  console.log("Hello from GET");
-  try {
-    await connect();
-    const characters = await Character.findAll();
-    return new NextResponse(JSON.stringify(characters), {status: 200});
+
+  console.log("Hello from GETCharakters");
+  const session = await getServerSession();
+  const loggedMail = session.user.email;
+
+    try {
+      await connect();
+      const characters = await Character.find({createdBy:loggedMail});
+      return new NextResponse(JSON.stringify(characters), {status: 200});
   } catch (error) {
     return new NextResponse("Database Error", {status: 500});
-  }
+  };
 };
 
 //-----------UPDATE-------------------//

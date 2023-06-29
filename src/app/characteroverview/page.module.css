@@ -30,6 +30,8 @@
 .listitem {
   border: 2px solid black;
   cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 .listitem:hover {
   border: 4px solid brown;

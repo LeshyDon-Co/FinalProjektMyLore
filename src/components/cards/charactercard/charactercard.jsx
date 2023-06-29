@@ -26,6 +26,7 @@ function Charactercard(props) {
           className={styles.wiwa}
         />
       ),
+
       text: "Wisch wasch, wasch willscht du?",
       attribute1: "HP",
       value1: "16",

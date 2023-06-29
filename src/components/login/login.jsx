@@ -20,11 +20,11 @@ const Login = () => {
     signIn("credentials", {emaillogin, passwordlogin});
 
 
-  if(session.status === 'authenticated'){
-    router?.push("/characteroverview");
-  // }else{
-    // router.push("/")
-  };
+  // if(session.status === 'authenticated'){
+  //   router?.push("/characteroverview");
+  // // }else{
+  //   // router.push("/")
+  // };
 
     // //Dateneingabe speichern
     // //An Datenbank schicken

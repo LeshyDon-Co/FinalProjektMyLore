@@ -1,0 +1,10 @@
+.introimage {
+  height: 100%;
+  width: 70%;
+
+  background-image: url(../../../assets/my-lore-clean.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

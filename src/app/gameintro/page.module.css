@@ -2,5 +2,26 @@
   width: 100vw;
   height: 100vh;
 
-  padding-top: 5vh;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+}
+
+.h2 {
+  margin: 0 auto auto auto;
+}
+
+.intro {
+  height: 60vh;
+  width: 100vw;
+  border: 2px solid red;
+  display: flex;
+  margin: auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 5vw auto 5vw;
 }

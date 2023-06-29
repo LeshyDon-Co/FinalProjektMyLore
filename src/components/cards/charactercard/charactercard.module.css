@@ -6,6 +6,7 @@
 
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
 
 .p {
@@ -14,6 +15,23 @@
 
 .card {
   /* border: 2px solid red; */
+  background: beige;
+  width: 20%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  position: relative;
+}
+
+.card:hover {
+  border: 3px solid black;
+  box-shadow: 15px 15px 30px 10px black;
+}
+
+.clickCard {
+  border: 2px solid red;
   background: beige;
   width: 20%;
   height: 100%;
@@ -38,6 +56,10 @@
 
 .wiwa {
   /* border: 2px solid turquoise; */
+  height: 120%;
+
+  width: 130%;
+
   max-width: 130%;
   position: absolute;
   left: -15%;
@@ -49,14 +71,14 @@
   /* border: 2px solid green; */
 }
 
-.footer {
+.footerchar {
   /* border: 2px solid orange; */
   display: flex;
   justify-content: space-between;
   position: absolute;
-  width: 100%;
+  width: 20vw;
   height: 15%;
-  bottom: 2%;
+  bottom: 5%;
 }
 
 .attributes {

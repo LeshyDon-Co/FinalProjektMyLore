@@ -1,5 +1,5 @@
 "use client";
-import Buttonone from "@/components/buttons/buttonone/buttonone";
+import Buttonone from "@/components/buttons/buttonnormal/buttonnormal";
 // import Charactercard from "@/components/cards/charactercard/charactercard";
 import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
@@ -7,39 +7,38 @@ import React from "react";
 import styles from "./page.module.css";
 
 function CharakterÜbersicht() {
-
   const router = useRouter();
   const session = useSession();
 
-  if(session.status === "unauthenticated"){
+  if (session.status === "unauthenticated") {
     router.push("/");
-  }else{
-  return (
-    <div className={styles.body}>
-      <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
-      <div className={styles.container}>
-        <div className={styles.charlist}>
-          <p>Deine Charaktere:</p>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
-          <div className={styles.listitem}>item</div>
+  } else {
+    return (
+      <div className={styles.body}>
+        <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
+        <div className={styles.container}>
+          <div className={styles.charlist}>
+            <p>Deine Charaktere:</p>
+            <div className={styles.listitem}>item</div>
+            <div className={styles.listitem}>item</div>
+            <div className={styles.listitem}>item</div>
+            <div className={styles.listitem}>item</div>
+            <div className={styles.listitem}>item</div>
+            <div className={styles.listitem}>item</div>
+          </div>
+          <div
+            className={styles.card}
+            onClick={() => router.push("/charactercreation")}
+          >
+            <p>Neuen Charakter erstellen</p>
+            <p>+</p>
+          </div>
         </div>
-        <div
-          className={styles.card}
-          onClick={() => router.push("/charactercreation")}
-        >
-          <p>Neuen Charakter erstellen</p>
-          <p>+</p>
-        </div>
+        <Buttonone text={"weiter spielen"} />
       </div>
-      <Buttonone text={"weiter spielen"} />
-    </div>
-  );
-};
-};
+    );
+  }
+}
 
 export default CharakterÜbersicht;
 

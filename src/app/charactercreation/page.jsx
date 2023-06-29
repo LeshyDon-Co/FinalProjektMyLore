@@ -5,9 +5,7 @@ import styles from "./page.module.css";
 import Charactercard from "@/components/cards/charactercard/charactercard";
 import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
-import Buttonone from "@/components/buttons/buttonone/buttonone";
-import Buttonnormal from "@/components/buttons/buttonnormal/buttonnormal";
-
+import Buttonone from "@/components/buttons/buttonnormal/buttonnormal";
 
 //--------------------------------------------------------//
 
@@ -95,7 +93,7 @@ if(authenticated){
         setClickedCard={setClickedCard}
       />
       <div className={styles.footer}>
-        <Buttonnormal
+        <Buttonone
           text={"<- Charakterübersicht"}
           link={"/characteroverview"}
         />
@@ -109,7 +107,7 @@ if(authenticated){
             />
           </form>
         </div>
-        <Buttonnormal text={"Beginne deine Reise ->"} todo={validate, saveCharacter} />
+        <Buttonone text={"Beginne deine Reise ->"} todo={validate, saveCharacter} />
       </div>
     </div>
   );

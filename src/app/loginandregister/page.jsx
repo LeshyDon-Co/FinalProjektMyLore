@@ -1,8 +1,8 @@
 "use client";
 
-import Register from '@/components/register/register';
-import Login from '@/components/login/login';
-import React, { useEffect, useState } from 'react';
+import Register from "@/components/register/register";
+import Login from "@/components/login/login";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 import {useSession} from "next-auth/react";
@@ -10,21 +10,19 @@ import {useRouter} from "next/navigation";
 
 //--------------------------------------------------------//
 
-
 // const LoginandRegister = async () => {
 function LoginandRegister() {
-
   const router = useRouter();
   const session = useSession();
 
-    useEffect(() => {
-    if(session.status === "authenticated"){
+  useEffect(() => {
+    if (session.status === "authenticated") {
       //Einkommentieren, wenn Overview fertig
-      // router.push("/characteroverview")
+      router.push("/characteroverview");
     }
-  }, [session])
+  }, [session]);
 
-//--------------------------------------------------------//
+  //--------------------------------------------------------//
 
   return (
     <div className={styles.body}>
@@ -44,7 +42,6 @@ function LoginandRegister() {
       </div>
     </div>
   );
-};
-
+}
 
 export default LoginandRegister;

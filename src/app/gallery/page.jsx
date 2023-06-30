@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./page.module.css";
 // import MyLore from '../assets/my-lore-schriftzug.png';
 // import Image from 'next/image';
-import Karussel from "@/components/karussel/karussel";
+import dynamic from "next/dynamic";
+const Karussel = dynamic(() => import("@/components/karussel/karussel"), { ssr: false });
 
 function Gallery() {
   return (

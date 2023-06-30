@@ -8,7 +8,7 @@
 
 .loginheading {
   text-align: center;
-  color: #e9d593;
+  color: black;
   /* margin-bottom: 6rem; */
   margin-top: 1rem;
 }
@@ -35,9 +35,12 @@
   padding: 8px;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #535252;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #535252; */
   background-color: transparent;
+
+  border: 1px solid black;
+  box-shadow: 15px 15px 30px 5px black;
 }
 
 .logininput::placeholder {
@@ -53,10 +56,11 @@
   background-color: #d4af37;
   color: #f4e9c6;
   cursor: pointer;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000;
-  box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000;
+  /* -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000; */
+  /* box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000; */
   justify-content: center;
   align-items: center;
+  box-shadow: 15px 15px 30px 10px black;
 }
 .loginbutton:hover {
   background-color: #d4af3780;

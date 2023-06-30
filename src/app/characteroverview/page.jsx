@@ -1,11 +1,17 @@
 "use client";
 import Buttonone from "@/components/buttons/buttonnormal/buttonnormal";
+import NewCharCard from "@/components/cards/newChar/newcharcard";
 // import Charactercard from "@/components/cards/charactercard/charactercard";
 import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
+
+const play = () => {
+  //Prüfen, welcher Charakter gewählt wurde, mit diesem
+  //dann auf die Spieleseite weiterleiten
+}
 
 function CharakterÜbersicht() {
 
@@ -35,59 +41,30 @@ function CharakterÜbersicht() {
   console.log(chardata);
   if (session.status === "unauthenticated") {
     router.push("/");
-
-  // }else{
-  // return (
-  //   <div className={styles.body}>
-  //   <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
-  //     <div className={styles.container}>
-  //       <div className={styles.charlist}>
-  //         <p>Deine Charaktere:</p>
-  //         {chardata?.map((char) => {
-  //           return<div key={char.id} className={styles.listitem}>{char.name}, {char.email}</div>
-  //         })}
-  //       </div>
-  //       <div
-  //         className={styles.card}
-  //         onClick={() => router.push("/charactercreation")}
-  //       >
-  //         <p>Neuen Charakter erstellen</p>
-  //         <p>+</p>
-  //         </div> 
-  //       </div>
-  //       <Buttonone text={"weiter spielen"} />
-  //     </div>
-  //   );
-  // }};
-
    } else {
     return (
-      <div className={styles.body}>
-        <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
+      <div className={styles.body}>        
+        <div className={styles.characteroverviewtitle}></div>
         <div className={styles.container}>
           <div className={styles.charlist}>
-            <p>Deine Charaktere:</p>
             <div>
               {chardata.map((char, index) => {
-                return <div className={styles.listitem} key={index}>{char.name}, {char.nation}, Level {char.level}</div>;
+                return <div 
+                          className={styles.listitem} 
+                          key={index}
+                          onClick={play}
+                          >
+                          {char.name}, {char.nation}, Level {char.level}                          
+                        </div>;
               })}
             </div>            
           </div>
-          <div
-            className={styles.card}
-            onClick={() => router.push("/charactercreation")}
-          >
-            <p>Neuen Charakter erstellen</p>
-            <p>+</p>
-          </div> 
+          <NewCharCard/>
         </div>
-        <Buttonone text={"weiter spielen"} />
+        {/* <Buttonone text={"weiter spielen"} /> */}
       </div>
     );
   }}
 
 
 export default CharakterÜbersicht;
-
-//Für jeden Charakter, den der User bereits erstellt hat, wird eine Card angezeigt
-//Immer die letze Card ist die "Neuen Charakter erstellen"- Karte -> leitet zu /charaktercreateion weiter

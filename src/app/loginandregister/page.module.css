@@ -20,7 +20,8 @@
 .registercontainer {
   margin-top: 2em;
   width: 25%;
-  border: 1px solid #535252;
+  border: 1px solid black;
+  box-shadow: 15px 15px 30px 10px black;
   height: 55%;
 
   border-radius: 10px;

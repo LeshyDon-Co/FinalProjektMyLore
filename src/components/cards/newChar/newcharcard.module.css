@@ -1,0 +1,52 @@
+.newcharcard {
+  /* border: 2px solid red; */
+
+  height: 80%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 10%;
+  /* box-shadow: 15px 15px 30px 10px black; */
+  border: 2px solid #250f34;
+  border-radius: 10px 0px 10px 0px;
+  cursor: crosshair;
+}
+
+.p {
+  font-size: 0.6rem;
+}
+
+.newcharcard:hover {
+  border: 2px solid #250f34;
+  box-shadow: 15px 15px 30px 10px black;
+}
+/* .card { */
+/* border: 2px solid red; */
+/* background: beige;
+  width: 20%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  position: relative;
+} */
+
+/* .card:hover {
+  border: 3px solid black;
+  box-shadow: 15px 15px 30px 10px black;
+} */
+
+/* .clickCard {
+  border: 2px solid red;
+  background: beige;
+  width: 20%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  position: relative;
+} */

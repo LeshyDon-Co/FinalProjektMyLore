@@ -7,44 +7,39 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
 
-// async function getCharData(){
-//   const res = await fetch("http://localhost:3000/api/auth/character/");
-  
-//   if(!res.ok){
-//     throw new Error("Failed to fetch Data");
-//   }
-
-//   return res.json();
-// };
-
 function CharakterÜbersicht() {
 
   const router = useRouter();
   const session = useSession(); 
-  const [chardata, setChardata] = useState("")
+  const [chardata, setChardata] = useState([]);
 
   useEffect(() => {
-    const getCharData = async () => {
-      const res = await fetch("/api/auth/character");
+    if(session.data){
+      const getCharData = async () => {
+        const res = await fetch("/api/auth/character", {
+          // cache: "no-store",
+        });
 
-      if(!res.ok){
-        throw new Error("Failed Datafetching")
-      }
+        if(!res.ok){
+          throw new Error("Failed Datafetching")
+        };
 
-      const data = await res.json();
-      setChardata(data);
+        const data = await res.json();        
+        setChardata(data);
+       }   
+       getCharData();
+
     }
-    getCharData()
-  }, []);
+  }, [session]);
 
-
+  console.log(chardata);
   if (session.status === "unauthenticated") {
     router.push("/");
 
   // }else{
   // return (
   //   <div className={styles.body}>
-  //     <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
+  //   <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
   //     <div className={styles.container}>
   //       <div className={styles.charlist}>
   //         <p>Deine Charaktere:</p>
@@ -58,6 +53,12 @@ function CharakterÜbersicht() {
   //       >
   //         <p>Neuen Charakter erstellen</p>
   //         <p>+</p>
+  //         </div> 
+  //       </div>
+  //       <Buttonone text={"weiter spielen"} />
+  //     </div>
+  //   );
+  // }};
 
    } else {
     return (
@@ -66,12 +67,11 @@ function CharakterÜbersicht() {
         <div className={styles.container}>
           <div className={styles.charlist}>
             <p>Deine Charaktere:</p>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
+            <div>
+              {chardata.map((char, index) => {
+                return <div className={styles.listitem} key={index}>{char.name}, {char.nation}, Level {char.level}</div>;
+              })}
+            </div>            
           </div>
           <div
             className={styles.card}

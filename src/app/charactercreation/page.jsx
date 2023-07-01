@@ -26,8 +26,10 @@ const CharakterErstellung = () => {
     }
   }, [session]);
 
-  if (authenticated) {
-    //--------------------------------------------------------//
+
+//--------------------------------------------------------//
+
+if (authenticated) {
 
     const validateAndSaveCharacter = async (e) => {
       e.preventDefault();

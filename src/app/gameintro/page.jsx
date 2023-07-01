@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import Story from "@/assets/storytelling/story";
+import Story from "@/assets/storytelling/storyconverter";
 import Buttonone from "@/components/buttons/buttonnormal/buttonnormal";
 import Introimage from "@/components/explanation/introimage/introimage";
 import Introtext from "@/components/explanation/introtext/introtext";

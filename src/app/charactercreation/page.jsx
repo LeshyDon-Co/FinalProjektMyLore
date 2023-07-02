@@ -26,7 +26,6 @@ const CharakterErstellung = () => {
     }
   }, [session]);
 
-
 //--------------------------------------------------------//
 
 if (authenticated) {
@@ -94,7 +93,13 @@ if (authenticated) {
     //   router.push("/");
     // }else{
     return (
-      <div className={styles.body}>
+      <div 
+        className={
+          clickedCard.name === "Wischi-Waschi-Bär" ? styles.bodyAxolittle :
+          clickedCard.name === "Flammengo" ? styles.bodyFlammengo :
+          clickedCard.name === "Axolittle" ? styles.bodyAxolittle :
+          styles.body}
+        >
         <div className={styles.h2}>
           <h2>Charaktererstellung</h2>
         </div>

@@ -10,6 +10,43 @@
   background-size: cover;
 }
 
+.bodyWiwa {
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/backgrounds/waschistadt1.jpg");
+  /* background-repeat: no-repeat; */
+  /* background-repeat: repeat; */
+  background-size: contain;
+}
+
+.bodyFlammengo {
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/backgrounds/Flammengo1.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+}
+
+.bodyAxolittle {
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/backgrounds/waschistadt1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .h2 {
   margin: 0 auto auto auto;
 }

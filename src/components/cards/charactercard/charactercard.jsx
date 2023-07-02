@@ -101,7 +101,7 @@ function Charactercard(props) {
 
   const [isClicked, setIsClicked] = useState(false);
   function getCharacter(item) {
-    console.log(item);
+    console.log("hallo", item);
     setClickedCard(item);
     setIsClicked(true);
 

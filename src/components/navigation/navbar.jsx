@@ -14,7 +14,7 @@ import { titleFont } from '../../app/fonts'
 const links = [
   {
     id: 1,
-    title: "Gameinfo",
+    title: "MyLore-Wiki",
     url: "/gameinfo",
   },
   {
@@ -22,11 +22,11 @@ const links = [
     title: "Gallery",
     url: "/gallery",
   },
-  {
-    id: 3,
-    title: "About",
-    url: "/about",
-  },
+  // {
+  //   id: 3,
+  //   title: "About",
+  //   url: "/about",
+  // },
 ];
 
 //--------------------------------------------------------------------//

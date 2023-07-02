@@ -31,15 +31,27 @@
 }
 
 .clickCard {
-  border: 2px solid red;
   background: beige;
   width: 20%;
   height: 100%;
   margin: auto;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px black;
   z-index: 9999;
   position: relative;
+  -webkit-animation: clickCard 1s ease-in-out infinite alternate;
+  -moz-animation: clickCard 2s ease-in-out infinite alternate;
+  animation: clickCard 2s ease-in-out infinite alternate;
+}
+@keyframes clickCard {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #d4af37, 0 0 40px #d4af37,
+      0 0 50px #d4af37, 0 0 60px #d4af37, 0 0 70px #d4af37;
+  }
+
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #947b27, 0 0 40px #947b27,
+      0 0 50px #947b27, 0 0 60px #947b27, 0 0 70px #947b27, 0 0 80px #947b27;
+  }
 }
 
 .imagecontainer {
@@ -48,10 +60,10 @@
   width: 100%;
   height: 50%;
   margin-bottom: 10%;
-  /* background-color: yellow; */
-  background-image: url(../../../assets/my-lore-clean.jpg);
+  background-color: #46826b;
+  /* background-image: url(../../../assets/my-lore-clean.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .wiwa {

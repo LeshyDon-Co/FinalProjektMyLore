@@ -49,6 +49,7 @@ if (authenticated) {
         const stadium = clickedCard.stadium;
         const characteristic = clickedCard.characteristic;
         const createdBy = session.data.user.email;
+
         try {
           const res = await fetch("/api/auth/character", {
             method: "POST",

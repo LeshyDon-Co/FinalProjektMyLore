@@ -5,16 +5,19 @@
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
-}
-
-.h2 {
-  margin: 0 auto auto auto;
+  /* align-items: center;
+  justify-content: center; */
+  background-image: url("../../assets/backgrounds/waschistadt1.jpg"),
+    url("../../assets/backgrounds/Flammengo1.jpg"),
+    url("../../assets/backgrounds/axolittle2.jpg");
+  background-position: left top, center top, right top;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* background-size: 33.33%, 33.33%, 33.33%; */
+  background-size: 33.33% 100%, 33.33% 100%, 33.33% 100%;
 }
 
 .footer {
-  /* border: 2px solid red; */
-  right: 0;
   display: flex;
   justify-content: space-between;
-  margin: auto 5vw auto 5vw;
+  margin: 2em 2em;
 }

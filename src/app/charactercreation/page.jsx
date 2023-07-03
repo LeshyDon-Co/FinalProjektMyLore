@@ -93,10 +93,19 @@ if (authenticated) {
     //   router.push("/");
     // }else{
     return (
-      <div className={styles.body}>
-        <div className={styles.h2}>
-          <h2>Charaktererstellung</h2>
-        </div>
+        // <div className={styles.mainbody}>
+        //  <div className={styles.wiwabody}>
+        //  </div>
+        //  <div className={styles.flammengobody}>2</div>
+        //  <div className={styles.axolittlebody}>3</div>
+        //  </div>
+        <div 
+        className={
+          // clickedCard.name === "Wischi-Waschi-Bär" ? styles.wiwabody :
+          // clickedCard.name === "Flammengo" ? styles.flammengobody :
+          // clickedCard.name === "Axolittle" ? styles.axolittlebody :
+          styles.body}
+        >
         <Charactercard
           clickedCard={clickedCard}
           setClickedCard={setClickedCard}

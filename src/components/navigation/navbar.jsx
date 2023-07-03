@@ -22,11 +22,11 @@ const links = [
     title: "Gallery",
     url: "/gallery",
   },
-  {
-    id: 3,
-    title: "About",
-    url: "/about",
-  },
+  // {
+  //   id: 3,
+  //   title: "About",
+  //   url: "/about",
+  // },
 ];
 
 //--------------------------------------------------------------------//

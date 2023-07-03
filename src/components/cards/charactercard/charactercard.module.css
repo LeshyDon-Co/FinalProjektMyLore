@@ -5,6 +5,7 @@
   width: 100vw;
 
   display: flex;
+  padding-top: 2rem;
   justify-content: space-around;
   position: relative;
 }
@@ -14,15 +15,15 @@
 }
 
 .card {
-  /* border: 2px solid red; */
-  background: beige;
-  width: 20%;
+  border: 2px solid black;
+  backdrop-filter: blur(5px);
+  width: 15%;
   height: 100%;
-  margin: auto;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px black;
-  z-index: 9999;
-  position: relative;
+  box-shadow: 10px 10px 30px 10px black;
+  /* z-index: 9999; */
+  /* position: relative; */
+  color: white;
 }
 
 .card:hover {
@@ -31,52 +32,56 @@
 }
 
 .clickCard {
-  border: 2px solid red;
-  background: beige;
-  width: 20%;
+  border: 2px solid black;
+  width: 15%;
   height: 100%;
-  margin: auto;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: 10px 10px 30px 10px black;
   z-index: 9999;
   position: relative;
+  color: white;
+  -webkit-animation: clickCard 1s ease-in-out infinite alternate;
+  -moz-animation: clickCard 2s ease-in-out infinite alternate;
+  animation: clickCard 2s ease-in-out infinite alternate;
+}
+@keyframes clickCard {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff,
+      0 0 300px #fff, 0 0 35px #fff, 0 0 40px #fff;
+  }
+
+  to {
+    box-shadow: 0 0 10px grey, 0 0 20px grey, 0 0 30px grey, 0 0 40px #d4af37,
+      0 0 50px grey, 0 0 60px grey, 0 0 70px grey;
+  }
 }
 
 .imagecontainer {
-  /* border: 2px solid blue; */
   position: relative;
   width: 100%;
   height: 50%;
   margin-bottom: 10%;
-  /* background-color: yellow; */
-  background-image: url(../../../assets/my-lore-clean.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .wiwa {
-  /* border: 2px solid turquoise; */
   height: 120%;
-
   width: 130%;
-
   max-width: 130%;
   position: absolute;
   left: -15%;
   top: -10%;
 }
+
 .main {
   position: relative;
-  /* top: -5%; */
   /* border: 2px solid green; */
 }
 
 .footerchar {
   /* border: 2px solid orange; */
   display: flex;
-  justify-content: space-between;
   position: absolute;
-  width: 20vw;
+  width: 100%;
   height: 15%;
   bottom: 5%;
 }

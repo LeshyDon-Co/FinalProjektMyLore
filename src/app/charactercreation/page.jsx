@@ -128,6 +128,7 @@ if (authenticated) {
           <Buttonone
             text={"Beginne deine Reise ->"}
             todo={validateAndSaveCharacter}
+            className={styles.reisebutton}
           />
         </div>
       </div>

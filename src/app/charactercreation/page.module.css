@@ -19,5 +19,8 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  margin: 2em 2em;
+  margin-top: auto;
+  margin-bottom: 2em;
+  margin-left: 10%;
+  margin-right: 10%;
 }

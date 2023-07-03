@@ -2,16 +2,16 @@
   width: 100vw;
   height: 100vh;
 
-  padding-top: 5vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
 }
 
 .h2 {
-  margin: 5vh auto auto auto;
+  margin: 0 auto auto auto;
 }
 
-.buttons {
+.footer {
   /* border: 2px solid red; */
   right: 0;
   display: flex;

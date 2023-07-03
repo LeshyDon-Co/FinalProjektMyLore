@@ -1,9 +1,9 @@
-"use client";
+// "use client";
 import MyLore from '../assets/my-lore-schriftzug.png';
 import Image from 'next/image';
 import styles from "./page.module.css";
-import { signOut, useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+// import { signOut, useSession } from 'next-auth/react';
+// import { useRouter } from 'next/navigation';
 
 
 export default function Home() {

@@ -12,8 +12,6 @@
 }
 
 .selected {
-  /* border: 1px solid #4a1e68;
-  box-shadow: 0 0 10px #4a1e68; */
   animation: shimmer 2s ease-in-out infinite alternate;
 }
 
@@ -29,5 +27,21 @@
   to {
     border-color: #4a1e68;
     box-shadow: 0 10px 10px #4a1e68;
+  }
+}
+
+/* Media Queries für responsive Gestaltung */
+@media screen and (max-width: 600px) {
+  .listitem {
+    padding: 0.3rem;
+    margin: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .listitem {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 0.8rem;
   }
 }

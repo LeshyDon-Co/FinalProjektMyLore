@@ -62,8 +62,12 @@ function CharakterÜbersicht() {
                   isSelected={selectedItemIndex === index}
                   />
               })}
-            </div>            
+            </div>          
           </div>
+          <div className={styles.buttoncontainer}>
+            <button className={styles.playbutton}>spielen</button>
+            <button className={styles.deletebutton}>löschen</button>
+           </div>
           <div
             className={styles.card}
             onClick={() => router.push("/charactercreation")}
@@ -72,7 +76,7 @@ function CharakterÜbersicht() {
             <p>+</p>
           </div> 
         </div>
-        <Buttonone text={"weiter spielen"} />
+
       </div>
     );
   }}

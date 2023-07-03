@@ -1,5 +1,6 @@
 "use client";
 import Buttonone from "@/components/buttons/buttonnormal/buttonnormal";
+import Listitem from "@/components/Listitem/listitem";
 // import Charactercard from "@/components/cards/charactercard/charactercard";
 import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
@@ -12,6 +13,12 @@ function CharakterÜbersicht() {
   const router = useRouter();
   const session = useSession(); 
   const [chardata, setChardata] = useState([]);
+  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+
+  const handleItemClick = (index) => {
+    setSelectedItemIndex(index);
+    console.log(selectedItemIndex);
+  };
 
   useEffect(() => {
     if(session.data){
@@ -36,43 +43,31 @@ function CharakterÜbersicht() {
   if (session.status === "unauthenticated") {
     router.push("/");
 
-  // }else{
-  // return (
-  //   <div className={styles.body}>
-  //   <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
-  //     <div className={styles.container}>
-  //       <div className={styles.charlist}>
-  //         <p>Deine Charaktere:</p>
-  //         {chardata?.map((char) => {
-  //           return<div key={char.id} className={styles.listitem}>{char.name}, {char.email}</div>
-  //         })}
-  //       </div>
-  //       <div
-  //         className={styles.card}
-  //         onClick={() => router.push("/charactercreation")}
-  //       >
-  //         <p>Neuen Charakter erstellen</p>
-  //         <p>+</p>
-  //         </div> 
-  //       </div>
-  //       <Buttonone text={"weiter spielen"} />
-  //     </div>
-  //   );
-  // }};
-
    } else {
     return (
       <div className={styles.body}>
-        <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
+        {/* <h1 className={styles.characteroverviewtitle}></h1> */}
         <div className={styles.container}>
           <div className={styles.charlist}>
             <p>Deine Charaktere:</p>
             <div>
               {chardata.map((char, index) => {
-                return <div className={styles.listitem} key={index}>{char.name}, {char.nation}, Level {char.level}</div>;
+                return <Listitem 
+                  key={index}
+                  index={index}
+                  name={char.name}
+                  nation={char.nation}
+                  level={char.level}
+                  onItemClick={handleItemClick}
+                  isSelected={selectedItemIndex === index}
+                  />
               })}
-            </div>            
+            </div>          
           </div>
+          <div className={styles.buttoncontainer}>
+            <button className={styles.playbutton}>spielen</button>
+            <button className={styles.deletebutton}>löschen</button>
+           </div>
           <div
             className={styles.card}
             onClick={() => router.push("/charactercreation")}
@@ -81,7 +76,7 @@ function CharakterÜbersicht() {
             <p>+</p>
           </div> 
         </div>
-        <Buttonone text={"weiter spielen"} />
+
       </div>
     );
   }}

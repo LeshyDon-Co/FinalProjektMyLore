@@ -16,6 +16,7 @@ const CharakterErstellung = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [characterName, setCharacterName] = useState("");
   const [clickedCard, setClickedCard] = useState({name: ""});
+  const [driveData, setDriveData] = useState({});
 
   console.log(session);
   useEffect(() => {
@@ -26,11 +27,9 @@ const CharakterErstellung = () => {
     }
   }, [session]);
 
+  //--------------------------------------------------------//
 
-//--------------------------------------------------------//
-
-if (authenticated) {
-
+  if (authenticated) {
     const validateAndSaveCharacter = async (e) => {
       e.preventDefault();
 
@@ -68,15 +67,26 @@ if (authenticated) {
             }),
           });
           const resdata = await res.json();
-          console.log(resdata);
+          setDriveData(resdata);
+          localStorage.setItem("userdaten", JSON.stringify(driveData));
+          console.log("resdata", resdata);
           res.status === 201;
         } catch (error) {
           console.log(error);
         }
+        console.log("driveData", driveData);
 
         router.push("/gameintro");
+
+        // router.push({
+        //   pathname: "/gameintro",
+        // query: {name: clickedCard.name},
+        // });
+        // localStorage.setItem("userdaten", JSON.stringify(driveData));
       }
     };
+    localStorage.setItem("userdaten", JSON.stringify(driveData));
+    console.log("test1tests", driveData);
 
     //--------------------------------------------------------//
 

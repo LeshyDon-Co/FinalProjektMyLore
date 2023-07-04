@@ -6,7 +6,6 @@ import {NextResponse} from "next/server";
 //-----------------POST---------------------//
 
 export const POST = async (request) => {
-  console.log(request.body);
 
   const {
     name,
@@ -48,7 +47,6 @@ export const POST = async (request) => {
 
 export const GET = async (request) => {
 
-  console.log("Hello from GETCharakters");
   const session = await getServerSession();
   const loggedMail = session.user.email;
 
@@ -64,3 +62,4 @@ export const GET = async (request) => {
 //-----------UPDATE-------------------//
 
 //-----------DELETE-------------------//
+

@@ -1,17 +1,20 @@
 import connect from "@/utils/db";
 import { NextResponse } from "next/server";
+import { ObjectId } from 'bson';
+import Character from "@/models/Character";
 
+//----------------------------------------------------------------------------------------//
 
-export const GET = async (request, {params}) => {
-    const {email} = params;
+export const DELETE = async (request, {params}) => {
+  const  {id} = params;
 
-    try {
-        await connect()
+  try {
+    await connect();
 
-        const chars = await Character.findBy????(email);
+    await Character.findByIdAndDelete(id);
 
-        return new NextResponse(JSON.stringify(chars), {status: 200});
-    } catch (error) {
-        return new NextResponse("DAtabase Error", {status: 500});
-    };
-};
+    return new NextResponse("Charakter has been deleted", {status: 200});
+  } catch (error) {
+    return new NextResponse("Database Error in DELETE", {status: 500});
+  }
+}

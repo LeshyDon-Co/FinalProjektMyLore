@@ -3,8 +3,8 @@ import React from "react";
 import styles from "./karussel.module.css";
 import Image from "next/image";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel, initTE } from "tw-elements";
-import { useEffect } from "react";
+
+//import { useEffect } from "react";
 
 // Bilder
 import galleryLogo from "../../assets/letterings/gallery-schriftzug.png";
@@ -16,9 +16,7 @@ import bild5 from "../../assets/gallery/screenshots/Bildschirmfoto vom 2023-06-1
 
 function Karussel() {
   // Initialisierung für ES Users
-  useEffect(() => {
-    initTE({ Carousel });
-  }, []);
+
   return (
     <div className={`${styles.body} flex items-center justify-center`}>
       <div className="max-w-4xl mx-auto p-8 bg-white rounded shadow-lg">

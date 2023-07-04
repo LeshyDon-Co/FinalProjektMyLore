@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.13",
-    "autoprefixer": "10.4.14",
     "bcryptjs": "^2.4.3",
     "bson": "^5.3.0",
     "eslint": "8.43.0",
@@ -22,8 +21,15 @@
     "next-images": "^1.8.5",
     "path": "^0.12.7",
     "postcss": "8.4.24",
+
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.2"
+    "react-responsive-carousel": "^3.2.23",
+    "tw-elements": "^1.0.0-beta2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
   }
 }

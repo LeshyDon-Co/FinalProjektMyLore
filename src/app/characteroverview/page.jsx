@@ -40,6 +40,12 @@ const getCharData = async () => {
 
 //----------------------------------------------------------------------------------------//
 
+  const playWithCharacter = async (id) => {
+    //was mache ich mit der ID?
+    router.push("/game");
+  }
+//----------------------------------------------------------------------------------------//
+
   const deleteCharacter = async (id) => {
 
     try {
@@ -89,7 +95,7 @@ const getCharData = async () => {
             </div>          
           </div>
           <div className={styles.buttoncontainer}>
-            <button className={styles.playbutton}>spielen</button>
+            <button className={styles.playbutton} onClick={() => playWithCharacter(chardata[selectedItemIndex]._id)}>spielen</button>
             <button className={styles.deletebutton} onClick={() => deleteCharacter(chardata[selectedItemIndex]._id)}>löschen</button>
            </div>
           <div

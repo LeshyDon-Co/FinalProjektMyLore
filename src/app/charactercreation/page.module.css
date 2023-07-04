@@ -1,3 +1,26 @@
-.container {
-  background-color: tomato;
+.body {
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  background-image: url("../../assets/backgrounds/waschistadt1.jpg"),
+    url("../../assets/backgrounds/Flammengo1.jpg"),
+    url("../../assets/backgrounds/axolittle2.jpg");
+  background-position: left top, center top, right top;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* background-size: 33.33%, 33.33%, 33.33%; */
+  background-size: 33.33% 100%, 33.33% 100%, 33.33% 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 2em;
+  margin-left: 10%;
+  margin-right: 10%;
 }

@@ -1,3 +1,8 @@
+.body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .maincontainer {
   background-image: url(../assets/my-lore-clean.jpg);
   background-repeat: no-repeat;
@@ -7,4 +12,12 @@
   height: 100vh;
 
   font-size: 1.5em;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.maincontainer img {
+  padding-top: 10%;
+  margin: 0 auto;
 }

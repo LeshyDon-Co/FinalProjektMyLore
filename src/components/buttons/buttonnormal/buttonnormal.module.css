@@ -1,0 +1,11 @@
+.buttonone {
+  border: 2px solid red;
+  left: 0;
+  display: flex;
+}
+
+.buttonone:hover {
+  border: 2px solid brown;
+}
+
+/* Hier wird Claudi sich austoben :D  */

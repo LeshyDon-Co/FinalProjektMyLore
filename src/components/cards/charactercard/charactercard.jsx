@@ -15,6 +15,7 @@ function Charactercard(props) {
   const list = [
     {
       name: "Wischi-Waschi-Bär",
+      nation: "Wischi-Waschi-Bär",
       img: (
         <Image
           priority={true}
@@ -27,18 +28,19 @@ function Charactercard(props) {
         />
       ),
 
-      text: "Wisch wasch, wasch willscht du?",
+      text: "Wasch willscht du?",
       attribute1: "HP",
       value1: "16",
       attribute2: "ATK",
       value2: "4",
       attribute3: "DEF",
       value3: "10",
-      grad: "extrem ",
-      special: "arrogant",
+      stadium: "extrem ",
+      characteristic: "arrogant",
     },
     {
       name: "Flammengo",
+      nation: "Flammengo",
       img: (
         <Image
           priority={true}
@@ -50,18 +52,19 @@ function Charactercard(props) {
           className={styles.wiwa}
         />
       ),
-      text: "Ich habe Hunger, gib mir Lappen!",
+      text: "Ach Mensch, bin ich heiß!",
       attribute1: "HP",
       value1: "20",
       attribute2: "ATK",
       value2: "5",
       attribute3: "DEF",
       value3: "5",
-      grad: "extrem ",
-      special: "gierig",
+      stadium: "extrem ",
+      characteristic: "gierig",
     },
     {
-      name: "Axolilalittle",
+      name: "Axolittle",
+      nation: "Axolittle",
       img: (
         <Image
           priority={true}
@@ -80,8 +83,8 @@ function Charactercard(props) {
       value2: "9",
       attribute3: "DEF",
       value3: "6",
-      grad: "extrem ",
-      special: "cholerisch",
+      stadium: "extrem ",
+      characteristic: "cholerisch",
     },
     // {
     //   name: "",

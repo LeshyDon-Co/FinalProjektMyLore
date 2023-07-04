@@ -1,5 +1,6 @@
 "use client";
 import Buttonone from "@/components/buttons/buttonnormal/buttonnormal";
+import Listitem from "@/components/Listitem/listitem";
 // import Charactercard from "@/components/cards/charactercard/charactercard";
 import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
@@ -7,72 +8,66 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
 
-// async function getCharData(){
-//   const res = await fetch("http://localhost:3000/api/auth/character/");
-  
-//   if(!res.ok){
-//     throw new Error("Failed to fetch Data");
-//   }
-
-//   return res.json();
-// };
-
 function CharakterÜbersicht() {
 
   const router = useRouter();
   const session = useSession(); 
-  const [chardata, setChardata] = useState("")
+  const [chardata, setChardata] = useState([]);
+  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+
+  const handleItemClick = (index) => {
+    setSelectedItemIndex(index);
+    console.log(selectedItemIndex);
+  };
 
   useEffect(() => {
-    const getCharData = async () => {
-      const res = await fetch("/api/auth/character");
+    if(session.data){
+      const getCharData = async () => {
+        const res = await fetch("/api/auth/character", {
+          // cache: "no-store",
+        });
 
-      if(!res.ok){
-        throw new Error("Failed Datafetching")
-      }
+        if(!res.ok){
+          throw new Error("Failed Datafetching")
+        };
 
-      const data = await res.json();
-      setChardata(data);
+        const data = await res.json();        
+        setChardata(data);
+       }   
+       getCharData();
+
     }
-    getCharData()
-  }, []);
+  }, [session]);
 
-
+  console.log(chardata);
   if (session.status === "unauthenticated") {
     router.push("/");
-
-  // }else{
-  // return (
-  //   <div className={styles.body}>
-  //     <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
-  //     <div className={styles.container}>
-  //       <div className={styles.charlist}>
-  //         <p>Deine Charaktere:</p>
-  //         {chardata?.map((char) => {
-  //           return<div key={char.id} className={styles.listitem}>{char.name}, {char.email}</div>
-  //         })}
-  //       </div>
-  //       <div
-  //         className={styles.card}
-  //         onClick={() => router.push("/charactercreation")}
-  //       >
-  //         <p>Neuen Charakter erstellen</p>
-  //         <p>+</p>
 
    } else {
     return (
       <div className={styles.body}>
-        <h1 className={styles.characteroverviewtitle}>Charakterübersicht</h1>
+        {/* <h1 className={styles.characteroverviewtitle}></h1> */}
         <div className={styles.container}>
           <div className={styles.charlist}>
             <p>Deine Charaktere:</p>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
-            <div className={styles.listitem}>item</div>
+            <div>
+              {chardata.map((char, index) => {
+                return <Listitem 
+                  key={index}
+                  index={index}
+                  name={char.name}
+                  nation={char.nation}
+                  level={char.level}
+                  onItemClick={handleItemClick}
+                  isSelected={selectedItemIndex === index}
+                  />
+              })}
+            </div>          
           </div>
+          <div className={styles.buttoncontainer}>
+            <button className={styles.playbutton}>spielen</button>
+            <button className={styles.deletebutton}>löschen</button>
+           </div>
           <div
             className={styles.card}
             onClick={() => router.push("/charactercreation")}
@@ -81,7 +76,7 @@ function CharakterÜbersicht() {
             <p>+</p>
           </div> 
         </div>
-        <Buttonone text={"weiter spielen"} />
+
       </div>
     );
   }}

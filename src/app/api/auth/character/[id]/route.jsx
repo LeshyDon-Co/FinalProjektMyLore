@@ -3,12 +3,12 @@ import { NextResponse } from "next/server";
 
 
 export const GET = async (request, {params}) => {
-    const {id} = params;
+    const {email} = params;
 
     try {
         await connect()
 
-        const chars = await Character.findByID(id);
+        const chars = await Character.findBy????(email);
 
         return new NextResponse(JSON.stringify(chars), {status: 200});
     } catch (error) {

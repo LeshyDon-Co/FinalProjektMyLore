@@ -7,39 +7,69 @@ import {useRouter} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
+//----------------------------------------------------------------------------------------//
 
-function CharakterÜbersicht() {
+const CharakterÜbersicht = () => {
 
   const router = useRouter();
   const session = useSession(); 
   const [chardata, setChardata] = useState([]);
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
 
-  const handleItemClick = (index) => {
-    setSelectedItemIndex(index);
-    console.log(selectedItemIndex);
+//----------------------------------------------------------------------------------------//
+
+const getCharData = async () => {
+  const res = await fetch("/api/auth/character", {
+    // cache: "no-store",
+  });
+
+  if(!res.ok){
+    throw new Error("Failed Datafetching")
   };
 
+  const data = await res.json();        
+  setChardata(data);
+ } 
+
+ //----------------------------------------------------------------------------------------//
+
+  const handleItemClick = (index) => {
+    setSelectedItemIndex(index);
+    console.log("selected Char:", selectedItemIndex);
+  };
+
+//----------------------------------------------------------------------------------------//
+
+  const playWithCharacter = async (id) => {
+    //was mache ich mit der ID?
+    router.push("/game");
+  }
+//----------------------------------------------------------------------------------------//
+
+  const deleteCharacter = async (id) => {
+
+    try {
+      await fetch(`/api/auth/character/${id}`, {
+        method: "DELETE",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    getCharData();
+ };
+
+//----------------------------------------------------------------------------------------//
+
   useEffect(() => {
-    if(session.data){
-      const getCharData = async () => {
-        const res = await fetch("/api/auth/character", {
-          // cache: "no-store",
-        });
-
-        if(!res.ok){
-          throw new Error("Failed Datafetching")
-        };
-
-        const data = await res.json();        
-        setChardata(data);
-       }   
+    if(session.data){  
        getCharData();
-
     }
   }, [session]);
 
+//----------------------------------------------------------------------------------------//
+
   console.log(chardata);
+
   if (session.status === "unauthenticated") {
     router.push("/");
 
@@ -65,8 +95,8 @@ function CharakterÜbersicht() {
             </div>          
           </div>
           <div className={styles.buttoncontainer}>
-            <button className={styles.playbutton}>spielen</button>
-            <button className={styles.deletebutton}>löschen</button>
+            <button className={styles.playbutton} onClick={() => playWithCharacter(chardata[selectedItemIndex]._id)}>spielen</button>
+            <button className={styles.deletebutton} onClick={() => deleteCharacter(chardata[selectedItemIndex]._id)}>löschen</button>
            </div>
           <div
             className={styles.card}

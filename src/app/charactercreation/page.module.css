@@ -24,3 +24,11 @@
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.input {
+  backdrop-filter: blur(5px);
+  background-color: transparent;
+  border: 1px solid black;
+  text-align: center;
+  color: white;
+}

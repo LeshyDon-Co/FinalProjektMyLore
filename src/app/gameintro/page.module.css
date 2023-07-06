@@ -5,28 +5,34 @@
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
-  /* position: relative; */
-}
-
-.h2 {
-  margin: 0 auto auto auto;
+  background-image: url(../../assets/my-lore-clean.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
 }
 
 .intro {
-  height: 60vh;
-  width: 100vw;
-  /* border: 2px solid red; */
+  top: 10%;
+  height: 70vh;
+  width: 95vw;
   display: flex;
-  margin: auto;
-}
-
-.storyline {
-  width: auto;
-  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  margin: auto 5vw auto 5vw;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
 }

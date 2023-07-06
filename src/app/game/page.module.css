@@ -2,9 +2,66 @@
   width: 100vw;
   height: 100vh;
 
-  padding-top: 5vh;
+  padding-top: 8vh;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.container {
-  background-color: blue;
+/* .questAndName {
+  border: 2px solid blue;
+
+  width: ;
+  height: 85vh;
+  
+  padding: auto;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;  */
+.quest {
+  border: 2px solid yellow;
+
+  height: 85vh;
+  width: 25vw;
+  margin: auto auto auto 2vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: auto; */
+}
+
+.locationAndChar {
+  border: 2px solid green;
+
+  width: 70vw;
+  height: 85vh;
+  margin: auto 2vw auto auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.characterAll {
+  border: 2px solid orange;
+
+  height: 60%;
+  width: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.pictureChar {
+  border: 2px solid black;
+  width: 50%;
+}
+
+.characterStats {
+  border: 2px solid pink;
+  width: 50%;
 }

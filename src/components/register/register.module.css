@@ -8,7 +8,7 @@
 
 .loginheading {
   text-align: center;
-  color: #e9d593;
+  color: white;
   /* margin-bottom: 6rem; */
   margin-top: 1rem;
 }
@@ -35,7 +35,7 @@
   padding: 8px;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 5px 30px 10px black;
   border: 1px solid #535252;
   background-color: transparent;
 }

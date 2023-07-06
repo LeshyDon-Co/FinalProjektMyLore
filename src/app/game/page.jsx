@@ -9,19 +9,20 @@ import CharacterStats from "@/components/overview/character/characterstats/chara
 function Game() {
   return (
     <div className={styles.body}>
-      <div className={styles.questAndName}>
-        <NameOverview />
-        <div className={styles.quest}>
-          <QuestListOverview />
-        </div>
+      <NameOverview />
+      {/* <div className={styles.questAndName}> */}
+      {/* <NameOverview /> */}
+      <div className={styles.quest}>
+        <QuestListOverview />
       </div>
+      {/* </div> */}
       <div className={styles.locationAndChar}>
         <Location />
         <div className={styles.characterAll}>
           <div className={styles.pictureChar}>
             Hier kommt das Bild vom Char rein
           </div>
-          <CharacterStats className={styles.characterStats} />
+          <CharacterStats />
         </div>
       </div>
     </div>

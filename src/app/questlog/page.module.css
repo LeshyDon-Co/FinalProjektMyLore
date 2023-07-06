@@ -7,4 +7,9 @@
 
 .container {
   background-color: mediumaquamarine;
+  border: 2px solid red;
+
+  width: 90%;
+  height: 80%;
+  margin: 5% auto;
 }

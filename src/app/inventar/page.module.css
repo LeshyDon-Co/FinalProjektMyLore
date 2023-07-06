@@ -2,9 +2,87 @@
   width: 100vw;
   height: 100vh;
 
-  padding-top: 10vh;
+  padding-top: 8vh;
 }
 
 .container {
-  background-color: khaki;
+  border: 2px solid red;
+  /* background-color: khaki; */
+
+  height: 90vh;
+  width: 95%;
+  padding-top: 10vh;
+  margin: auto 2vw;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills {
+  border: 2px solid blue;
+
+  height: 85%;
+  width: 25%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* padding: auto; */
+}
+
+.char {
+  border: 2px solid green;
+
+  height: 50vh;
+  width: 50vh;
+
+  display: flex;
+  /* flex-direction: column; */
+  text-align: center;
+  /* justify-content: center; */
+  align-items: end;
+}
+
+.itemVertical {
+  border: 2px solid white;
+
+  height: 100%;
+
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+}
+
+.itemHorizontal {
+  border: 2px solid orange;
+
+  width: 100%;
+  /* height: ; */
+  display: flex;
+  justify-content: end;
+  align-items: end;
+
+  position: relative;
+  bottom: 0;
+  /* flex-direction: row; */
+}
+
+.inventar {
+  border: 2px solid yellow;
+
+  height: 85%;
+  width: 25%;
+
+  display: flex;
+  text-align: center;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.itemholder {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
 }

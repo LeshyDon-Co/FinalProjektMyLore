@@ -1,0 +1,8 @@
+.bodyComponent {
+  border: 2px solid red;
+  height: auto;
+  width: auto;
+
+  font-size: 0.8rem;
+  text-align: center;
+}

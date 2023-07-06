@@ -32,7 +32,7 @@ function LoginandRegister() {
         </div>
         <div className={styles.p}>
           <p>
-            Hier kommen die Statusmeldungen über Registrierung und Validierung
+            Hier kommen die Statusmeldungen von Registrierung und Validierung
             rein.
           </p>
         </div>

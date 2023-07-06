@@ -1,0 +1,11 @@
+.bodyComponent {
+  border: 2px solid blue;
+  height: 100%;
+  width: 25vw;
+
+  padding-top: 10vh;
+}
+
+.listItem {
+  margin-top: 10vh;
+}

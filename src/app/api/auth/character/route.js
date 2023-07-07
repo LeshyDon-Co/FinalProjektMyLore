@@ -16,6 +16,11 @@ export const POST = async (request) => {
     defense,
     stadium,
     characteristic,
+    isSelected,
+    picture,
+    quests,
+    location,
+    items,
     createdBy,
   } = await request.json();
 
@@ -30,6 +35,11 @@ export const POST = async (request) => {
     defense,
     stadium,
     characteristic,
+    isSelected,
+    picture,
+    quests,
+    location,
+    items,
     createdBy,
   });
   console.log(newChar);

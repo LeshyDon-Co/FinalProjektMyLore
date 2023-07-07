@@ -7,8 +7,8 @@ const storySchema = new Schema({
     type: String,
     required: true,
   },
-  story: {
-    type: Array,
+  text: {
+    type: String,
     required: true,
   },
 });

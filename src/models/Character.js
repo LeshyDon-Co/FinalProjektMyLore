@@ -31,9 +31,25 @@ const characterSchema = new Schema(
     characteristic: {
       type: String,
     },
+    isSelected: {
+      type: Boolean,
+    },
+    picture: {
+      type: String,
+    },
+    quests: {
+      type: Array,
+    },
+    location: {
+      type: String,
+    },
+    items: {
+      type: Array,
+    },
     createdBy: {
       type: String,
     },
+
   },
   {timestamps: true}
 );

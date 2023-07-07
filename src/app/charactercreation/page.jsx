@@ -47,6 +47,9 @@ const CharakterErstellung = () => {
         const defense = clickedCard.value3;
         const stadium = clickedCard.stadium;
         const characteristic = clickedCard.characteristic;
+        const location = "Hauptstadtname";
+        const picture = clickedCard.img;
+        const isSelected = true;
         const createdBy = session.data.user.email;
         try {
           const res = await fetch("/api/auth/character", {
@@ -63,6 +66,8 @@ const CharakterErstellung = () => {
               defense,
               stadium,
               characteristic,
+              location,
+              isSelected,
               createdBy,
             }),
           });

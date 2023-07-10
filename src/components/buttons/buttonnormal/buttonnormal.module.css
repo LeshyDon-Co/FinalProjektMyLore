@@ -1,11 +1,21 @@
 .buttonone {
-  border: 2px solid red;
   left: 0;
   display: flex;
+  padding: 10px;
+
+  color: #493D13;
+
+  background-image: url(../../../assets/buttons/golden-button-cornered.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100% ;
+
+  transition: 0.2s;
 }
 
 .buttonone:hover {
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
+  transform: scale(1.1);
+
 }
 
 /* Hier wird Claudi sich austoben :D  */

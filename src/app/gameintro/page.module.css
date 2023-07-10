@@ -5,6 +5,7 @@
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
+
   background-image: url(../../assets/my-lore-clean.jpg);
   background-position: center;
   background-size: cover;
@@ -28,6 +29,9 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
 
 .footer {

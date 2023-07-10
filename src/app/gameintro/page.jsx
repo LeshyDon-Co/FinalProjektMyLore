@@ -54,7 +54,7 @@ function GameIntro() {
       </div>
       <div className={styles.footer}>
           <Buttonone
-            text={"Beginne mit der Rettung der Welt ->"}
+            text={"Beginne mit der Rettung der Welt"}
             link={"/game"}
             className={styles.continue}
           />

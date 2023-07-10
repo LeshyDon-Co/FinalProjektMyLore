@@ -1,9 +1,40 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import NameOverview from "@/components/overview/name/nameoverview";
 import ItemHolder from "@/components/itemholder/itemholder";
 
 function Inventar() {
+
+  const [items, setItems] = useState([]);
+
+  const getItemData = async () => {
+    try {
+      const res = await fetch(`/api/auth/item`);
+
+      if(!res.ok){
+        throw new Error("Failed to fetch Data!")
+      }
+      
+      const data = await res.json();
+      setItems(data);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() =>{
+    getItemData()
+
+    // const storedData = localStorage.getItem("userdaten");
+    // const infodata = JSON.parse(storedData);
+
+    // setItems(infodata.items)
+  },[])
+
+  console.log(items);
+  
   return (
     <div className={styles.body}>
       <NameOverview />
@@ -21,28 +52,17 @@ function Inventar() {
           </div>
         </div>
         <div className={styles.inventar}>
-          Hier kommen die Inventarslots rein
+          Rucksack
           <div className={styles.itemholder}>
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
+            {items.map((item, index) => (
+              <ItemHolder key={item._id}
+                          name={item.itemname}
+                          pic={item.itempicture}
+                          price={item.itemprice}
+                          text={item.itemtext}
+                          type={item.itemtype}
+                          id={item.itemid} /> 
+            ))}
           </div>
         </div>
       </div>

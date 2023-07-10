@@ -127,7 +127,7 @@ const CharakterErstellung = () => {
         />
         <div className={styles.footer}>
           <Buttonone
-            text={"<- Charakterübersicht"}
+            text={"Charakterübersicht"}
             link={"/characteroverview"}
           />
           <div>
@@ -141,7 +141,7 @@ const CharakterErstellung = () => {
             </form>
           </div>
           <Buttonone
-            text={"Beginne deine Reise ->"}
+            text={"Beginne deine Reise"}
             todo={validateAndSaveCharacter}
             className={styles.reisebutton}
           />

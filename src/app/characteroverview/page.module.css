@@ -74,18 +74,26 @@
   gap: 2em;
 }
 
-.playbutton {
+.playbutton,
+.deletebutton {
   /* background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px #ad82c9;
   border: 1px solid #341549;
-  border-radius: 50%;
-  width: 3rem;
+  border-radius: 30%; */
+
+  color: #493D13;
+  width: 5rem;
   height: 3rem;
   position: relative;
-  overflow: hidden; */
+  overflow: hidden;
   transition: transform 0.3s ease;
-  
-  
+
+  background-image: url(../../assets/buttons/golden-button-oval.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100% ;
+
+  transition: 0.2s;
+
 }
 
 .playbutton::before {
@@ -99,7 +107,6 @@
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .playbutton:hover {
@@ -108,19 +115,6 @@
 
 .playbutton:hover::before {
   opacity: 1;
-}
-.deletebutton {
-  background-image: url(../../assets/buttons/golden-button-oval.png);
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 5px #ad82c9;
-  border: 1px solid #341549;
-  border-radius: 50%;
-  width: 3em;
-  height: 3em;
-
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
 .deletebutton::before {
@@ -134,7 +128,6 @@
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .deletebutton:hover {

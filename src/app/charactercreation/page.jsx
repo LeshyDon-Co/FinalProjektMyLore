@@ -51,6 +51,11 @@ const CharakterErstellung = () => {
         const picture = clickedCard.img;
         const isSelected = true;
         const createdBy = session.data.user.email;
+        const items = [
+          "64abdd41dc9bfc34a26f0b2b",
+          "64abe91fdc9bfc34a26f0b30",
+        ];
+
         try {
           const res = await fetch("/api/auth/character", {
             method: "POST",
@@ -69,6 +74,7 @@ const CharakterErstellung = () => {
               location,
               isSelected,
               createdBy,
+              items,
             }),
           });
           const resdata = await res.json();

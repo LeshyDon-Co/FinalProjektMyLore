@@ -9,4 +9,28 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+}
+
+.items:hover {
+  box-shadow: 0 0 0 2px green;
+  cursor: pointer;
+}
+
+.items:hover .content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.content {
+  border: 2px solid purple;
+  background-color: greenyellow;
+  position: absolute;
+  right: 2rem;
+  width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  visibility: hidden;
+  opacity: 0;
 }

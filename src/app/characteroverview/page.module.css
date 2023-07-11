@@ -46,77 +46,14 @@
   transition: transform 0.3s ease;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-  /* border-radius: 50%; */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
 .buttoncontainer {
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
 
-.playbutton,
-.deletebutton {
-  /* background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 5px #ad82c9;
-  border: 1px solid #341549;
-  border-radius: 30%; */
-
-  color: #493D13;
-  width: 5rem;
-  height: 3rem;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-
-  background-image: url(../../assets/buttons/golden-button-oval.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100% ;
-
-  transition: 0.2s;
-
-}
-
-.playbutton::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  opacity: 0;
-}
-
-.playbutton:hover {
-  transform: scale(1.1);
-}
-
-.playbutton:hover::before {
-  opacity: 1;
-}
-
+.card::before,
+.playbutton::before,
 .deletebutton::before {
   content: "";
   position: absolute;
@@ -126,16 +63,34 @@
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
   opacity: 0;
 }
 
+.playbutton,
+.deletebutton {
+  color: #493d13;
+  width: 5rem;
+  height: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  background-image: url(../../assets/buttons/golden-button-oval.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  transition: 0.2s;
+}
+
+.card:hover,
+.playbutton:hover,
 .deletebutton:hover {
   transform: scale(1.1);
 }
 
-.deletebutton:hover::before {
-  opacity: 1;
+.card:hover {
+  box-shadow: 5px 10px 10px #ad82c9;
+  transition: 0.2s;
 }
 
 /* Media Queries für responsive Gestaltung */

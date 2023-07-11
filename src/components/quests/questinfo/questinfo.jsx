@@ -1,3 +1,4 @@
+"use client";
 import styles from "./questinfo.module.css";
 import React from "react";
 

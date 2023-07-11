@@ -23,7 +23,7 @@ function Questlog() {
   //     throw new Error("Failed Datafetching");
   //   }
 
-  //   const data = await res.json();
+  // const data = await res.json();
   //   setQuestData(data);
   //   console.log("questData", questData);
   // };

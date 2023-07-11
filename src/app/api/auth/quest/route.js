@@ -9,8 +9,8 @@ import Quest from "@/models/Quest";
 export const GET = async (request) => {
   console.log("Hello from GETQuests");
   const {searchParams} = new URL(request.url);
-  const id = searchParams.get("id");
-  console.log(id);
+  const questArray = searchParams.get("quests");
+  console.log(questArray);
 
   try {
     await connect();

@@ -1,3 +1,4 @@
+"use client";
 import styles from "./location.module.css";
 import React from "react";
 

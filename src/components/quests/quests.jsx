@@ -11,36 +11,46 @@ function Quests() {
   const session = useSession();
   const [allData, setAllData] = useState([]);
 
+  // const [storedData, setStoredData] = useState();
+
+  // try {
+  //   setStoredData(localStorage.getItem("userdaten"));
+  // } catch (error) {}
   const storedData = localStorage.getItem("userdaten");
   const infoData = JSON.parse(storedData);
   const quests = infoData.quests;
+  console.log("stored:", quests);
 
-  useEffect(() => {
-    if (session.data) {
-      console.log("session.data", session.data, session);
-      const getQuestData = async () => {
-        const res = await fetch(`/api/auth/quest?quests=${quests}`);
-        // console.log("res", res);
-        if (!res.ok) {
-          throw new Error("Failed Datafetching");
-        }
+  // useEffect(() => {
+  //   if (session.data) {
+  //     const storedData = localStorage.getItem("userdaten");
+  //     const infoData = JSON.parse(storedData);
+  //     const quests = infoData.quests;
+  //     console.log("quests", quests);
+  //     console.log("session.data", session.data, session);
+  //     const getQuestData = async () => {
+  //       const res = await fetch(`/api/auth/quest?quests=${quests}`);
+  //       // console.log("res", res);
+  //       if (!res.ok) {
+  //         throw new Error("Failed Datafetching");
+  //       }
 
-        const data = await res.json();
-        setAllData(data);
-      };
-      getQuestData();
-    }
-  }, [session]);
+  //       const data = await res.json();
+  //       setAllData(data);
+  //     };
+  //     getQuestData();
+  //   }
+  // }, [session]);
 
-  // --------------------------------------------------------//
+  // // --------------------------------------------------------//
 
-  useEffect(() => {
-    if (session.data) {
-      getQuestData();
-    }
-  }, [session]);
+  // useEffect(() => {
+  //   if (session.data) {
+  //     getQuestData();
+  //   }
+  // }, [session]);
 
-  console.log("Quests", allData);
+  // console.log("Quests", allData);
 
   // ----------------------------------------------------------//
 

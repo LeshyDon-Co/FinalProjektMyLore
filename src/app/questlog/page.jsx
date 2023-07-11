@@ -8,11 +8,11 @@ import {useSession} from "next-auth/react";
 import React, {useEffect, useState} from "react";
 
 function Questlog() {
-  // const router = useRouter();
-  // const session = useSession();
-  // const [questData, setQuestData] = useState([]);
+  const router = useRouter();
+  const session = useSession();
+  const [questData, setQuestData] = useState([]);
 
-  // //--------------------------------------------------------//
+  //--------------------------------------------------------//
 
   // const getQuestData = async () => {
   //   const res = await fetch("/api/auth/quest", {
@@ -28,7 +28,7 @@ function Questlog() {
   //   console.log("questData", questData);
   // };
 
-  //----------------------------------------------------------//
+  // //----------------------------------------------------------//
 
   // useEffect(() => {
   //   if (session.data) {

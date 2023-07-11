@@ -1,3 +1,4 @@
+"use client";
 import styles from "./characterstats.module.css";
 import React from "react";
 

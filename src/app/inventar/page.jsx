@@ -39,20 +39,24 @@ function Inventar() {
     <div className={styles.body}>
       <NameOverview />
       <div className={styles.container}>
-        <div className={styles.skills}>Coming soon</div>
-        <div className={styles.char}>
+        <div className={styles.skills}>Skills coming soon...</div>
+        <div className={styles.charitemcontainer}>
+        <div className={styles.charcontainer}>
           <div className={styles.itemVertical}>
             <ItemHolder />
             <ItemHolder />
             <ItemHolder />
           </div>
-          <div className={styles.itemHorizontal}>
+          <div className={styles.char}></div>
+
+        </div>
+        <div className={styles.itemHorizontal}>
             <ItemHolder />
             <ItemHolder />
           </div>
         </div>
         <div className={styles.inventar}>
-          Rucksack
+          <h2 className={styles.rucksack}>Dein Rucksack</h2>
           <div className={styles.itemholder}>
             {items.map((item, index) => (
               <ItemHolder key={item._id}

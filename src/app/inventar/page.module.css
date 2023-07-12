@@ -4,7 +4,7 @@
 
   padding-top: 8vh;
   /* engere Auswah: 2, 4, 5 */
-  background-image: url(../../assets/backgrounds/inventarbackgrounds/inventargold.jpg);
+  background-image: url(../../assets/backgrounds/golden-background-brighter2.jpg);
   /* background-position: center; */
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@
   justify-content: center;
   /* padding: auto; */
   
-  border-image: url(../../assets/frames/corner-frame-LT-LB-nospace.png) 330 / 100px / 1.5em round;
+  border-image: url(../../assets/frames/ornamentic-LT-RB-light-gold.png) 300 fill / 110px / 1.5em round;
 }
 
 .charitemcontainer {

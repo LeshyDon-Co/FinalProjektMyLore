@@ -30,6 +30,8 @@
   text-align: center;
   justify-content: center;
   /* padding: auto; */
+  
+  border-image: url(../../assets/frames/corner-frame-LT-LB-nospace.png) 330 / 100px / 1.5em round;
 }
 
 .char {
@@ -75,14 +77,28 @@
   height: 85%;
   width: 25%;
 
+  padding: 50px;
+
   display: flex;
   text-align: center;
   /* justify-content: center; */
   flex-direction: column;
+
+  /* border-image: url(../../assets/frames/corner-frame-RT-RB-nospace.png) 330 / 100px / 1.5em round; */
+
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10 fill / 10px / 1.5em;
+  border-image-outset: 3em;
 }
+
 
 .itemholder {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
 }
+
+/* .skills,
+.inventar {
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10 fill / 10px / 1.5em;
+  border-image-outset: 1.5em;
+} */

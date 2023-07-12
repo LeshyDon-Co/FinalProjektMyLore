@@ -49,7 +49,7 @@ const CharakterErstellung = () => {
         const characteristic = clickedCard.characteristic;
         const location = "Hauptstadtname";
         const quests = ["64a8158f82ef3b16f01d113b"];
-        // const picture = clickedCard.img;
+        const picture = clickedCard.img;
         const isSelected = true;
         const createdBy = session.data.user.email;
         const items = [
@@ -74,7 +74,7 @@ const CharakterErstellung = () => {
               stadium,
               characteristic,
               isSelected,
-              // picture,
+              picture,
               quests,
               location,
               createdBy,
@@ -84,6 +84,7 @@ const CharakterErstellung = () => {
           const resdata = await res.json();
           console.log();
           setDriveData(resdata);
+          localStorage.clearItem("userdaten");
           localStorage.setItem("userdaten", JSON.stringify(driveData));
           console.log("resdata", resdata);
           res.status === 201;
@@ -92,7 +93,7 @@ const CharakterErstellung = () => {
         }
         console.log("driveData", driveData);
 
-        router.push("/gameintro");
+        // router.push("/gameintro");
 
         // router.push({
         //   pathname: "/gameintro",

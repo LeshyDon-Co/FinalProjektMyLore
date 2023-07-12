@@ -1,3 +1,4 @@
+"use client";
 import Listitem from "@/components/Listitem/listitem";
 import styles from "./questlist.module.css";
 import React from "react";

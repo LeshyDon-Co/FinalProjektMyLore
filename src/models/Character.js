@@ -38,10 +38,12 @@ const characterSchema = new Schema(
     picture: {
       type: String,
     },
-    quests: {
-      type: Schema.Types.ObjectId,
-      ref: "Quest",
-    },
+    quests: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Quest",
+      },
+    ],
     location: {
       type: String,
     },

@@ -10,6 +10,8 @@ function Worldmap() {
       <NameOverview />
       <div className={styles.container}>
         Die Weltkarte wird hier zu sehen sein!
+        <div className={styles.worldmap}>
+        </div>
       </div>
     </div>
   );

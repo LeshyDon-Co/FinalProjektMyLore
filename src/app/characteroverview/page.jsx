@@ -42,10 +42,10 @@ const CharakterÜbersicht = () => {
 
   const playWithCharacter = async (id) => {
     //was mache ich mit der ID?
-    // localStorage.setItem(
-    //   "userdaten",
-    //   JSON.stringify(chardata[selectedItemIndex])
-    // );
+    localStorage.setItem(
+      "userdaten",
+      JSON.stringify(chardata[selectedItemIndex])
+    );
     router.push("/game");
   };
 

@@ -1,12 +1,11 @@
 import Character from "@/models/Character";
 import connect from "@/utils/db";
-import { getServerSession } from "next-auth";
+import {getServerSession} from "next-auth";
 import {NextResponse} from "next/server";
 
 //-----------------POST---------------------//
 
 export const POST = async (request) => {
-
   const {
     name,
     nation,
@@ -39,8 +38,9 @@ export const POST = async (request) => {
     picture,
     quests,
     location,
-    items,
+
     createdBy,
+    items,
   });
   console.log(newChar);
 
@@ -56,20 +56,18 @@ export const POST = async (request) => {
 //----------------GET----------------------//
 
 export const GET = async (request) => {
-
   const session = await getServerSession();
   const loggedMail = session.user.email;
 
-    try {
-      await connect();
-      const characters = await Character.find({createdBy:loggedMail});
-      return new NextResponse(JSON.stringify(characters), {status: 200});
+  try {
+    await connect();
+    const characters = await Character.find({createdBy: loggedMail});
+    return new NextResponse(JSON.stringify(characters), {status: 200});
   } catch (error) {
     return new NextResponse("Database Error", {status: 500});
-  };
+  }
 };
 
 //-----------UPDATE-------------------//
 
 //-----------DELETE-------------------//
-

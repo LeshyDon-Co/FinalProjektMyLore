@@ -111,6 +111,7 @@ const Navbar = () => {
               alt="Name of the game as Logo in 3D"
             />
           </Link>
+          <Link href="/game" className={styles.link}>Übersicht</Link>
           <Link href="/inventar" className={styles.link}>Inventar</Link>
           <Link href="/questlog" className={styles.link}>Questlog</Link>  
           <Link href="/worldmap" className={styles.link}>Weltkarte</Link> 

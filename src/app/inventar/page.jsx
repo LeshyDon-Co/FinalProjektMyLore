@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import NameOverview from "@/components/overview/name/nameoverview";
 import ItemHolder from "@/components/itemholder/itemholder";
+import ItemHolderHoizontal from "@/components/itemholderhorizontal/itemholderhorizontal";
+import ItemHolderVertikal from "@/components/itemholdervertikal/itemholdervertikal";
+
 
 function Inventar() {
 
-  const [items, setItems] = useState([]);
   const [charData, setCharData] = useState([]);
 
 //----------------------------------------------------------//
@@ -21,7 +23,7 @@ function Inventar() {
     }
 
     const data = await res.json();
-    console.log("data", data);
+    // console.log("data", data);
     setCharData(data);
 
   };
@@ -36,11 +38,10 @@ function Inventar() {
     console.log("charID:", charID);
     
     getCharData(charID);
-    // getCharakterItems(charID);
-    // getItemData();
+
   },[])
 
-  console.log("chardata", charData);
+  // console.log("chardata", charData);
  //----------------------------------------------------------//
  
   return (
@@ -51,16 +52,16 @@ function Inventar() {
         <div className={styles.charitemcontainer}>
         <div className={styles.charcontainer}>
           <div className={styles.itemVertical}>
-            {/* <ItemHolder />
-            <ItemHolder />
-            <ItemHolder /> */}
+            <ItemHolderVertikal />
+            <ItemHolderVertikal />
+            <ItemHolderVertikal />
           </div>
           <div className={styles.char}></div>
 
         </div>
         <div className={styles.itemHorizontal}>
-            {/* <ItemHolder />
-            <ItemHolder /> */}
+            <ItemHolderHoizontal />
+            <ItemHolderHoizontal />
           </div>
         </div>
         <div className={styles.inventar}>

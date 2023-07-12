@@ -1,5 +1,4 @@
 "use client";
-
 import styles from "./page.module.css";
 import NameOverview from "@/components/overview/name/nameoverview";
 import Quests from "@/components/quests/quests";
@@ -40,7 +39,7 @@ function Questlog() {
 
   return (
     <div className={styles.body}>
-      {/* <NameOverview /> */}
+      <NameOverview />
       <div className={styles.container}>
         <Quests />
       </div>

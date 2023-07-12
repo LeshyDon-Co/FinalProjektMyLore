@@ -11,14 +11,15 @@ export const GET = async (request) => {
   const {searchParams} = new URL(request.url);
   const questArray = searchParams.get("quests");
   console.log(questArray);
+  const splitElement = questArray.split(",");
+  console.log(splitElement);
 
   try {
     await connect();
     console.log("Ich bin connectet");
-    const quest = await Story.find({name: "mainstory"});
-    const storyChar = await Story.find({name: "wiwastory"});
-    // console.log("storywiwa", storywiwa);
-    return new NextResponse(JSON.stringify([storyMain, storyChar]), {
+    const quests = await Quest.find({id: {$in: splitElement}});
+    console.log("quest severside:", quests);
+    return new NextResponse(JSON.stringify(quests), {
       status: 200,
     });
   } catch (error) {

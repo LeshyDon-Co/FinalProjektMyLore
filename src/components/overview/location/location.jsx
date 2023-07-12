@@ -1,12 +1,17 @@
 "use client";
 import styles from "./location.module.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Location() {
-  const storedData = localStorage.getItem("userdaten");
-  const infoData = JSON.parse(storedData);
 
-  const location = infoData.nation;
+  const [location, setLocation] = useState("");
+
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("userdaten") || "";
+    const infoData = JSON.parse(storedData);
+    setLocation(infoData.nation)
+  },[])
 
   return (
     <div className={styles.bodyComponent}>

@@ -9,3 +9,7 @@
   color: black;
   backdrop-filter: blur(10px);
 }
+
+.introtext::-webkit-scrollbar {
+  width: 0px;
+}

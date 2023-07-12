@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import itemSchema from "./Item.js";
 
 const {Schema} = mongoose;
 
@@ -38,7 +39,8 @@ const characterSchema = new Schema(
       type: String,
     },
     quests: {
-      type: Array,
+      type: Schema.Types.ObjectId,
+      ref: "Quest",
     },
     location: {
       type: String,
@@ -49,7 +51,12 @@ const characterSchema = new Schema(
     createdBy: {
       type: String,
     },
-
+    items: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Item",
+      },
+    ],
   },
   {timestamps: true}
 );

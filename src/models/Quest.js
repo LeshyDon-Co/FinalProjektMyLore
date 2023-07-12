@@ -10,6 +10,12 @@ const questSchema = new Schema(
     },
     title: {type: String, required: true},
     text: {type: String, required: true},
+    characters: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Character",
+      },
+    ],
   },
   {
     timestamps: true,

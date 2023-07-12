@@ -42,7 +42,7 @@
   /* flex-direction: column; */
   text-align: center;
   /* justify-content: center; */
-  align-items: end;
+  align-items: flex-end;
 }
 
 .itemVertical {
@@ -61,8 +61,8 @@
   width: 100%;
   /* height: ; */
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
 
   position: relative;
   bottom: 0;
@@ -77,12 +77,14 @@
 
   display: flex;
   text-align: center;
-  /* justify-content: center; */
   flex-direction: column;
 }
 
 .itemholder {
+  border: 3px solid pink;
   display: flex;
+  align-content: flex-start;
+  flex-direction: row;
   flex-wrap: wrap;
   height: 100%;
 }

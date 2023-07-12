@@ -7,34 +7,42 @@ import ItemHolder from "@/components/itemholder/itemholder";
 function Inventar() {
 
   const [items, setItems] = useState([]);
+  const [charData, setCharData] = useState([]);
 
-  const getItemData = async () => {
-    try {
-      const res = await fetch(`/api/auth/item`);
+//----------------------------------------------------------//
+ 
+  const getCharData = async (charID) => {
+    const res = await fetch(`/api/auth/character/${charID}`, {
+      // cache: "no-store",
+    });
 
-      if(!res.ok){
-        throw new Error("Failed to fetch Data!")
-      }
-      
-      const data = await res.json();
-      setItems(data);
-      console.log(data);
-    } catch (error) {
-      console.log(error);
+    if (!res.ok) {
+      throw new Error("Failed Datafetching");
     }
-  }
 
+    const data = await res.json();
+    console.log("data", data);
+    setCharData(data);
+
+  };
+
+//----------------------------------------------------------//
+ 
   useEffect(() =>{
-    getItemData()
 
-    // const storedData = localStorage.getItem("userdaten");
-    // const infodata = JSON.parse(storedData);
-
-    // setItems(infodata.items)
+    const userdata = localStorage.getItem("userdaten");
+    const userdataparsed = JSON.parse(userdata);
+    const charID = userdataparsed._id;
+    console.log("charID:", charID);
+    
+    getCharData(charID);
+    // getCharakterItems(charID);
+    // getItemData();
   },[])
 
-  console.log(items);
-  
+  console.log("chardata", charData);
+ //----------------------------------------------------------//
+ 
   return (
     <div className={styles.body}>
       <NameOverview />
@@ -43,22 +51,22 @@ function Inventar() {
         <div className={styles.charitemcontainer}>
         <div className={styles.charcontainer}>
           <div className={styles.itemVertical}>
+            {/* <ItemHolder />
             <ItemHolder />
-            <ItemHolder />
-            <ItemHolder />
+            <ItemHolder /> */}
           </div>
           <div className={styles.char}></div>
 
         </div>
         <div className={styles.itemHorizontal}>
-            <ItemHolder />
-            <ItemHolder />
+            {/* <ItemHolder />
+            <ItemHolder /> */}
           </div>
         </div>
         <div className={styles.inventar}>
           <h2 className={styles.rucksack}>Dein Rucksack</h2>
           <div className={styles.itemholder}>
-            {items.map((item, index) => (
+            {charData.map((item, index) => (
               <ItemHolder key={item._id}
                           name={item.itemname}
                           pic={item.itempicture}

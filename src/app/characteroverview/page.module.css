@@ -2,8 +2,9 @@
   width: 100vw;
   height: 100vh;
   padding-top: 10vh;
-  background-image: url("../../assets/COVBG.jpg");
   color: #d4bce4;
+  background-image: url("../../assets/backgrounds/backgroundfield.jpg");
+  background-size: cover;
 }
 
 .container {

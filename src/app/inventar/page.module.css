@@ -4,12 +4,9 @@
 
   padding-top: 8vh;
 
-  background-image: url(../../assets/backgrounds/inventarbackgrounds/golden-background-brighter2.jpg);
-
+  background-image: url(../../assets/backgrounds/golden-background-brighter2.jpg);
   background-position: center;
 
-  /* ausprobieren: cover macht etwas dunkler, 100% macht sehr viele Shadows mit rein, gnaz weglassen ist am hellsten */
-  /* background-size: cover; */
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -50,6 +47,8 @@
   text-align: center;
   justify-content: center;
   /* padding: auto; */
+  
+  border-image: url(../../assets/frames/ornamentic-LT-RB-light-gold.png) 300 fill / 110px / 1.5em round;
 }
 
 .charitemcontainer {
@@ -119,10 +118,18 @@
   height: 85%;
   width: 25%;
 
+  padding: 50px;
+
   display: flex;
   text-align: center;
   flex-direction: column;
+
+  /* border-image: url(../../assets/frames/corner-frame-RT-RB-nospace.png) 330 / 100px / 1.5em round; */
+
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10 fill / 10px / 1.5em;
+  border-image-outset: 3em;
 }
+
 
 .itemholder {
   display: flex;
@@ -132,3 +139,9 @@
   height: 100%;
   padding: 3% 5%;
 }
+
+/* .skills,
+.inventar {
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10 fill / 10px / 1.5em;
+  border-image-outset: 1.5em;
+} */

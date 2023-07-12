@@ -5,13 +5,19 @@
   padding-top: 8vh;
 }
 
+/* wird noch zum Canvas */
 .container {
   border: 2px solid red;
 
-  background-color: burlywood;
+  /* background-color: burlywood; */
+  background-image: url("../../assets/worldmap/worldmap.jpg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   width: 96%;
   height: 97%;
   margin: auto 2vw;
   padding-top: 10vh;
+  /* overflow: scroll; */
 }

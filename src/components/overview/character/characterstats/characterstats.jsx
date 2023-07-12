@@ -1,14 +1,26 @@
+"use client";
 import styles from "./characterstats.module.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function CharacterStats() {
-  const storedData = localStorage.getItem("userdaten");
-  const infoData = JSON.parse(storedData);
-  const ATK = infoData.attack;
-  const DEF = infoData.defense;
-  const HP = infoData.health;
-  const stadium = infoData.stadium;
-  const characteristic = infoData.characteristic;
+
+  const [ATK, setATK] = useState("");
+  const [DEF, setDEF] = useState("");
+  const [HP, setHP] = useState("");
+  const [stadium, setStadium] = useState("");
+  const [characteristic, setCaracteristic] = useState("");
+
+  useEffect(()=> {
+      const storedData = localStorage.getItem("userdaten");
+      const infoData = JSON.parse(storedData);
+    
+      setATK(infoData.attack);
+      setDEF(infoData.defense);
+      setHP(infoData.health);
+      setStadium(infoData.stadium);
+      setCaracteristic(infoData.characteristic);
+  },[]);
+  
 
   return (
     <div className={styles.bodyComponent}>

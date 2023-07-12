@@ -58,7 +58,6 @@ const CharakterErstellung = () => {
           "64ad7e46da7376fda4a42c4d",
         ];
 
-
         try {
           const res = await fetch("/api/auth/character", {
             method: "POST",
@@ -74,11 +73,12 @@ const CharakterErstellung = () => {
               defense,
               stadium,
               characteristic,
-              location,
-              quests,
               isSelected,
-              createdBy,
+              picture,
+              quests,
+              location,
               items,
+              createdBy,
             }),
           });
           const resdata = await res.json();
@@ -91,7 +91,7 @@ const CharakterErstellung = () => {
         }
         console.log("driveData", driveData);
 
-        router.push("/gameintro");
+        // router.push("/gameintro");
 
         // router.push({
         //   pathname: "/gameintro",

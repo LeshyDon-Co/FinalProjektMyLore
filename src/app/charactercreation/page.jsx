@@ -48,8 +48,8 @@ const CharakterErstellung = () => {
         const stadium = clickedCard.stadium;
         const characteristic = clickedCard.characteristic;
         const location = "Hauptstadtname";
-        const quests = ["0001"];
-        const picture = clickedCard.img;
+        const quests = ["64a8158f82ef3b16f01d113b"];
+        // const picture = clickedCard.img;
         const isSelected = true;
         const createdBy = session.data.user.email;
         const items = [
@@ -57,7 +57,6 @@ const CharakterErstellung = () => {
           "64abe91fdc9bfc34a26f0b30",
           "64ad7e46da7376fda4a42c4d",
         ];
-
 
         try {
           const res = await fetch("/api/auth/character", {
@@ -74,14 +73,16 @@ const CharakterErstellung = () => {
               defense,
               stadium,
               characteristic,
-              location,
-              quests,
               isSelected,
+              // picture,
+              quests,
+              location,
               createdBy,
               items,
             }),
           });
           const resdata = await res.json();
+          console.log();
           setDriveData(resdata);
           localStorage.setItem("userdaten", JSON.stringify(driveData));
           console.log("resdata", resdata);

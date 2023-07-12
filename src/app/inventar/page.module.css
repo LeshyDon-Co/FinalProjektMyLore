@@ -47,8 +47,9 @@
   text-align: center;
   justify-content: center;
   /* padding: auto; */
-  
-  border-image: url(../../assets/frames/ornamentic-LT-RB-light-gold.png) 300 fill / 110px / 1.5em round;
+
+  border-image: url(../../assets/frames/ornamentic-LT-RB-light-gold.png) 300
+    fill / 110px / 1.5em round;
 }
 
 .charitemcontainer {
@@ -68,7 +69,7 @@
 .char {
   /* border: 2px solid red; */
   /* backdrop-filter: blur(5px); */
-  background-image: url(../../assets/characterimages/Flammengo.png);
+  background-image: url(../../assets/characterimages/Axolittle.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -126,10 +127,10 @@
 
   /* border-image: url(../../assets/frames/corner-frame-RT-RB-nospace.png) 330 / 100px / 1.5em round; */
 
-  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10 fill / 10px / 1.5em;
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10
+    fill / 10px / 1.5em;
   border-image-outset: 3em;
 }
-
 
 .itemholder {
   display: flex;
@@ -140,8 +141,9 @@
   padding: 3% 5%;
 }
 
-/* .skills,
+.skills,
 .inventar {
-  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10 fill / 10px / 1.5em;
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10
+    fill / 10px / 1.5em;
   border-image-outset: 1.5em;
-} */
+}

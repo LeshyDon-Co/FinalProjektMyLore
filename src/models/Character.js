@@ -39,22 +39,24 @@ const characterSchema = new Schema(
       type: String,
     },
     quests: {
-      type: Array,
+      type: Schema.Types.ObjectId,
+      ref: "Quest",
     },
     location: {
       type: String,
     },
-    items: {
-      type: Array,
-    },
+    // items: {
+    //   type: Array,
+    // },
     createdBy: {
       type: String,
     },
-    items: [{
-      type: Schema.Types.ObjectId,
-      ref: "Item",
-    }]
-    
+    items: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Item",
+      },
+    ],
   },
   {timestamps: true}
 );

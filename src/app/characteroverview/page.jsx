@@ -42,8 +42,13 @@ const CharakterÜbersicht = () => {
 
   const playWithCharacter = async (id) => {
     //was mache ich mit der ID?
+    localStorage.setItem(
+      "userdaten",
+      JSON.stringify(chardata[selectedItemIndex])
+    );
     router.push("/game");
   };
+
   //----------------------------------------------------------------------------------------//
 
   const deleteCharacter = async (id) => {
@@ -67,7 +72,7 @@ const CharakterÜbersicht = () => {
 
   //----------------------------------------------------------------------------------------//
 
-  console.log(chardata);
+  // console.log("CharData kurz vor dem return", chardata);;
 
   if (session.status === "unauthenticated") {
     router.push("/");

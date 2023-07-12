@@ -48,13 +48,16 @@ const CharakterErstellung = () => {
         const stadium = clickedCard.stadium;
         const characteristic = clickedCard.characteristic;
         const location = "Hauptstadtname";
+        const quests = ["0001"];
         const picture = clickedCard.img;
         const isSelected = true;
         const createdBy = session.data.user.email;
         const items = [
           "64abdd41dc9bfc34a26f0b2b",
           "64abe91fdc9bfc34a26f0b30",
+          "64ad7e46da7376fda4a42c4d",
         ];
+
 
         try {
           const res = await fetch("/api/auth/character", {
@@ -72,6 +75,7 @@ const CharakterErstellung = () => {
               stadium,
               characteristic,
               location,
+              quests,
               isSelected,
               createdBy,
               items,
@@ -114,28 +118,26 @@ const CharakterErstellung = () => {
     //   router.push("/");
     // }else{
     return (
-        // <div className={styles.mainbody}>
-        //  <div className={styles.wiwabody}>
-        //  </div>
-        //  <div className={styles.flammengobody}>2</div>
-        //  <div className={styles.axolittlebody}>3</div>
-        //  </div>
-        <div 
+      // <div className={styles.mainbody}>
+      //  <div className={styles.wiwabody}>
+      //  </div>
+      //  <div className={styles.flammengobody}>2</div>
+      //  <div className={styles.axolittlebody}>3</div>
+      //  </div>
+      <div
         className={
           // clickedCard.name === "Wischi-Waschi-Bär" ? styles.wiwabody :
           // clickedCard.name === "Flammengo" ? styles.flammengobody :
           // clickedCard.name === "Axolittle" ? styles.axolittlebody :
-          styles.body}
-        >
+          styles.body
+        }
+      >
         <Charactercard
           clickedCard={clickedCard}
           setClickedCard={setClickedCard}
         />
         <div className={styles.footer}>
-          <Buttonone
-            text={"Charakterübersicht"}
-            link={"/characteroverview"}
-          />
+          <Buttonone text={"Charakterübersicht"} link={"/characteroverview"} />
           <div>
             <form>
               <input

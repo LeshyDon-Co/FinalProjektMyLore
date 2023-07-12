@@ -93,7 +93,7 @@ const CharakterErstellung = () => {
         }
         console.log("driveData", driveData);
 
-        // router.push("/gameintro");
+         router.push("/gameintro");
 
         // router.push({
         //   pathname: "/gameintro",

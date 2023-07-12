@@ -92,7 +92,7 @@ const Navbar = () => {
           <Link href="/characteroverview" className={styles.link}>Charakterübersicht</Link>  
           <Link href="/gameinfo" className={styles.link}>Spiele-Wiki</Link> 
           <Link href="/gallery" className={styles.link}>Gallerie</Link> 
-          <button onClick={()=>signOut()}>Logout</button>
+          <button className={styles.logout} onClick={()=>signOut()}>Logout</button>
       </div>
       )}
 
@@ -111,10 +111,11 @@ const Navbar = () => {
               alt="Name of the game as Logo in 3D"
             />
           </Link>
+          <Link href="/game" className={styles.link}>Übersicht</Link>
           <Link href="/inventar" className={styles.link}>Inventar</Link>
           <Link href="/questlog" className={styles.link}>Questlog</Link>  
           <Link href="/worldmap" className={styles.link}>Weltkarte</Link> 
-          <button onClick={()=>signOut()}>Logout</button>
+          <button className={styles.logout} onClick={()=>signOut()}>Logout</button>
       </div>
       )}
     </div>

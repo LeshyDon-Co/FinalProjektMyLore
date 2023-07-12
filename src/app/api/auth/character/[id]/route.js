@@ -3,6 +3,27 @@ import { NextResponse } from "next/server";
 import { ObjectId } from 'bson';
 import Character from "@/models/Character";
 
+
+//----------------GET----------------------//
+
+export const GET = async (request, {params}) => {
+
+  const {id} = params;
+  console.log(id);
+
+    try {
+      await connect();
+      
+      const character = await Character.findOne({_id:id}).populate('items');
+
+      const characterItems = character.items;
+
+      return new NextResponse(JSON.stringify(characterItems), {status: 200});
+
+  } catch (error) {
+    return new NextResponse("Database Error", {status: 500});
+  };
+};
 //----------------------------------------------------------------------------------------//
 
 export const DELETE = async (request, {params}) => {

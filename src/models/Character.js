@@ -44,9 +44,9 @@ const characterSchema = new Schema(
     location: {
       type: String,
     },
-    items: {
-      type: Array,
-    },
+    // items: {
+    //   type: Array,
+    // },
     createdBy: {
       type: String,
     },

@@ -54,6 +54,7 @@ const CharakterErstellung = () => {
         const items = [
           "64abdd41dc9bfc34a26f0b2b",
           "64abe91fdc9bfc34a26f0b30",
+          "64ad7e46da7376fda4a42c4d",
         ];
 
         try {

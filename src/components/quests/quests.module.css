@@ -7,3 +7,25 @@
 
   /* align-items: center; */
 }
+
+.questList {
+  border: 2px solid blue;
+
+  padding-top: 5%;
+  height: 100%;
+  width: 25%;
+}
+
+.questInfo {
+  border: 2px solid green;
+  height: 100%;
+  width: 70%;
+}
+
+.title {
+  padding-top: 5%;
+}
+
+.text {
+  padding-top: 5%;
+}

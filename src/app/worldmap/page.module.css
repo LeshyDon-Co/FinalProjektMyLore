@@ -8,16 +8,17 @@
 /* wird noch zum Canvas */
 .container {
   border: 2px solid red;
+  border-image: url(../../assets/frames/horizontal-ornamentic-RT-LB-light.png) 200 / 70px / 0.3em round;
 
   /* background-color: burlywood; */
   background-image: url("../../assets/worldmap/worldmap.jpg");
   background-position: top;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 
-  width: 96%;
-  height: 97%;
-  margin: auto 2vw;
-  padding-top: 10vh;
+  width: 90%;
+  height: 95%;
+  margin: 1vw auto;
+
   /* overflow: scroll; */
 }

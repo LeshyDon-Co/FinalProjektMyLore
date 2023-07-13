@@ -6,6 +6,8 @@ function Listitem(props) {
 
   const handleClick = () => {
     onItemClick(index);
+    console.log("index listItem:", index);
+    // console.log("key listItem:", key);
   };
 
   return (

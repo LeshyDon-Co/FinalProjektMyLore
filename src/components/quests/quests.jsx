@@ -2,7 +2,7 @@
 import styles from "./quests.module.css";
 import {useRouter} from "next/navigation";
 import {useSession} from "next-auth/react";
-import React, {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import Listitem from "../Listitem/listitem";
 
 function Quests() {
@@ -10,7 +10,9 @@ function Quests() {
   const session = useSession();
   const [allData, setAllData] = useState([]);
 
-  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+  const [selectedItemIndex, setSelectedItemIndex] = useState();
+  const [title, setTitle] = useState();
+  const [text, setText] = useState();
 
   //---------------------------------------------------------//
 
@@ -33,6 +35,8 @@ function Quests() {
         const data = await res.json();
         console.log("DataArray", data);
         setAllData(data);
+
+        console.log("direkt nach data", allData[0]);
       };
       getQuestData();
     }
@@ -43,16 +47,21 @@ function Quests() {
   const handleItemClick = (index) => {
     setSelectedItemIndex(index);
     console.log("selected Quest:", selectedItemIndex);
+    // const titletest = await selectedItemIndex;
   };
 
   //----------------------------------------------------------//
 
-  console.log("Quests", allData);
-  // console.log("title", allData[0].text);
+  useEffect(() => {
+    console.log("useEffect:", selectedItemIndex);
+    if (selectedItemIndex !== undefined) {
+      setTitle(allData[selectedItemIndex].title);
+      setText(allData[selectedItemIndex].text);
+    }
+  }, [selectedItemIndex]);
 
-  const title = allData[selectedItemIndex].title;
-  const text = allData[selectedItemIndex].text;
-  console.log(title);
+  // console.log("Quests", allData);
+  console.log("title", selectedItemIndex);
 
   // ----------------------------------------------------------//
 

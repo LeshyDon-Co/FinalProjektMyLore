@@ -3,12 +3,6 @@
 import React from "react";
 import styles from "./page.module.css";
 import NameOverview from "@/components/overview/name/nameoverview";
-import Konva from "konva";
-import dynamic from "next/dynamic";
-
-const NoSSRComponent = dynamic(() => import("../../components/worldmapKonva/worldmapkonva.jsx"), {
-  ssr: false,
-});
 
 
 function Worldmap() {
@@ -43,7 +37,6 @@ function Worldmap() {
   // layer.draw();
 
   return (
-    <NoSSRComponent />
   //   <Stage width={window.innerWidth} height={window.innerHeight}>
   //   <Layer>
   //     <Circle x={200} y={100} radius={50} fill="green" />
@@ -57,6 +50,15 @@ function Worldmap() {
         
     //   {/* </div> */}
     // </div>
+
+    <div className={styles.body}>
+      <NameOverview />
+      <div className={styles.container}>
+        <div className={styles.worldmap}>
+        </div>
+      </div>
+    </div>
+
   );
 }
 

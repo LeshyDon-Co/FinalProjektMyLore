@@ -15,6 +15,7 @@
   /* justify-content: space-between; */
 
   position: fixed;
+  top: 70px;
 
   font-size: 0.8rem;
 }

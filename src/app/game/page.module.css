@@ -32,6 +32,8 @@
   align-items: center;
   justify-content: center;
   /* margin: auto; */
+
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 20 fill / 20px / 1em round;
 }
 
 .locationAndChar {

@@ -17,7 +17,7 @@ export const GET = async (request) => {
   try {
     await connect();
     console.log("Ich bin connectet");
-    const quests = await Quest.find({id: {$in: splitElement}});
+    const quests = await Quest.find({_id: {$in: splitElement}});
     console.log("quest severside:", quests);
     return new NextResponse(JSON.stringify(quests), {
       status: 200,

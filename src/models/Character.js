@@ -35,13 +35,15 @@ const characterSchema = new Schema(
     isSelected: {
       type: Boolean,
     },
-    // picture: {
-    //   type: String,
-    // },
-    quests: {
-      type: Schema.Types.ObjectId,
-      ref: "Quest",
+    picture: {
+      type: String,
     },
+    quests: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Quest",
+      },
+    ],
     location: {
       type: String,
     },

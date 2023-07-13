@@ -38,9 +38,8 @@ export const POST = async (request) => {
     // picture,
     quests,
     location,
-
-    createdBy,
     items,
+    createdBy,
   });
   console.log(newChar);
 

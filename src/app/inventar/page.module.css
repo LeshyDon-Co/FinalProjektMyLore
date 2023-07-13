@@ -47,9 +47,7 @@
   text-align: center;
   justify-content: center;
   /* padding: auto; */
-  
-  border-image: url(../../assets/frames/ornamentic-LT-RB-light-gold.png) 300 fill / 110px / 1.5em round;
-}
+  }
 
 .charitemcontainer {
   display: flex;
@@ -104,11 +102,6 @@
 .inventar {
   border: 2px solid black;
   background-position: center;
-  /* border-image: url(../../assets/backgrounds/inventarbackgrounds/goldenframe.png)
-    30 fill / 10px / 40px; */
-
-  /* background-image: url(../../assets/backgrounds/inventarbackgrounds/cool-luxury-wallpaper-24143-24805-hd-wallpapers.jpg); */
-  /* background-size: 100% 100%; */
   background-size: contain;
 
   background-repeat: no-repeat;
@@ -123,11 +116,6 @@
   display: flex;
   text-align: center;
   flex-direction: column;
-
-  /* border-image: url(../../assets/frames/corner-frame-RT-RB-nospace.png) 330 / 100px / 1.5em round; */
-
-  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10 fill / 10px / 1.5em;
-  border-image-outset: 3em;
 }
 
 
@@ -140,8 +128,8 @@
   padding: 3% 5%;
 }
 
-/* .skills,
+.skills,
 .inventar {
   border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10 fill / 10px / 1.5em;
   border-image-outset: 1.5em;
-} */
+}

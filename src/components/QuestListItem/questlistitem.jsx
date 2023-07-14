@@ -5,14 +5,22 @@ import styles from "./questlistitem.module.css";
 
 function Questlistitem(props) {
 
-    const {index, title} = props;
+    const {index, title, onItemClick, isSelected} = props;
+
+//---------------------------------------------------------//
+
+    const handleClick = () => {
+      onItemClick(index);
+      console.log("index listItem:", index);
+    };
 
 //---------------------------------------------------------//
 
     return (
     <div
-     className={styles.questlistitem}
-     key={index}
+    className={`${styles.questlistitem} ${isSelected ? styles.selected : ""}`}
+    onClick={handleClick}
+    key={index}
      >
       {title}
     </div>

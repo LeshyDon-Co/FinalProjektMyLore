@@ -3,15 +3,25 @@ import styles from "./questlistoverview.module.css";
 import React, { useEffect, useState } from "react";
 import Listitem from "@/components/Listitem/listitem";
 import Questlistitem from "@/components/QuestListItem/questlistitem";
+import { useRouter } from "next/navigation";
 
 //--------------------------------------------------------------//
 
 function QuestListOverview() {
 
-  // const [charID, setCharID] = useState("");
+  const router = useRouter();
   const [quests, setQuests] = useState([]);
+  const [selectedItemIndex, setSelectedItemIndex] = useState();
+
 
 //--------------------------------------------------------------//
+
+  const handleItemClick = (index) => {
+    console.log("selected Quest:", selectedItemIndex);
+    router.push("/questlog")
+  }
+
+  //--------------------------------------------------------------//
 
   const getQuests = async(charID) => {
     console.log("ingetQuests:",charID);
@@ -28,6 +38,7 @@ function QuestListOverview() {
   }
 
 //--------------------------------------------------------------//
+ 
   useEffect(() => {
     const userdata = localStorage.getItem("userdaten");
     const userdataparsed = JSON.parse(userdata);
@@ -46,7 +57,10 @@ function QuestListOverview() {
           return(
             <Questlistitem
               key={index}
+              index={index}
               title={quest.title}
+              onItemClick={handleItemClick}
+              isSelected={selectedItemIndex === index}
             />
           )
         })}

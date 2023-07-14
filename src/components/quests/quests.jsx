@@ -75,7 +75,10 @@ function Quests() {
             return (
               <Questlistitem
                 key={index}
+                index={index}
                 title={quest.title}
+                onItemClick={handleItemClick}
+                isSelected={selectedItemIndex === index}
               />
               // <Listitem
               //   key={index}

@@ -35,9 +35,9 @@ const characterSchema = new Schema(
     isSelected: {
       type: Boolean,
     },
-    picture: {
-      type: String,
-    },
+    // picture: {
+    //   type: String,
+    // },
     quests: [
       {
         type: Schema.Types.ObjectId,

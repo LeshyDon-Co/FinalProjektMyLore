@@ -10,6 +10,7 @@ import ItemHolderVertikal from "@/components/itemholdervertikal/itemholdervertik
 function Inventar() {
 
   const [charData, setCharData] = useState([]);
+  const [charnation, setCharnation] = useState("");
 
 //----------------------------------------------------------//
  
@@ -35,7 +36,9 @@ function Inventar() {
     const userdata = localStorage.getItem("userdaten");
     const userdataparsed = JSON.parse(userdata);
     const charID = userdataparsed._id;
-    console.log("charID:", charID);
+    setCharnation(userdataparsed.nation);
+    // console.log("charnation:", charnation);
+    // console.log("charID:", charID);
     
     getCharData(charID);
 
@@ -56,8 +59,15 @@ function Inventar() {
             <ItemHolderVertikal />
             <ItemHolderVertikal />
           </div>
-          <div className={styles.char}></div>
-
+          {(charnation === "Wischi-Waschi-Bär") && (
+            <div className={styles.charwaschi}> </div>
+          )}
+          {(charnation === "Axolittle") && (
+            <div className={styles.charaxolittle}> </div>
+          )}
+          {(charnation === "Flammengo") && (
+            <div className={styles.charflamingo}> </div>
+          )}
         </div>
         <div className={styles.itemHorizontal}>
             <ItemHolderHoizontal />

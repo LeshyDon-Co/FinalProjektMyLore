@@ -83,7 +83,7 @@ const CharakterÜbersicht = () => {
         <div className={styles.container}>
           <div className={styles.charlist}>
             <p>Deine Charaktere:</p>
-            <div>
+            <div className={styles.charcontainer}>
               {chardata.map((char, index) => {
                 return (
                   <Listitem

@@ -1,5 +1,6 @@
 import connect from "@/utils/db";
 import { NextResponse } from "next/server";
+import Quest from "@/models/Quest"
 import Character from "@/models/Character";
 
 
@@ -16,6 +17,7 @@ export const GET = async (request, {params}) => {
         const characterQuests = character.quests;
         return new NextResponse(JSON.stringify(characterQuests), {status: 200});
     } catch (error) {
+        console.log(error);
         return new NextResponse("Datafetching Error in GET quests", {status: 500});
     };
 };

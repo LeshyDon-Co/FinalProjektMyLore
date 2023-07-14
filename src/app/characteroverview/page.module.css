@@ -10,13 +10,14 @@
 .container {
   border: 2px solid #341549;
   border-radius: 40px;
-  display: flex;
-  height: 60vh;
-  justify-content: space-between;
-  margin: 5%;
-  /* margin: 5% 15%; */
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: space-between;
+
+  height: 60vh;
+  margin: 5%;
   padding: 5%;
 }
 
@@ -26,8 +27,22 @@
   align-items: center;
   gap: 0.5rem;
 
+  height: 100%;
+}
+
+.charcontainer{
   overflow: scroll;
 }
+
+.charcontainer::-webkit-scrollbar{
+  scrollbar-width: none; 
+  scroll-behavior: auto;
+}
+
+.charcontainer::-webkit-scrollbar-corner{
+  visibility: hidden;
+}
+
 
 .card {
   border: 1px solid #341549;

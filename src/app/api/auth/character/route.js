@@ -16,11 +16,11 @@ export const POST = async (request) => {
     stadium,
     characteristic,
     isSelected,
-    picture,
+    // picture,
     quests,
     location,
-    items,
     createdBy,
+    items,
   } = await request.json();
 
   await connect();
@@ -35,7 +35,7 @@ export const POST = async (request) => {
     stadium,
     characteristic,
     isSelected,
-    picture,
+    // picture,
     quests,
     location,
     items,

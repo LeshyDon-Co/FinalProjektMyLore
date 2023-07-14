@@ -24,15 +24,20 @@ function CharacterStats() {
 
   return (
     <div className={styles.bodyComponent}>
-      <div>Status</div>
+      <div className={styles.h2}>Werte:</div>
       <div className={styles.statusData}>
-        HP: {HP}
-        <br />
-        ATK: {ATK}
-        <br />
-        DEF: {DEF}
-        <br />
-        STATUS: {stadium} {characteristic}
+        <div className={styles.statusdatabezeichnungen}>
+          <div>Leben:</div>
+          <div>Attacke:</div>
+          <div>Verteidigung:</div>
+          <div>Eigenschaft:</div>
+        </div>
+        <div className={styles.statusdatawerte}>
+          <div>{HP}</div>
+          <div>{ATK}</div>
+          <div>{DEF}</div>
+          <div>{stadium} {characteristic}</div>
+        </div>
       </div>
     </div>
   );

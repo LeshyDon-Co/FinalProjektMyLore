@@ -4,6 +4,7 @@ import {useRouter} from "next/navigation";
 import {useSession} from "next-auth/react";
 import React, {useCallback, useEffect, useState} from "react";
 import Listitem from "../Listitem/listitem";
+import Questlistitem from "../QuestListItem/questlistitem";
 
 function Quests() {
   const router = useRouter();
@@ -72,13 +73,20 @@ function Quests() {
         <div className={styles.listItem}>
           {allData.map((quest, index) => {
             return (
-              <Listitem
+              <Questlistitem
                 key={index}
                 index={index}
-                name={quest.title}
+                title={quest.title}
                 onItemClick={handleItemClick}
                 isSelected={selectedItemIndex === index}
               />
+              // <Listitem
+              //   key={index}
+              //   index={index}
+              //   name={quest.title}
+              //   onItemClick={handleItemClick}
+              //   isSelected={selectedItemIndex === index}
+              // />
             );
           })}
         </div>

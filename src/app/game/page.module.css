@@ -22,18 +22,16 @@
   flex-direction: column;
   /* justify-content: space-between;  */
 .quest {
-  border: 2px solid yellow;
-
-  height: 85vh;
-  width: 25vw;
-  margin: auto auto auto 2vw;
+  height: 70vh;
+  width: 20vw;
+  margin: auto auto auto 4vw;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin: auto; */
 
-  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 20 fill / 20px / 1em round;
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 20
+    fill / 20px / 1em round;
 }
 
 .locationAndChar {
@@ -56,6 +54,38 @@
   margin-bottom: 5%;
   display: flex;
   /* justify-content: space-between; */
+}
+.charwaschi {
+  background-image: url(../../assets/characterimages/WischiWaschiBaer.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.charaxolittle {
+  background-image: url(../../assets/characterimages/Axolittle.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.charflamingo {
+  background-image: url(../../assets/characterimages/Flammengo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
 }
 
 .pictureChar {

@@ -10,14 +10,14 @@ function Location() {
   useEffect(() => {
     const storedData = localStorage.getItem("userdaten") || "";
     const infoData = JSON.parse(storedData);
-    setLocation(infoData.nation)
+    setLocation(infoData.location)
   },[])
 
   return (
     <div className={styles.bodyComponent}>
       Aktueller Standort:
       <br />
-      {location}-City
+      {location}
     </div>
   );
 }

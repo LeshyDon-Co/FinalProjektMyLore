@@ -1,6 +1,5 @@
 import connect from "@/utils/db";
 import { NextResponse } from "next/server";
-import { ObjectId } from 'bson';
 import Character from "@/models/Character";
 
 
@@ -9,7 +8,7 @@ import Character from "@/models/Character";
 export const GET = async (request, {params}) => {
 
   const {id} = params;
-  console.log(id);
+  // console.log(id);
 
     try {
       await connect();

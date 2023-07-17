@@ -10,10 +10,17 @@
 
 .questList {
   border: 2px solid blue;
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 20 fill / 20px / 0.5em round;
+
 
   padding-top: 5%;
   height: 100%;
-  width: 25%;
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .questInfo {

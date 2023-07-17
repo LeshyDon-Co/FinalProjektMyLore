@@ -21,21 +21,23 @@
   display: flex;
   flex-direction: column;
   /* justify-content: space-between;  */
+
 .quest {
-  height: 70vh;
-  width: 20vw;
+  height: 75vh;
+  width: 25vw;
   margin: auto auto auto 4vw;
 
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
 
   border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 20
     fill / 20px / 1em round;
 }
 
 .locationAndChar {
-  border: 2px solid green;
+  /* border: 2px solid green; */
 
   width: 70vw;
   height: 85vh;
@@ -47,14 +49,17 @@
 }
 
 .characterAll {
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
 
-  height: 60%;
+  height: 70%;
   width: 100%;
   margin-bottom: 5%;
   display: flex;
-  /* justify-content: space-between; */
+
+  /* align-items: center; */
+  /* justify-content: end; */
 }
+
 .charwaschi {
   background-image: url(../../assets/characterimages/WischiWaschiBaer.png);
   background-position: center;
@@ -77,7 +82,7 @@
   align-items: flex-end;
 }
 
-.charflamingo {
+.charflammengo {
   background-image: url(../../assets/characterimages/Flammengo.png);
   background-position: center;
   background-size: contain;
@@ -89,7 +94,7 @@
 }
 
 .pictureChar {
-  border: 2px solid black;
+  border: 2px solid #00eeff;
   width: 50%;
 }
 

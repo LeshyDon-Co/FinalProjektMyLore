@@ -55,7 +55,7 @@ function Game() {
             <div className={styles.charaxolittle}> </div>
           )}
           {(charnation === "Flammengo") && (
-            <div className={styles.charflamingo}> </div>
+            <div className={styles.charflammengo}> </div>
           )}
           <CharacterStats />
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./page.module.css";
-import Karussel from "@/components/karussel/karussel";
+import Slideshow from "@/components/karussel2/karussel";
 // import MyLore from '../assets/my-lore-schriftzug.png';
 // import Image from 'next/image';
 //import dynamic from "next/dynamic";
@@ -17,7 +17,7 @@ function Gallery() {
           height={800}
           alt="Name of the game as Logo in 3D"
         /> */}
-        <Karussel/>
+        <Slideshow/>
       </main>
     </div>
   );

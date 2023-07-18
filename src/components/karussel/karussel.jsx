@@ -28,7 +28,6 @@ function Karussel() {
           height={200}
         />
         <p className="text-gray-700 mb-8">Screenshots</p>
-        <Carousel showArrows={true}>
           <div>
             <Image
               src={bild1}
@@ -74,7 +73,6 @@ function Karussel() {
               className={`${styles.bild} rounded`}
             />
           </div>
-        </Carousel>
       </div>
     </div>
   );

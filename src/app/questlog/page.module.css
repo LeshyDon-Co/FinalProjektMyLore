@@ -2,9 +2,19 @@
   width: 100vw;
   height: 100vh;
 
-  padding-top: 10vh;
+  padding-top: 8vh;
 }
 
 .container {
-  background-color: mediumaquamarine;
+  /* background-color: mediumaquamarine; */
+  /* border: 2px solid red; */
+
+  width: 95vw;
+  height: 85vh;
+  margin: 2vw auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }

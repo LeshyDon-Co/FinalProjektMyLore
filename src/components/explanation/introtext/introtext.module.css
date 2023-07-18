@@ -1,9 +1,15 @@
 .introtext {
   /* border: 2px solid red; */
   height: 100%;
-  width: 40%;
+  width: 70%;
   font-size: 0.8rem;
   position: relative;
-  right: 0;
   overflow: auto;
+  z-index: 999;
+  color: black;
+  backdrop-filter: blur(10px);
+}
+
+.introtext::-webkit-scrollbar {
+  width: 0px;
 }

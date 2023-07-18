@@ -12,6 +12,7 @@
     "@nextui-org/react": "^1.0.0-beta.13",
     "bcryptjs": "^2.4.3",
     "bson": "^5.3.0",
+    "canvas": "^2.11.2",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "fs": "^0.0.1-security",
@@ -21,7 +22,6 @@
     "next-images": "^1.8.5",
     "path": "^0.12.7",
     "postcss": "8.4.24",
-
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-responsive-carousel": "^3.2.23",

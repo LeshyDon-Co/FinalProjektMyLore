@@ -1,0 +1,38 @@
+.bodyComponent {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  /* align-items: center; */
+}
+
+.questList {
+  border: 2px solid blue;
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 20 fill / 20px / 0.5em round;
+
+
+  padding-top: 5%;
+  height: 100%;
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.questInfo {
+  border: 2px solid green;
+  height: 100%;
+  width: 70%;
+}
+
+.title {
+  padding-top: 5%;
+}
+
+.text {
+  padding-top: 5%;
+}

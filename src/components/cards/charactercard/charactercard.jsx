@@ -8,6 +8,7 @@ import {useState} from "react";
 
 import WischiWaschi from "../../../assets/characterimages/WischiWaschiBaer.png";
 import Flammengo from "../../../assets/characterimages/Flammengo.png";
+import Axolittle from "../../../assets/characterimages/Axolittle.png";
 
 function Charactercard(props) {
   console.log(props);
@@ -70,7 +71,7 @@ function Charactercard(props) {
         <Image
           priority={true}
           alt=""
-          src={WischiWaschi}
+          src={Axolittle}
           width={400}
           height={400}
           // fill={true}

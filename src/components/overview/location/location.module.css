@@ -1,0 +1,11 @@
+.bodyComponent {
+  border: 2px solid red;
+  height: 6vh;
+  width: 10vw;
+  margin: 0 auto;
+
+  font-size: 0.8rem;
+  text-align: center;
+
+  border-image: url(../../../assets/frames/old-frame-with-pergament-kisspng.png) 130 fill / 35px / 2em;
+}

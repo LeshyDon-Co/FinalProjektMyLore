@@ -2,9 +2,23 @@
   width: 100vw;
   height: 100vh;
 
-  padding-top: 10vh;
+  padding-top: 8vh;
 }
 
+/* wird noch zum Canvas */
 .container {
-  background-color: burlywood;
+  border: 2px solid red;
+  border-image: url(../../assets/frames/horizontal-ornamentic-RT-LB-light.png) 200 / 70px / 0.5em round;
+
+  /* background-color: burlywood; */
+  background-image: url("../../assets/worldmap/worldmap.jpg");
+  background-position: top;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  width: 75%;
+  height: 95%;
+  margin: 1vw auto;
+
+  /* overflow: scroll; */
 }

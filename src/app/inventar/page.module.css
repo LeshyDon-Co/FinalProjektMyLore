@@ -2,9 +2,161 @@
   width: 100vw;
   height: 100vh;
 
-  padding-top: 10vh;
+  padding-top: 8vh;
+
+  background-image: url(../../assets/backgrounds/golden-background-brighter2.jpg);
+  background-position: center;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .container {
-  background-color: khaki;
+  /* border: 2px solid red; */
+  /* background-color: khaki; */
+
+  height: 90vh;
+  width: 95%;
+  padding-top: 5vh;
+  margin: auto 2vw;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rucksack {
+  text-decoration: underline;
+}
+.skills {
+  border: 2px solid black;
+  /* border-image: url(../../assets/backgrounds/inventarbackgrounds/goldenframe.png)
+    30 fill / 15px / 40px; */
+  /* fill / 30px / 30px space; */
+  /* background-image: url(); */
+  /* background-size: 100% 100%; */
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  border-radius: 14px;
+
+  height: 85%;
+  width: 25%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* padding: auto; */
+}
+
+.charitemcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.charcontainer {
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+
+  /* border: 2px solid purple; */
+}
+
+/* .char { */
+/* border: 2px solid red; */
+/* backdrop-filter: blur(5px); */
+/* background-image: url(../../assets/characterimages/Axolittle.png); */
+/* background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: flex-end; */
+/* } */
+
+.charwaschi {
+  background-image: url(../../assets/characterimages/WischiWaschiBaer.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.charaxolittle {
+  background-image: url(../../assets/characterimages/Axolittle.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.charflammengo {
+  background-image: url(../../assets/characterimages/Flammengo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.itemVertical {
+  /* border: 2px solid white; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemHorizontal {
+  /* border: 2px solid orange; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventar {
+  border: 2px solid black;
+  background-position: center;
+  background-size: contain;
+
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  border-radius: 14px;
+
+  height: 85%;
+  width: 25%;
+
+  padding: 50px;
+
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.itemholder {
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 3% 5%;
+}
+
+.skills,
+.inventar {
+  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10
+    fill / 10px / 1.5em;
+  border-image-outset: 1.5em;
 }

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import itemSchema from "./Item.js";
 
 const {Schema} = mongoose;
 
@@ -31,9 +32,30 @@ const characterSchema = new Schema(
     characteristic: {
       type: String,
     },
+    isSelected: {
+      type: Boolean,
+    },
+    // picture: {
+    //   type: String,
+    // },
+    quests: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Quest",
+      },
+    ],
+    location: {
+      type: String,
+    },
     createdBy: {
       type: String,
     },
+    items: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Item",
+      },
+    ],
   },
   {timestamps: true}
 );

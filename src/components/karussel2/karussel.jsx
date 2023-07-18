@@ -35,9 +35,9 @@ const Slideshow = ({ images, onFullscreen, onPause }) => {
           <Image
             src={image}
             alt="slide"
-            width={400}
-            height={400}
-            className={`${styles.bild} rounded`}
+            width="400"
+            height="400"
+            className="w-full rounded-lg"
           />
         </div>
       ))}
@@ -59,13 +59,6 @@ const Slideshow = ({ images, onFullscreen, onPause }) => {
       </div>
     </div>
   );
-};
-
-const styles = {
-  bild: {
-    width: "100%",
-    height: "auto",
-  },
 };
 
 export default Slideshow;

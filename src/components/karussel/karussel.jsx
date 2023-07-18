@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from "react";
 import styles from "./karussel.module.css";
 import Image from "next/image";

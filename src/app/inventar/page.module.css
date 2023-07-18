@@ -156,7 +156,7 @@
 
 .skills,
 .inventar {
-  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 10
+  border-image: url(../../assets/frames/vertical-old-frame.png) 10
     fill / 10px / 1.5em;
   border-image-outset: 1.5em;
 }

@@ -8,7 +8,9 @@
 /* wird noch zum Canvas */
 .container {
   border: 2px solid red;
-  border-image: url(../../assets/frames/horizontal-ornamentic-RT-LB-light.png) 200 / 70px / 0.5em round;
+  border-radius: 30px 0 30px 0;
+
+  border-image: url(../../assets/frames/horizontal-ornamentic-RT-LB-light.png) 200 / 50px / 0.4em round;
 
   /* background-color: burlywood; */
   background-image: url("../../assets/worldmap/worldmap.jpg");

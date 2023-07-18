@@ -69,7 +69,7 @@ function Quests() {
   return (
     <div className={styles.bodyComponent}>
       <div className={styles.questList}>
-        <h2>Questübersicht</h2>
+        <h2 className={styles.h2}>Questübersicht</h2>
         <div className={styles.listItem}>
           {allData.map((quest, index) => {
             return (

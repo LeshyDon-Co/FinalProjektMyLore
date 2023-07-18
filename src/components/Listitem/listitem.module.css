@@ -8,8 +8,8 @@
   /* transition: border-color 0.3s ease-in-out; */
 }
 .listitem:hover {
-  border-color: #4a1e68;
-  box-shadow: 0 0 10px #ad82c9;
+  border-color: #493D13;
+  box-shadow: 0 0 10px #947B27;
 }
 
 .selected {
@@ -18,16 +18,16 @@
 
 @keyframes shimmer {
   from {
-    border-color: #4a1e68;
-    box-shadow: 0 0 10px #ad82c9;
+    border-color: #947B27;
+    box-shadow: 0 0 10px #493D13;
   }
   /* 50% {
     border-color: transparent;
     box-shadow: none;
   } */
   to {
-    border-color: #4a1e68;
-    box-shadow: 0 10px 10px #4a1e68;
+    border-color: #493D13;
+    box-shadow: 0 5px 10px #947B27;
   }
 }
 

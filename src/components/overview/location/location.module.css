@@ -1,11 +1,14 @@
 .bodyComponent {
   border: 2px solid red;
   height: 6vh;
-  width: 10vw;
+  width: 15vw;
   margin: 0 auto;
 
   font-size: 0.8rem;
   text-align: center;
 
-  border-image: url(../../../assets/frames/old-frame-with-pergament-kisspng.png) 130 fill / 35px / 2em;
+  position: relative;
+  right: 300px;
+
+  border-image: url(../../../assets/frames/old-wood-top-bottom-inner.png) 25 fill / 10px / 2.5em;
 }

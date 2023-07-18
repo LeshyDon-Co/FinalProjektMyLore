@@ -4,16 +4,26 @@
 
   display: flex;
   justify-content: space-between;
-
   /* align-items: center; */
+
+  /* background-image: url(../../assets/backgrounds/pergament/horizontal-black-scroll.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; */
+}
+
+.h2{
+  text-decoration: underline;
+
+margin: 50px auto 20px;
 }
 
 .questList {
-  border: 2px solid blue;
-  border-image: url(../../assets/frames/old-frame-with-pergament-kisspng.png) 20 fill / 20px / 0.5em round;
+  /* border: 2px solid blue; */
+  border-image: url(../../assets/frames/vertical-old-frame.png) 10 fill / 20px / 0 round;
 
+  /* color: cornsilk; */
 
-  padding-top: 5%;
+  padding-top: 10%;
   height: 100%;
   width: 30%;
 
@@ -24,13 +34,18 @@
 }
 
 .questInfo {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   height: 100%;
-  width: 70%;
+  width: 65%;
+
+  background-image: url(../../assets/backgrounds/pergament/horizontal-goldish-scroll2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .title {
-  padding-top: 5%;
+  padding-top: 22%;
 }
 
 .text {

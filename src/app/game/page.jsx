@@ -29,13 +29,16 @@ function Game() {
 //----------------------------------------------------------//
 
   useEffect(() => {
+    if (localStorage.getItem('userdaten') === null){
+      console.log("Keine Userdaten vorhanden");
+    }else{
     const userdata = localStorage.getItem("userdaten");
     const userdataparsed = JSON.parse(userdata);
     const charID = userdataparsed._id;
 
     setCharnation(userdataparsed.nation)
 
-    getCharData(charID);
+    getCharData(charID);}
   },[]);
 //----------------------------------------------------------//
  

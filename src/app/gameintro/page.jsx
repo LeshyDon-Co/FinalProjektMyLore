@@ -12,12 +12,11 @@ function GameIntro() {
   const session = useSession();
   const [allData, setAllData] = useState([]);
 
-  const storedData = localStorage.getItem("userdaten");
-  const infoData = JSON.parse(storedData);
-  const nation = infoData.nation;
-
 
   useEffect(() => {
+    const storedData = localStorage.getItem("userdaten");
+    const infoData = JSON.parse(storedData);
+    const nation = infoData.nation;
     if (session.data) {
       console.log("session.data", session.data, session);
       const getIntroData = async () => {

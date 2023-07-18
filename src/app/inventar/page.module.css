@@ -29,19 +29,21 @@
   text-decoration: underline;
 }
 .skills {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   /* border-image: url(../../assets/backgrounds/inventarbackgrounds/goldenframe.png)
     30 fill / 15px / 40px; */
   /* fill / 30px / 30px space; */
   /* background-image: url(); */
   /* background-size: 100% 100%; */
-  background-repeat: no-repeat;
-  backdrop-filter: blur(5px);
-  border-radius: 14px;
+  /* background-repeat: no-repeat; */
+  /* backdrop-filter: blur(5px);
+  border-radius: 14px; */
 
+  font-size: 0.8rem;
   height: 85%;
   width: 25%;
-
+  /* margin: 5%; */
+  padding: 5%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -127,7 +129,7 @@
 }
 
 .inventar {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   background-position: center;
   background-size: contain;
 
@@ -156,7 +158,7 @@
 
 .skills,
 .inventar {
-  border-image: url(../../assets/frames/vertical-old-frame.png) 10
-    fill / 10px / 1.5em;
+  border-image: url(../../assets/frames/vertical-old-frame.png) 10 fill / 10px /
+    1.5em;
   border-image-outset: 1.5em;
 }

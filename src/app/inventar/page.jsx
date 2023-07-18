@@ -5,7 +5,9 @@ import NameOverview from "@/components/overview/name/nameoverview";
 import ItemHolder from "@/components/itemholder/itemholder";
 import ItemHolderHoizontal from "@/components/itemholderhorizontal/itemholderhorizontal";
 import ItemHolderVertikal from "@/components/itemholdervertikal/itemholdervertikal";
-
+import CharacterStats from "@/components/overview/character/characterstats/characterstats";
+import Characterstatsinventar from "@/components/overview/character/characterstatsinventar/characterstatsinventar";
+// import Characterstatsinventar from "@/components/overview/characterstats/characterstatsinventar";
 
 function Inventar() {
 
@@ -51,7 +53,11 @@ function Inventar() {
     <div className={styles.body}>
       <NameOverview />
       <div className={styles.container}>
-        <div className={styles.skills}>Skills coming soon...</div>
+        <div className={styles.skills}>
+          {/* Skills coming soon... */}
+          <div>Skills coming soon....</div>
+          <Characterstatsinventar/>
+        </div>
         <div className={styles.charitemcontainer}>
         <div className={styles.charcontainer}>
           <div className={styles.itemVertical}>

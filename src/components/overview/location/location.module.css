@@ -1,15 +1,22 @@
 .bodyComponent {
-  border: 2px solid red;
-  height: 6vh;
-  width: 15vw;
+  /* border: 2px solid red; */
+  height: 3vh;
+  width: auto;
   margin: 0 auto;
 
   font-size: 0.8rem;
-  text-align: center;
+  /* text-align: center; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   position: relative;
-  top: 2%;
-  right: 20%;
+  top: -4%;
+  right: -39%;
 
-  border-image: url(../../../assets/frames/old-wood-top-bottom-inner.png) 25 fill / 10px / 2.5em;
+  /* border-image: url(../../../assets/frames/old-wood-top-bottom-inner.png) 25 fill / 10px / 2.5em; */
+
+  border-image: url(../../../assets/buttons/golden-button-cornered.png) 30 fill / 10px / 1em round;
+  background-size: 100% 100%;
 }

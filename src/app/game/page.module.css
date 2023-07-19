@@ -23,7 +23,7 @@
   /* justify-content: space-between;  */
 
 .quest {
-  height: 75vh;
+  height: 70vh;
   width: 25vw;
   margin: auto auto auto 4vw;
 
@@ -32,8 +32,8 @@
   justify-content: center;
   align-items: center;
 
-  border-image: url(../../assets/backgrounds/pergament/vertical-old-half-framed8.png) 10
-    fill / 20px / 1em round;
+  border-image: url(../../assets/backgrounds/pergament/vertical-old-half-framed8.png) 15
+    fill / 20px / 0.5em round;
 }
 
 .locationAndChar {
@@ -100,5 +100,10 @@
 
 .characterStats {
   border: 2px solid pink;
-  width: 50%;
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+
+  /* border-image: url(../../assets/backgrounds/pergament/vertical-old-half-framed7.png) 10 fill / 20px / 0.5em round; */
 }

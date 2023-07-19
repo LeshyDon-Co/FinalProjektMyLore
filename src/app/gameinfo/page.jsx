@@ -5,8 +5,7 @@ function Gameinfo() {
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-        Hier entsteht eine Seite, die Informationen über das spiel enthält
-      </div>
+Spiele-Wiki in Bearbeitung ...      </div>
     </div>
   );
 }

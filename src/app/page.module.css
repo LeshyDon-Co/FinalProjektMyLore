@@ -31,12 +31,9 @@
   background-size: contain;
 
   height: 6%;
+  width: 10vw;
 
- /* position: absolute;
- bottom: 0;
- right: 0; */
-
-transform: translateY(-100px);
-
-/* z-index: 2; */
+ position: absolute;
+ bottom: 1%;
+ right: 2%;
 }

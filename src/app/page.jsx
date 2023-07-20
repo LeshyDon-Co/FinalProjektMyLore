@@ -21,8 +21,8 @@ export default function Home() {
           height={800}
           alt="Name of the game as Logo in 3D"
         />
-      </main>
       <Link href="/impressum" className={styles.impressum}></Link>
+      </main>
     </div>
   );
 };

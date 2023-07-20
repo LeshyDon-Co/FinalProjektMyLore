@@ -44,6 +44,7 @@ function Game() {
 //----------------------------------------------------------//
  
   return (
+    
     <div className={styles.body}>
       <NameOverview />
       <div className={styles.quest}>

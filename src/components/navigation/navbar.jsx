@@ -71,6 +71,7 @@ const Navbar = () => {
           </Link>
           <Link href="/gameinfo" className={styles.link}>Spiele-Wiki</Link> 
           <Link href="/gallery" className={styles.link}>Gallerie</Link> 
+          <Link href="/impressum" className={styles.link}>Impressum</Link> 
           <Link href="/loginandregister" className={styles.link}>Anmeldung / Registrierung</Link>
       </div>
       )}
@@ -92,6 +93,7 @@ const Navbar = () => {
           <Link href="/characteroverview" className={styles.link}>Charakterübersicht</Link>  
           <Link href="/gameinfo" className={styles.link}>Spiele-Wiki</Link> 
           <Link href="/gallery" className={styles.link}>Gallerie</Link> 
+          <Link href="/impressum" className={styles.link}>Impressum</Link> 
           <button className={styles.logout} onClick={()=>signOut()}>Abmeldung</button>
       </div>
       )}

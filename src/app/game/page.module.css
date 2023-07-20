@@ -7,6 +7,9 @@
   display: flex;
   justify-content: space-between;
 
+  /* background-image: url(../../assets/backgrounds/lava.jpg); */
+  /* background-image: url(../../assets/backgrounds/backgroundflammengo.jpg); */
+
   background-image: url(../../assets/backgrounds/dave--6jxbP3-N1I-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -127,7 +130,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
- position: absolute;
+  position: absolute;
   bottom: 0;
   left: 35%;
   /* z-index: -1; */

@@ -11,5 +11,6 @@
   top: 2%;
   right: 20%;
 
-  border-image: url(../../../assets/frames/old-wood-top-bottom-inner.png) 25 fill / 10px / 2.5em;
+  border-image: url(../../../assets/frames/old-wood-top-bottom-inner.png) 25
+    fill / 10px / 2.5em;
 }

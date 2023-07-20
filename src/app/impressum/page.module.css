@@ -1,0 +1,70 @@
+.body {
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 10vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.personalRoll {
+  height: 80%;
+  width: 30%;
+  margin: 3% 1%;
+  padding-top: 9%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  /* background-image: url(../../assets/characterimages/Flammengo.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat; */
+
+  border-image: url(../../assets/backgrounds/pergament/vertical-goldish-scroll2.png)
+    10 fill / 20px / 20px round;
+}
+
+.h2maddy {
+  /* border: 2px solid red; */
+  background-image: url(../../assets/letterings/maddy-schriftzug.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90px;
+}
+
+.h2claudi {
+  /* border: 2px solid red; */
+  background-image: url(../../assets/letterings/claudi-schriftzug.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80px;
+}
+
+.h2lion {
+  /* border: 2px solid red; */
+  background-image: url(../../assets/letterings/lion-schriftzug.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80px;
+}
+
+.h2steven {
+  /* border: 2px solid red; */
+  background-image: url(../../assets/letterings/steven-schriftzug.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80px;
+}

@@ -16,8 +16,7 @@ function Location() {
   return (
     <div className={styles.bodyComponent}>
       Aktueller Standort:
-      <br />
-      {location}
+      {` "${location}"`}
     </div>
   );
 }

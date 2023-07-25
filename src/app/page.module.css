@@ -21,3 +21,19 @@
   padding-top: 10%;
   margin: 0 auto;
 }
+
+
+.impressum {
+  background-image: url(../assets/letterings/impressum-schriftzug.png);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  height: 6%;
+  width: 10vw;
+
+ position: absolute;
+ bottom: 1%;
+ right: 2%;
+}

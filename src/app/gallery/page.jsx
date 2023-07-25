@@ -18,6 +18,8 @@ function Gallery() {
           alt="Name of the game as Logo in 3D"
         /> */}
         {/* <Karussel/> */}
+        <div>
+Galerie in Bearbeitung ...      </div>
       </main>
     </div>
   );

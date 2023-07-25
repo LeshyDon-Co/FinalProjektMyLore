@@ -4,22 +4,25 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
+  border-image: url(../../assets/frames/vertical-ornamentic-LT-RB-light.png) 30 fill / 20px / 1em;
 }
 
 .loginheading {
+  font-size: 1.2rem;
+
   text-align: center;
-  color: white;
-  /* margin-bottom: 6rem; */
-  margin-top: 1rem;
+  color: #F4E9C6;
+  text-shadow: 1px 1px 10px #000000;
+
+  margin-top: 15%;
 }
 
 .inputs {
-  /* border: 2px solid red; */
   padding-bottom: 1.5rem;
 }
 
 .formgroup {
-  /* border: 2px solid red; */
   margin-bottom: 1rem;
 }
 
@@ -28,32 +31,33 @@
 }
 
 .logininput {
-  width: 80%;
+  width: 70%;
   padding: 8px;
-  margin: 10px;
-  border-radius: 5px;
-  box-shadow: 10px 5px 30px 10px black;
-  border: 1px solid #535252;
-  background-color: transparent;
+  margin: 10px 0 15px;
+  box-shadow: 1px 5px 30px 10px black;
+
+  background-color: #35353542;
 }
 
 .logininput::placeholder {
-  color: #000000;
+  color: #e9d59377;
+  text-shadow: 1px 1px 5px #000000;
 }
 
 .loginbutton {
-  margin-bottom: 1rem;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 10px;
-  background-color: #d4af37;
-  color: #f4e9c6;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000;
-  box-shadow: 0px 10px 13px -7px #000000, 0px 0px 19px -3px #000000;
-  justify-content: center;
-  align-items: center;
+  padding: 5px 20px;
+  margin-bottom: 20%;
+
+  color: #493D13;
+
+  background-image: url(../../assets/buttons/golden-button-cornered.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  transition: 0.2s;
 }
+
 .loginbutton:hover {
-  background-color: #d4af3780;
+  /* background-color: #d4af3780; */
+  transform: scale(1.1);
 }

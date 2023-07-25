@@ -1,5 +1,5 @@
 .bodyComponent {
-  border: 2px solid black;
+  /* border: 2px solid black; */
 
   height: 80%;
   width: 70%;
@@ -12,8 +12,8 @@
   /* backdrop-filter: blur(5px); */
 
   position: relative;
-  top: 150px;
-  right: 40px;
+  top: 15%;
+  right: 5%;
 
   border-image: url(../../../../assets/backgrounds/pergament/vertical-old-half-framed7.png)
     10 fill / 20px / 0.5em round;

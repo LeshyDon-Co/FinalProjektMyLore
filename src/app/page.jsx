@@ -1,6 +1,7 @@
 "use client";
 import MyLore from '../assets/my-lore-schriftzug.png';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from "./page.module.css"
 
 // import { signOut, useSession } from 'next-auth/react';
@@ -20,6 +21,7 @@ export default function Home() {
           height={800}
           alt="Name of the game as Logo in 3D"
         />
+      <Link href="/impressum" className={styles.impressum}></Link>
       </main>
     </div>
   );

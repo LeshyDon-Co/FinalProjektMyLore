@@ -5,6 +5,7 @@ import NameOverview from "@/components/overview/name/nameoverview";
 import QuestListOverview from "@/components/overview/quests/questlistoverview";
 import Location from "@/components/overview/location/location";
 import CharacterStats from "@/components/overview/character/characterstats/characterstats";
+import Image from "next/image"
 
 //----------------------------------------------------------//
  
@@ -43,6 +44,7 @@ function Game() {
 //----------------------------------------------------------//
  
   return (
+    
     <div className={styles.body}>
       <NameOverview />
       <div className={styles.quest}>
@@ -61,6 +63,9 @@ function Game() {
             <div className={styles.charflammengo}> </div>
           )}
           <CharacterStats />
+        </div>
+        <div className={styles.underground}>
+
         </div>
       </div>
     </div>

@@ -7,7 +7,6 @@ import ItemHolderHoizontal from "@/components/itemholderhorizontal/itemholderhor
 import ItemHolderVertikal from "@/components/itemholdervertikal/itemholdervertikal";
 import CharacterStats from "@/components/overview/character/characterstats/characterstats";
 import Characterstatsinventar from "@/components/overview/character/characterstatsinventar/characterstatsinventar";
-// import Characterstatsinventar from "@/components/overview/characterstats/characterstatsinventar";
 
 function Inventar() {
 
@@ -26,7 +25,7 @@ function Inventar() {
     }
 
     const data = await res.json();
-    // console.log("data", data);
+    console.log("data", data);
     setCharData(data);
 
   };
@@ -90,7 +89,8 @@ function Inventar() {
                           price={item.itemprice}
                           text={item.itemtext}
                           type={item.itemtype}
-                          id={item.itemid} /> 
+                          id={item.itemid}
+                          /> 
             ))}
           </div>
         </div>

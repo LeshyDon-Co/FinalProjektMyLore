@@ -6,8 +6,20 @@ function ItemHolder(props) {
 
   const {name, pic, price, text, type, id} = props;
 
-  return <div className={styles.items}>
+//----------------------------------------------------------//
+ 
+  const equipItem = (e) => {
+    console.log("dobbleClick", e.target.id);
+    //Hier einbauen, dass das geklickte Item ausgerüstet wird
+  }
+
+//----------------------------------------------------------//
+ 
+  return <div className={styles.items}
+              onDoubleClick={equipItem}
+              >
     <Image 
+      id={id}
       src={pic} 
       alt="Item" 
       width={61} 

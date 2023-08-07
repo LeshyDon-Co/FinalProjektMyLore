@@ -94,7 +94,7 @@ const Navbar = () => {
           <Link href="/gameinfo" className={styles.link}>Spiele-Wiki</Link> 
           <Link href="/gallery" className={styles.link}>Gallerie</Link> 
           <Link href="/impressum" className={styles.link}>Impressum</Link> 
-          <button className={styles.logout} onClick={()=>signOut()}>Abmeldung</button>
+          <button className={styles.logout} onClick={()=>signOut({ callbackUrl: '/' })}>Abmeldung</button>
       </div>
       )}
 
@@ -117,7 +117,7 @@ const Navbar = () => {
           <Link href="/inventar" className={styles.link}>Inventar</Link>
           <Link href="/questlog" className={styles.link}>Questlog</Link>  
           <Link href="/worldmap" className={styles.link}>Weltkarte</Link> 
-          <button className={styles.logout} onClick={()=>signOut()}>Abmeldung</button>
+          <button className={styles.logout} onClick={()=>signOut({ callbackUrl: '/' })}>Abmeldung</button>
       </div>
       )}
     </div>

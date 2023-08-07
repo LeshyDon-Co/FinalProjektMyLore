@@ -19,7 +19,7 @@ function Gallery() {
         /> */}
         {/* <Karussel/> */}
         <div>
-Galerie in Bearbeitung ...      </div>
+Gallerie in Bearbeitung ...      </div>
       </main>
     </div>
   );

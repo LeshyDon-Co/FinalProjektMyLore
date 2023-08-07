@@ -5,6 +5,27 @@
   padding-top: 8vh;
 }
 
+.nameAndLocation {
+  /* border: 2px solid red; */
+  height: 5vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+}
+
+.name {
+  width: fit-content;
+  margin-left: 0.5em;
+}
+
+.location {
+  width: fit-content;
+  margin-right: 0.5em;
+}
+
 .container {
   /* background-color: mediumaquamarine; */
   /* border: 2px solid red; */

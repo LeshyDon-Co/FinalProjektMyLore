@@ -47,9 +47,11 @@
 }
 
 .link:hover {
-  color: white;
+  /* color: white; */
+  text-decoration: underline;
 }
 
 .logout:hover {
-  color: white;
+  /* color: white; */
+  text-decoration: underline;
 }

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import NameOverview from "@/components/overview/name/nameoverview";
+import Location from "@/components/overview/location/location";
 import ItemHolder from "@/components/itemholder/itemholder";
 import ItemHolderHoizontal from "@/components/itemholderhorizontal/itemholderhorizontal";
 import ItemHolderVertikal from "@/components/itemholdervertikal/itemholdervertikal";
@@ -49,7 +50,14 @@ function Inventar() {
  
   return (
     <div className={styles.body}>
-      <NameOverview />
+      <div className={styles.nameAndLocation}>
+        <div className={styles.name}>
+        <NameOverview />
+        </div>
+        <div className={styles.location}>
+        <Location />
+        </div>
+      </div>
       <div className={styles.container}>
         <div className={styles.skills}>Skills coming soon...</div>
         <div className={styles.charitemcontainer}>

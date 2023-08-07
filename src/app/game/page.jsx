@@ -5,67 +5,69 @@ import NameOverview from "@/components/overview/name/nameoverview";
 import QuestListOverview from "@/components/overview/quests/questlistoverview";
 import Location from "@/components/overview/location/location";
 import CharacterStats from "@/components/overview/character/characterstats/characterstats";
-import Image from "next/image"
+import Image from "next/image";
 
 //----------------------------------------------------------//
- 
-function Game() {
 
+function Game() {
   const [charData, setCharData] = useState([]);
   const [charnation, setCharnation] = useState("");
 
-//----------------------------------------------------------//
- 
-  const getCharData = async(charID) => {
+  //----------------------------------------------------------//
+
+  const getCharData = async (charID) => {
     const res = await fetch(`/api/auth/character/${charID}`);
 
-    if(!res.ok){
+    if (!res.ok) {
       throw new Error("Failed datafetching in game");
     }
 
     const data = await res.json();
     setCharData(data);
-  }
+  };
 
-//----------------------------------------------------------//
+  //----------------------------------------------------------//
 
   useEffect(() => {
-    if (localStorage.getItem('userdaten') === null){
+    if (localStorage.getItem("userdaten") === null) {
       console.log("Keine Userdaten vorhanden");
-    }else{
-    const userdata = localStorage.getItem("userdaten");
-    const userdataparsed = JSON.parse(userdata);
-    const charID = userdataparsed._id;
+    } else {
+      const userdata = localStorage.getItem("userdaten");
+      const userdataparsed = JSON.parse(userdata);
+      const charID = userdataparsed._id;
 
-    setCharnation(userdataparsed.nation)
+      setCharnation(userdataparsed.nation);
 
-    getCharData(charID);}
-  },[]);
-//----------------------------------------------------------//
- 
+      getCharData(charID);
+    }
+  }, []);
+  //----------------------------------------------------------//
+
   return (
-    
     <div className={styles.body}>
-      <NameOverview />
-      <div className={styles.quest}>
-        <QuestListOverview />
+      <div className={styles.nameAndLocation}>
+        <div className={styles.name}>
+        <NameOverview />
+        </div>
+        <div className={styles.location}>
+        <Location />
+        </div>
       </div>
       <div className={styles.locationAndChar}>
-        <Location />
+        <div className={styles.quest}>
+          <QuestListOverview />
+        </div>
         <div className={styles.characterAll}>
-        {(charnation === "Wischi-Waschi-Bär") && (
+          {charnation === "Wischi-Waschi-Bär" && (
             <div className={styles.charwaschi}> </div>
           )}
-          {(charnation === "Axolittle") && (
+          {charnation === "Axolittle" && (
             <div className={styles.charaxolittle}> </div>
           )}
-          {(charnation === "Flammengo") && (
+          {charnation === "Flammengo" && (
             <div className={styles.charflammengo}> </div>
           )}
           <CharacterStats />
-        </div>
-        <div className={styles.underground}>
-
         </div>
       </div>
     </div>

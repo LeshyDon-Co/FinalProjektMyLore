@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import NameOverview from "@/components/overview/name/nameoverview";
+import Location from "@/components/overview/location/location";
 
 
 function Worldmap() {
@@ -52,7 +53,14 @@ function Worldmap() {
     // </div>
 
     <div className={styles.body}>
-      <NameOverview />
+     <div className={styles.nameAndLocation}>
+        <div className={styles.name}>
+        <NameOverview />
+        </div>
+        <div className={styles.location}>
+        <Location />
+        </div>
+      </div>
       <div className={styles.container}>
         <div className={styles.worldmap}>
         </div>

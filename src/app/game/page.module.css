@@ -5,12 +5,13 @@
   padding-top: 8vh;
 
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
   /* background-image: url(../../assets/backgrounds/lava.jpg); */
   /* background-image: url(../../assets/backgrounds/backgroundflammengo.jpg); */
 
-  background-image: url(../../assets/backgrounds/dave--6jxbP3-N1I-unsplash.jpg);
+  background-image: url(../../assets/backgrounds/dave--6jxbP3-N1I-unsplash-more-fractal.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
@@ -20,10 +21,31 @@
   /* backdrop-filter: blur(5px); */
 }
 
+.nameAndLocation {
+  /* border: 2px solid red; */
+  height: 5vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+}
+
+.name {
+  width: fit-content;
+  margin-left: 0.5em;
+}
+
+.location {
+  width: fit-content;
+  margin-right: 0.5em;
+
+}
+
 /* .questAndName {
   border: 2px solid blue;
 
-  width: ;
   height: 85vh;
   
   padding: auto;
@@ -32,11 +54,25 @@
 
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between;  */
+  justify-content: space-between;
+} */
+
+
+.locationAndChar {
+  /* border: 2px solid green; */
+
+  width: 100vw;
+  height: 85vh;
+  margin: 2vw auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
 .quest {
   height: 70vh;
-  width: 25vw;
+  width: 35vw;
   margin: auto auto auto 4vw;
 
   display: flex;
@@ -46,18 +82,6 @@
 
   border-image: url(../../assets/backgrounds/pergament/vertical-old-half-framed8.png)
     15 fill / 20px / 0.5em round;
-}
-
-.locationAndChar {
-  /* border: 2px solid green; */
-
-  width: 70vw;
-  height: 85vh;
-  margin: auto 2vw auto auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .characterAll {
@@ -118,20 +142,4 @@
   justify-content: center;
 
   /* border-image: url(../../assets/backgrounds/pergament/vertical-old-half-framed7.png) 10 fill / 20px / 0.5em round; */
-}
-
-.underground {
-  /* border: 2px solid brown; */
-
-  height: 50vh;
-  width: 35vw;
-
-  /* background-image: url(../../assets/backgrounds/sunset-stone1.png); */
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-
-  position: absolute;
-  bottom: 0;
-  left: 35%;
-  /* z-index: -1; */
 }

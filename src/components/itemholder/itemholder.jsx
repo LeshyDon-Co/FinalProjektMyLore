@@ -11,6 +11,8 @@ function ItemHolder(props) {
   const equipItem = (e) => {
     console.log("dobbleClick", e.target.id);
     //Hier einbauen, dass das geklickte Item ausgerüstet wird
+    //Im model ein Array erstellen, in dem die ausgerüstetten ItemIDs als Referenz gespeichert sind
+    //Diese dann beim LAden der Seite abfragen & mit populate "anzeigen und berechnen"
   }
 
 //----------------------------------------------------------//

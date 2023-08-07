@@ -1,6 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import NameOverview from "@/components/overview/name/nameoverview";
+import Location from "@/components/overview/location/location";
 import Quests from "@/components/quests/quests";
 import {useRouter} from "next/navigation";
 import {useSession} from "next-auth/react";
@@ -39,7 +40,14 @@ function Questlog() {
 
   return (
     <div className={styles.body}>
-      <NameOverview />
+      <div className={styles.nameAndLocation}>
+        <div className={styles.name}>
+        <NameOverview />
+        </div>
+        <div className={styles.location}>
+        <Location />
+        </div>
+      </div>
       <div className={styles.container}>
         <Quests />
       </div>

@@ -3,12 +3,6 @@
   height: 100vh;
 
   padding-top: 8vh;
-
-  /* background-image: url(../../assets/backgrounds/golden-background-brighter2.jpg); */
-  background-position: center;
-
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 
 .nameAndLocation {
@@ -51,14 +45,8 @@
 }
 .skills {
   border: 2px solid black;
-  /* border-image: url(../../assets/backgrounds/inventarbackgrounds/goldenframe.png)
-    30 fill / 15px / 40px; */
-  /* fill / 30px / 30px space; */
-  /* background-image: url(); */
-  /* background-size: 100% 100%; */
-  background-repeat: no-repeat;
-  backdrop-filter: blur(5px);
-  border-radius: 14px;
+
+  /* backdrop-filter: blur(5px); */
 
   height: 85%;
   width: 25%;
@@ -67,7 +55,6 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  /* padding: auto; */
 }
 
 .charitemcontainer {
@@ -77,11 +64,11 @@
 }
 
 .charcontainer {
+  /* border: 2px solid purple; */
+
   display: flex;
   flex-direction: row;
   height: 50vh;
-
-  /* border: 2px solid purple; */
 }
 
 /* .char { */
@@ -153,7 +140,7 @@
   background-size: contain;
 
   background-repeat: no-repeat;
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
   border-radius: 14px;
 
   height: 85%;

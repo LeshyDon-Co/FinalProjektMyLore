@@ -16,7 +16,7 @@ function Listitem(props) {
       onClick={handleClick}
       key={index}
     >
-      {name},{nation}, Level {level}
+      {name}, {nation}, Level {level}
     </div>
   );
 }

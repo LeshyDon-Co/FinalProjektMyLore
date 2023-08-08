@@ -7,15 +7,11 @@
   height: auto;
   width: auto;
   padding: 0.1rem 0.5rem;
-  /* margin: 0.3rem; */
+
   display: flex;
   flex-direction: row;
   text-align: center;
   gap: 10px;
-  /* justify-content: space-between; */
-
-  /* position: fixed;
-  top: 70px; */
 
   font-size: 0.8rem;
 }

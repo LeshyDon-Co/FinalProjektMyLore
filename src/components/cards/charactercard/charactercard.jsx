@@ -78,7 +78,7 @@ function Charactercard(props) {
           className={styles.wiwa}
         />
       ),
-      text: "Willst du spielen? ",
+      text: "Was blubberst du mich an?!",
       attribute1: "HP",
       value1: "15",
       attribute2: "ATK",

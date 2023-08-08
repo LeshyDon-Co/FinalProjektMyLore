@@ -23,6 +23,27 @@ export const GET = async (request, {params}) => {
     return new NextResponse("Database Error", {status: 500});
   };
 };
+//----------UPDATE-----------------------------------------------------------------//
+
+export const UPDATE = async (request, {params}) => {
+
+  const {id} = params;
+
+  try{
+
+    await connect();
+   //Character suchen
+   const character = await Character.findOne({_id:id}.populate('equipeditems'));
+
+   const characterEquipedItems = character.equipeditems;
+
+   return new NextResponse(JSON.stringify(characterEquipedItems), {status: 200});
+  } catch(error){
+    return new NextResponse("Database Error in UPDATE CHARACTER", {status: 500});
+  };
+};
+
+
 //----------------------------------------------------------------------------------------//
 
 export const DELETE = async (request, {params}) => {

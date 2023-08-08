@@ -6,6 +6,8 @@ import Location from "@/components/overview/location/location";
 import ItemHolder from "@/components/itemholder/itemholder";
 import ItemHolderHoizontal from "@/components/itemholderhorizontal/itemholderhorizontal";
 import ItemHolderVertikal from "@/components/itemholdervertikal/itemholdervertikal";
+import CharacterStats from "@/components/overview/character/characterstats/characterstats";
+import Characterstatsinventar from "@/components/overview/character/characterstats/characterstasinventar/characterstatsinventar";
 
 
 function Inventar() {
@@ -59,7 +61,11 @@ function Inventar() {
         </div>
       </div>
       <div className={styles.container}>
-        <div className={styles.skills}>Skills coming soon...</div>
+        <div className={styles.skills}>
+          
+          <p>Skills coming soon...</p>
+          <Characterstatsinventar/>
+        </div>
         <div className={styles.charitemcontainer}>
         <div className={styles.charcontainer}>
           <div className={styles.itemVertical}>
@@ -92,7 +98,9 @@ function Inventar() {
                           price={item.itemprice}
                           text={item.itemtext}
                           type={item.itemtype}
-                          id={item.itemid} /> 
+                          id={item.itemid}
+                          mykey={item._id}
+                          /> 
             ))}
           </div>
         </div>

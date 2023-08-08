@@ -47,12 +47,17 @@ const CharakterErstellung = () => {
         const defense = clickedCard.value3;
         const stadium = clickedCard.stadium;
         const characteristic = clickedCard.characteristic;
-        const location = "Hauptstadtname";
+        const location = "Gloricius";
         const quests = ["64a8158f82ef3b16f01d113b"];
         // const picture = clickedCard.img;
         const isSelected = true;
         const createdBy = session.data.user.email;
         const items = [
+          "64abdd41dc9bfc34a26f0b2b",
+          "64abe91fdc9bfc34a26f0b30",
+          "64ad7e46da7376fda4a42c4d",
+        ];
+        const equipeditems = [
           "64abdd41dc9bfc34a26f0b2b",
           "64abe91fdc9bfc34a26f0b30",
           "64ad7e46da7376fda4a42c4d",
@@ -79,6 +84,7 @@ const CharakterErstellung = () => {
               location,
               createdBy,
               items,
+              equipeditems,
             }),
           });
           const resdata = await res.json();

@@ -56,6 +56,12 @@ const characterSchema = new Schema(
         ref: "Item",
       },
     ],
+    equipeditems: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Item",
+      },
+    ],
   },
   {timestamps: true}
 );

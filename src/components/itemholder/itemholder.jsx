@@ -4,11 +4,30 @@ import Image from "next/image";
 
 function ItemHolder(props) {
 
-  const {name, pic, price, text, type, id} = props;
+  const {name, pic, price, text, type, id, mykey} = props;
 
-  return <div className={styles.items}>
-    <Image 
+  const equipitem = async (e) => {
+    console.log("Doppelgeklickt!", mykey);
+
+    //Ich habe jetzt die Itemid, des angeklickten items
+    //Diese möchte ich in das equipedItemArray schreiben
+
+    //WIE??????
+
+    // try {
+    //   await fetch(`/api/auth/character/${charid}`, {
+    //     method: "UPDATE",
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // };
+  }
+
+  return <div className={styles.items} onDoubleClick={equipitem}>
+    <Image
       src={pic} 
+      mykey={mykey}
+      id={id}
       alt="Item" 
       width={61} 
       height={61}

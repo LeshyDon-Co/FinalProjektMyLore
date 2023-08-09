@@ -14,6 +14,7 @@ export const GET = async (request, {params}) => {
       await connect();
       
       const character = await Character.findOne({_id:id}).populate('items');
+      // console.log(character);
 
       const characterItems = character.items;
 
@@ -27,20 +28,20 @@ export const GET = async (request, {params}) => {
 
 export const UPDATE = async (request, {params}) => {
 
-  const {id} = params;
+  console.log("Hello from UPDATE");
+  const { id } = params;
 
-  try{
-
+  try {
     await connect();
-   //Character suchen
-   const character = await Character.findOne({_id:id}.populate('equipeditems'));
+    const character = await Character.findOne({_id:id}).populate('equipeditems');
+    console.log(character);
+    const characterEquipedItems = character.equipeditems;
 
-   const characterEquipedItems = character.equipeditems;
+    return new NextResponse(JSON.stringify(characterEquipedItems), {status: 200});
+  } catch (error) {
+    return new NextResponse("Database Error in UPDATE", {status: 500});
+  }
 
-   return new NextResponse(JSON.stringify(characterEquipedItems), {status: 200});
-  } catch(error){
-    return new NextResponse("Database Error in UPDATE CHARACTER", {status: 500});
-  };
 };
 
 

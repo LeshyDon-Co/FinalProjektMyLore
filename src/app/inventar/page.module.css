@@ -67,6 +67,7 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  padding-top: 5%;
   /* padding: auto; */
 }
 
@@ -177,7 +178,7 @@
 
 .skills,
 .inventar {
-  border-image: url(../../assets/frames/vertical-old-frame.png) 10
-    fill / 10px / 1.5em;
+  border-image: url(../../assets/frames/vertical-old-frame.png) 10 fill / 10px /
+    1.5em;
   border-image-outset: 1.5em;
 }

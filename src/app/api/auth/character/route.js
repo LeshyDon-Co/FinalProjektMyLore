@@ -21,6 +21,7 @@ export const POST = async (request) => {
     location,
     createdBy,
     items,
+    equipeditems,
   } = await request.json();
 
   await connect();
@@ -39,6 +40,7 @@ export const POST = async (request) => {
     quests,
     location,
     items,
+    equipeditems,
     createdBy,
   });
   console.log(newChar);

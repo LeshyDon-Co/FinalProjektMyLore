@@ -1,14 +1,51 @@
+"use client";
 import styles from "./itemholder.module.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 function ItemHolder(props) {
 
-  const {name, pic, price, text, type, id} = props;
+  const {name, pic, price, text, type, id, mykey} = props;
+  const [charID, setCharID] = useState("");
 
-  return <div className={styles.items}>
-    <Image 
+//----------------------------------------------------------//
+ 
+  useEffect(() =>{
+
+    const userdata = localStorage.getItem("userdaten");
+    const userdataparsed = JSON.parse(userdata);
+    setCharID(userdataparsed._id);
+    
+  },[])
+
+//----------------------------------------------------------//
+
+  const equipitem = async (e) => {
+    console.log("Doppelgeklickt!", mykey);
+    console.log(charID);
+
+    //Ich habe jetzt die Itemid, des angeklickten items
+    //Diese möchte ich in das equipedItemArray schreiben
+
+    // in res die equipted items zurück bekommen
+
+    // try {
+    //  const res =  await fetch(`/api/auth/character/${charID}`, {
+    //     method: "UPDATE",
+    //   });
+    //   console.log(res);
+    // } catch (error) {
+    //   console.log(error);
+    // };
+  }
+  
+//----------------------------------------------------------//
+
+  return <div className={styles.items} onDoubleClick={equipitem}>
+    <Image
       src={pic} 
+      mykey={mykey}
+      id={id}
       alt="Item" 
       width={61} 
       height={61}

@@ -21,7 +21,7 @@ function NameOverview() {
 
   return (
     <div className={styles.bodyComponent}>
-      <div>Name: {name}</div>
+      <div>Name: {name} |</div>
       <div>Level: {level}</div>
     </div>
   );
